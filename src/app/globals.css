@@ -28,11 +28,12 @@
   --spacing-grid: 32px;
   --spacing-grid-2: 64px;
   --spacing-grid-3: 96px;
-  --spacing-grid-4: 128px;
-  --spacing-grid-5: 160px;
-  --spacing-grid-6: 200px;
-  --spacing-grid-7: 240px;
-  --spacing-grid-8: 320px;
+  --spacing-grid-4: 140px;
+  --spacing-grid-5: 180px;
+  --spacing-grid-6: 220px;
+  --spacing-grid-7: 280px;
+  --spacing-grid-8: 360px;
+  --spacing-grid-9: 440px;
 }
 
 /* Base Styles - Dark Theme Primary */

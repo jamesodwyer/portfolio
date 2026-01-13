@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* Selected Work Section */}
-      <section className="py-grid-7 border-t border-swiss-gray">
+      <section className="py-grid-8 border-t border-swiss-gray">
         <div className="grid-container">
           {/* Section Header */}
           <motion.div
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Principles Section - Grid Style */}
-      <section className="py-grid-7 border-t border-swiss-gray">
+      <section className="py-grid-8 border-t border-swiss-gray">
         <div className="grid-container">
           <motion.div
             className="mb-grid-5"
