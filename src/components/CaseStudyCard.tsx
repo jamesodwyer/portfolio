@@ -20,8 +20,8 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
     >
       <Link href={`/work/${study.slug}`} className="block">
         {/* Number and Category Header */}
-        <div className="flex items-baseline justify-between mb-4 border-b border-swiss-gray pb-4">
-          <div className="flex items-baseline gap-4">
+        <div className="flex items-baseline justify-between mb-6 border-b border-swiss-gray pb-6">
+          <div className="flex items-baseline gap-6">
             <span className="text-number-sm text-swiss-white">
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -33,18 +33,18 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-display-lg mb-4 transition-colors group-hover:text-swiss-yellow">
+        <h3 className="text-display-lg mb-6 transition-colors group-hover:text-swiss-yellow">
           {study.title}
         </h3>
 
         {/* Description */}
-        <p className="text-body text-swiss-muted mb-6">{study.subtitle}</p>
+        <p className="text-body text-swiss-muted mb-10 leading-relaxed">{study.subtitle}</p>
 
         {/* Results Row */}
-        <div className="grid grid-cols-3 gap-4 pt-4 border-t border-swiss-gray">
+        <div className="grid grid-cols-3 gap-6 pt-6 border-t border-swiss-gray">
           {study.results.slice(0, 3).map((result, i) => (
             <div key={i}>
-              <span className="text-heading text-swiss-yellow block">
+              <span className="text-heading text-swiss-yellow block mb-2">
                 {result.value}
               </span>
               <span className="text-micro text-swiss-muted">
@@ -55,7 +55,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         </div>
 
         {/* Arrow indicator */}
-        <div className="mt-6 flex items-center gap-2 text-swiss-muted group-hover:text-swiss-yellow transition-colors">
+        <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-yellow transition-colors">
           <span className="text-caption">VIEW PROJECT</span>
           <motion.svg
             width="20"

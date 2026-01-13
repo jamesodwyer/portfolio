@@ -5,11 +5,11 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-swiss-gray mt-grid-4">
+    <footer className="border-t border-swiss-gray mt-grid-6">
       <div className="grid-container">
-        <div className="py-grid-3 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+        <div className="py-grid-5 flex flex-col md:flex-row md:items-start md:justify-between gap-12">
           {/* Contact */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             <span className="text-caption text-swiss-muted">GET IN TOUCH</span>
             <a
               href={`mailto:${siteConfig.email}`}
@@ -21,13 +21,13 @@ export function Footer() {
 
           {/* Dot Pattern */}
           <div className="hidden md:block">
-            <DotPattern rows={5} cols={5} dotSize={6} gap={6} className="text-swiss-muted" />
+            <DotPattern rows={5} cols={5} dotSize={8} gap={8} className="text-swiss-muted" />
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             <span className="text-caption text-swiss-muted">FOLLOW</span>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-10">
               <a
                 href={siteConfig.social.linkedin}
                 target="_blank"
@@ -57,7 +57,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="py-6 border-t border-swiss-gray">
+        <div className="py-8 border-t border-swiss-gray">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <span className="text-small text-swiss-muted">
               {currentYear} {siteConfig.name}
