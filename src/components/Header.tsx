@@ -2,45 +2,39 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { siteConfig } from "@/lib/data";
+import { LogoMark } from "./Logo";
 
 export function Header() {
   const pathname = usePathname();
 
+  const navItems = [
+    { href: "/", label: "WORK" },
+    { href: "/projects", label: "PROJECTS" },
+    { href: "/contact", label: "CONTACT" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-bauhaus-white">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-swiss-black">
       <div className="grid-container">
-        <nav className="flex items-center justify-between h-20 border-b-2 border-bauhaus-black">
+        <nav className="flex items-center justify-between h-20 border-b border-swiss-gray">
           {/* Logo */}
-          <Link
-            href="/"
-            className="text-caption tracking-widest hover:text-bauhaus-red transition-colors"
-          >
-            {siteConfig.name.toUpperCase()}
+          <Link href="/" className="flex items-center gap-3 link-hover">
+            <LogoMark size={20} />
           </Link>
 
           {/* Navigation */}
           <div className="flex items-center gap-8">
-            <Link
-              href="/"
-              className={`text-caption tracking-widest transition-colors ${
-                pathname === "/"
-                  ? "text-bauhaus-red"
-                  : "hover:text-bauhaus-red"
-              }`}
-            >
-              WORK
-            </Link>
-            <Link
-              href="/about"
-              className={`text-caption tracking-widest transition-colors ${
-                pathname === "/about"
-                  ? "text-bauhaus-red"
-                  : "hover:text-bauhaus-red"
-              }`}
-            >
-              ABOUT
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-caption tracking-widest transition-colors ${
+                  pathname === item.href ? "text-swiss-yellow" : "link-hover"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </nav>
       </div>

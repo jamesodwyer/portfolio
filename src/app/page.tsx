@@ -1,100 +1,94 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CaseStudyCard, Footer } from "@/components";
-import { caseStudies, siteConfig } from "@/lib/data";
+import { CaseStudyCard, Footer, DotPattern } from "@/components";
+import { caseStudies } from "@/lib/data";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section - Poster Style */}
       <section className="min-h-screen flex items-center pt-20">
         <div className="grid-container w-full">
-          <div className="grid grid-cols-12 gap-6">
-            {/* Main Title */}
+          <div className="grid grid-cols-12 gap-6 items-center">
+            {/* Main Title - Left */}
             <div className="col-span-12 lg:col-span-8">
               <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                {/* Red accent line - Bauhaus element */}
-                <div className="bauhaus-line-red w-16 mb-8" />
-
-                <h1 className="text-display-xl mb-6">
-                  {siteConfig.name.split(" ")[0]}
-                  <br />
-                  <span className="text-bauhaus-gray">
-                    {siteConfig.name.split(" ").slice(1).join(" ")}
-                  </span>
-                </h1>
-
-                <div className="flex items-baseline gap-4 mb-12">
-                  <span className="text-display text-bauhaus-black">
-                    {siteConfig.title}
-                  </span>
-                  <span className="text-display text-bauhaus-gray">
-                    {siteConfig.subtitle}
+                {/* Title Label */}
+                <div className="flex items-center gap-4 mb-8">
+                  <DotPattern rows={3} cols={3} dotSize={6} gap={4} className="text-swiss-yellow" />
+                  <span className="text-caption text-swiss-muted">
+                    DIGITAL DESIGNER & DEVELOPER
                   </span>
                 </div>
+
+                {/* Large Name */}
+                <h1 className="text-display-hero mb-8">
+                  Design
+                  <br />
+                  <span className="text-swiss-muted">For</span>
+                  <br />
+                  People
+                </h1>
+
+                {/* Tagline */}
+                <p className="text-subheading text-swiss-muted max-w-lg">
+                  I create digital products that balance form and function.
+                  With a focus on clarity, precision, and user experience.
+                </p>
               </motion.div>
             </div>
 
-            {/* Geometric Element - Bauhaus Circle */}
+            {/* Dot Pattern - Right */}
             <div className="hidden lg:flex col-span-4 items-center justify-center">
               <motion.div
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="relative"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="w-48 h-48 rounded-full border-4 border-bauhaus-black" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-bauhaus-red rounded-full" />
+                <DotPattern
+                  rows={12}
+                  cols={12}
+                  dotSize={10}
+                  gap={8}
+                  circular={true}
+                  className="text-swiss-white"
+                />
               </motion.div>
             </div>
-
-            {/* Scroll Indicator */}
-            <motion.div
-              className="col-span-12 mt-12"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
-            >
-              <div className="flex items-center gap-4">
-                <span className="text-caption text-bauhaus-gray">
-                  SELECTED WORK
-                </span>
-                <div className="bauhaus-line flex-1 max-w-32 opacity-30" />
-                <motion.div
-                  animate={{ y: [0, 8, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="text-bauhaus-gray"
-                  >
-                    <path
-                      d="M12 5V19M12 19L5 12M12 19L19 12"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </motion.div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies Grid */}
-      <section className="py-grid-4">
+      {/* Selected Work Section */}
+      <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+          {/* Section Header */}
+          <motion.div
+            className="flex items-center justify-between mb-grid-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center gap-4">
+              <span className="text-number text-swiss-yellow">4</span>
+              <div>
+                <span className="text-caption text-swiss-muted block">SELECTED</span>
+                <span className="text-display">Case Studies</span>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <DotPattern rows={3} cols={6} dotSize={6} gap={6} className="text-swiss-muted" />
+            </div>
+          </motion.div>
+
+          {/* Case Studies Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-grid-3">
             {caseStudies.map((study, index) => (
               <CaseStudyCard key={study.slug} study={study} index={index} />
             ))}
@@ -102,24 +96,115 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bottom Statement */}
-      <section className="py-grid-4 border-t-2 border-bauhaus-black">
+      {/* Philosophy Section */}
+      <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 lg:col-span-8">
-              <motion.p
-                className="text-display-lg text-bauhaus-gray"
-                initial={{ opacity: 0, y: 40 }}
+            <motion.div
+              className="col-span-12 lg:col-span-8"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-caption text-swiss-muted block mb-6">PHILOSOPHY</span>
+              <h2 className="text-display-xl mb-8">
+                Good Design Is
+                <br />
+                <span className="text-swiss-yellow">As Little Design</span>
+                <br />
+                As Possible
+              </h2>
+              <p className="text-subheading text-swiss-muted max-w-2xl">
+                Less, but better – because it concentrates on the essential aspects,
+                and the products are not burdened with non-essentials. Back to purity,
+                back to simplicity.
+              </p>
+              <span className="text-caption text-swiss-muted block mt-6">— DIETER RAMS</span>
+            </motion.div>
+
+            {/* Geometric Element */}
+            <div className="hidden lg:flex col-span-4 items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, rotate: -90 }}
+                whileInView={{ opacity: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <DotPattern
+                  rows={10}
+                  cols={10}
+                  dotSize={12}
+                  gap={10}
+                  circular={true}
+                  className="text-swiss-yellow"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Principles Section - Grid Style */}
+      <section className="py-grid-5 border-t border-swiss-gray">
+        <div className="grid-container">
+          <motion.div
+            className="mb-grid-3"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-caption text-swiss-muted block mb-4">THREE PRINCIPLES</span>
+            <h2 className="text-display-lg">
+              Be Simple.
+              <br />
+              Be Organized.
+              <br />
+              Be Familiar.
+            </h2>
+          </motion.div>
+
+          {/* Principles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-grid-2">
+            {[
+              {
+                number: "1",
+                title: "Be Simple",
+                subtitle: "Hick's Law",
+                description: "The time it takes for a person to make a decision increases with the number of choices. Reduce complexity, increase clarity.",
+              },
+              {
+                number: "2",
+                title: "Be Organized",
+                subtitle: "Miller's Law",
+                description: "The average person can only keep 7 items in their working memory. Chunk information into digestible units.",
+              },
+              {
+                number: "3",
+                title: "Be Familiar",
+                subtitle: "Jakob's Law",
+                description: "Users spend most of their time on other sites. They prefer your site to work the same way as the ones they already know.",
+              },
+            ].map((principle, index) => (
+              <motion.div
+                key={index}
+                className="border-t border-swiss-gray pt-6"
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                Design is not just what it looks like.{" "}
-                <span className="text-bauhaus-black">
-                  Design is how it works.
+                <span className="text-number text-swiss-white block mb-4">
+                  {principle.number}
                 </span>
-              </motion.p>
-            </div>
+                <span className="text-caption text-swiss-muted block mb-2">
+                  / {principle.title} /
+                </span>
+                <span className="text-heading block mb-4">{principle.subtitle}</span>
+                <p className="text-small text-swiss-muted">{principle.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
