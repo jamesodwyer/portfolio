@@ -183,6 +183,58 @@ export const caseStudies: CaseStudy[] = [
       "Mobile-first approach is essential for impulse purchases",
     ],
   },
+  {
+    slug: "ticketmaster-mcp",
+    title: "Ticketmaster",
+    subtitle: "Building an AI-powered event discovery experience",
+    category: "AI / Product Design",
+    year: "2024",
+    color: "black",
+    thumbnail: "/images/ticketmaster/thumb.jpg",
+    hero: "/images/ticketmaster/hero.jpg",
+    overview: {
+      role: "Product Designer",
+      timeline: "4 months",
+      team: "2 designers, 4 engineers, 1 AI specialist",
+      tools: ["Figma", "Claude API", "MCP", "TypeScript"],
+    },
+    results: [
+      { metric: "Event discovery", value: "+85%" },
+      { metric: "User engagement", value: "+62%" },
+      { metric: "Search accuracy", value: "+94%" },
+    ],
+    challenge:
+      "Traditional event search relies on filters and keywords, making it difficult for users to discover events that match their interests and context. Users often miss relevant events because they don't know exactly what to search for.",
+    process: [
+      {
+        title: "AI Integration Research",
+        description:
+          "Explored how Model Context Protocol (MCP) could enable more natural, conversational event discovery. Mapped user intents and conversation patterns.",
+      },
+      {
+        title: "Conversation Design",
+        description:
+          "Designed conversational flows that feel natural while guiding users toward relevant events. Balanced AI suggestions with user control.",
+      },
+      {
+        title: "Interface Design",
+        description:
+          "Created a hybrid interface that combines traditional browsing with AI-powered recommendations and natural language search.",
+      },
+      {
+        title: "Testing & Refinement",
+        description:
+          "Conducted user testing to refine AI responses and ensure the experience felt helpful rather than intrusive.",
+      },
+    ],
+    solution:
+      "Delivered an AI-powered event discovery experience using MCP that understands context, preferences, and natural language queries. Users can describe what they're looking for conversationally and receive personalised recommendations.",
+    learnings: [
+      "AI should augment human decision-making, not replace it",
+      "Transparency in AI recommendations builds user trust",
+      "Conversational UI requires careful consideration of edge cases",
+    ],
+  },
 ];
 
 export const siteConfig = {

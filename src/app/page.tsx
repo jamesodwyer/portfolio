@@ -76,7 +76,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-6">
-              <span className="text-number text-swiss-yellow">3</span>
+              <span className="text-number text-swiss-yellow">4</span>
               <div>
                 <span className="text-caption text-swiss-muted block mb-2">SELECTED</span>
                 <span className="text-display">Case Studies</span>
