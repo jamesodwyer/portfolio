@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+/* Bauhaus/Swiss Design System */
+/* Inspired by Müller-Brockmann, Vignelli, and the International Typographic Style */
+
+@theme {
+  /* Color Palette - True Bauhaus: minimal, bold */
+  --color-bauhaus-black: #000000;
+  --color-bauhaus-white: #FFFFFF;
+  --color-bauhaus-red: #FF0000;
+  --color-bauhaus-blue: #0047FF;
+  --color-bauhaus-yellow: #FFCC00;
+  --color-bauhaus-gray: #666666;
+  --color-bauhaus-light: #F5F5F5;
+
+  /* Typography Scale - Vignelli-inspired hierarchy */
+  --font-display-xl: clamp(3rem, 8vw, 8rem);
+  --font-display-lg: clamp(2.5rem, 6vw, 5rem);
+  --font-display: clamp(2rem, 4vw, 3.5rem);
+  --font-heading: clamp(1.5rem, 3vw, 2rem);
+  --font-subheading: clamp(1.125rem, 2vw, 1.25rem);
+  --font-body: 1rem;
+  --font-small: 0.875rem;
+  --font-caption: 0.75rem;
+
+  /* Spacing - Grid-based (Müller-Brockmann) */
+  --spacing-grid: 24px;
+  --spacing-grid-2: 48px;
+  --spacing-grid-3: 72px;
+  --spacing-grid-4: 96px;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--color-bauhaus-white);
+  color: var(--color-bauhaus-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Selection - Bauhaus accent */
+::selection {
+  background-color: var(--color-bauhaus-red);
+  color: var(--color-bauhaus-white);
+}
+
+/* Scrollbar - Minimal */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bauhaus-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bauhaus-black);
+}
+
+/* Typography Utilities */
+.text-display-xl {
+  font-size: var(--font-display-xl);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.text-display-lg {
+  font-size: var(--font-display-lg);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.text-display {
+  font-size: var(--font-display);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+.text-heading {
+  font-size: var(--font-heading);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+.text-subheading {
+  font-size: var(--font-subheading);
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.text-body {
+  font-size: var(--font-body);
+  line-height: 1.6;
+}
+
+.text-small {
+  font-size: var(--font-small);
+  line-height: 1.5;
+}
+
+.text-caption {
+  font-size: var(--font-caption);
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Grid Container */
+.grid-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--spacing-grid-2);
+  padding-right: var(--spacing-grid-2);
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    padding-left: var(--spacing-grid);
+    padding-right: var(--spacing-grid);
+  }
+}
+
+/* Bauhaus Geometric Elements */
+.bauhaus-circle {
+  border-radius: 50%;
+}
+
+.bauhaus-line {
+  height: 2px;
+  background-color: var(--color-bauhaus-black);
+}
+
+.bauhaus-line-red {
+  height: 2px;
+  background-color: var(--color-bauhaus-red);
+}
+
+/* Color utilities */
+.bg-bauhaus-black { background-color: var(--color-bauhaus-black); }
+.bg-bauhaus-white { background-color: var(--color-bauhaus-white); }
+.bg-bauhaus-red { background-color: var(--color-bauhaus-red); }
+.bg-bauhaus-blue { background-color: var(--color-bauhaus-blue); }
+.bg-bauhaus-yellow { background-color: var(--color-bauhaus-yellow); }
+.bg-bauhaus-gray { background-color: var(--color-bauhaus-gray); }
+.bg-bauhaus-light { background-color: var(--color-bauhaus-light); }
+
+.text-bauhaus-black { color: var(--color-bauhaus-black); }
+.text-bauhaus-white { color: var(--color-bauhaus-white); }
+.text-bauhaus-red { color: var(--color-bauhaus-red); }
+.text-bauhaus-blue { color: var(--color-bauhaus-blue); }
+.text-bauhaus-yellow { color: var(--color-bauhaus-yellow); }
+.text-bauhaus-gray { color: var(--color-bauhaus-gray); }
+
+.border-bauhaus-black { border-color: var(--color-bauhaus-black); }
+.border-bauhaus-red { border-color: var(--color-bauhaus-red); }
+
+/* Spacing utilities */
+.py-grid { padding-top: var(--spacing-grid); padding-bottom: var(--spacing-grid); }
+.py-grid-2 { padding-top: var(--spacing-grid-2); padding-bottom: var(--spacing-grid-2); }
+.py-grid-3 { padding-top: var(--spacing-grid-3); padding-bottom: var(--spacing-grid-3); }
+.py-grid-4 { padding-top: var(--spacing-grid-4); padding-bottom: var(--spacing-grid-4); }
+
+.mt-grid { margin-top: var(--spacing-grid); }
+.mt-grid-2 { margin-top: var(--spacing-grid-2); }
+.mt-grid-3 { margin-top: var(--spacing-grid-3); }
+.mt-grid-4 { margin-top: var(--spacing-grid-4); }
+
+.mb-grid { margin-bottom: var(--spacing-grid); }
+.gap-grid { gap: var(--spacing-grid); }
+
+/* Link Styles - Swiss minimalism */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-bauhaus-red);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Focus States - Accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-bauhaus-red);
+  outline-offset: 4px;
+}
