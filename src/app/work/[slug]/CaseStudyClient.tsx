@@ -6,17 +6,17 @@ import type { CaseStudy } from "@/lib/data";
 import { Footer } from "@/components";
 
 const colorMap = {
-  red: "bg-bauhaus-red",
-  blue: "bg-bauhaus-blue",
-  yellow: "bg-bauhaus-yellow",
-  black: "bg-bauhaus-black",
+  red: "bg-red-600",
+  blue: "bg-blue-600",
+  yellow: "bg-swiss-yellow",
+  black: "bg-swiss-black",
 };
 
 const textColorMap = {
-  red: "text-bauhaus-red",
-  blue: "text-bauhaus-blue",
-  yellow: "text-bauhaus-yellow",
-  black: "text-bauhaus-black",
+  red: "text-red-500",
+  blue: "text-blue-500",
+  yellow: "text-swiss-yellow",
+  black: "text-swiss-white",
 };
 
 interface CaseStudyClientProps {
@@ -40,7 +40,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             >
               <Link
                 href="/"
-                className="text-caption text-bauhaus-gray hover:text-bauhaus-black transition-colors inline-flex items-center gap-2"
+                className="text-caption text-swiss-muted hover:text-swiss-white transition-colors inline-flex items-center gap-2"
               >
                 <svg
                   width="16"
@@ -69,13 +69,13 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               >
                 <div className="bauhaus-line-red w-16 mb-8" style={{ backgroundColor: study.color === 'red' ? '#FF0000' : study.color === 'blue' ? '#0047FF' : study.color === 'yellow' ? '#FFCC00' : '#000000' }} />
 
-                <span className="text-caption text-bauhaus-gray block mb-4">
+                <span className="text-caption text-swiss-muted block mb-4">
                   {study.category.toUpperCase()} — {study.year}
                 </span>
 
                 <h1 className="text-display-xl mb-6">{study.title}</h1>
 
-                <p className="text-subheading text-bauhaus-gray max-w-2xl">
+                <p className="text-subheading text-swiss-muted max-w-2xl">
                   {study.subtitle}
                 </p>
               </motion.div>
@@ -94,7 +94,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                     <span className={`text-display ${textColorMap[study.color]}`}>
                       {result.value}
                     </span>
-                    <span className="text-caption text-bauhaus-gray block mt-1">
+                    <span className="text-caption text-swiss-muted block mt-1">
                       {result.metric.toUpperCase()}
                     </span>
                   </div>
@@ -123,7 +123,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Overview Section */}
-      <section className="py-grid-3 border-t-2 border-bauhaus-black">
+      <section className="py-grid-5 border-t-2 border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -133,7 +133,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">OVERVIEW</span>
+              <span className="text-caption text-swiss-muted">OVERVIEW</span>
             </motion.div>
 
             <motion.div
@@ -144,19 +144,19 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div>
-                <span className="text-caption text-bauhaus-gray block mb-2">ROLE</span>
+                <span className="text-caption text-swiss-muted block mb-2">ROLE</span>
                 <span className="text-body">{study.overview.role}</span>
               </div>
               <div>
-                <span className="text-caption text-bauhaus-gray block mb-2">TIMELINE</span>
+                <span className="text-caption text-swiss-muted block mb-2">TIMELINE</span>
                 <span className="text-body">{study.overview.timeline}</span>
               </div>
               <div>
-                <span className="text-caption text-bauhaus-gray block mb-2">TEAM</span>
+                <span className="text-caption text-swiss-muted block mb-2">TEAM</span>
                 <span className="text-body">{study.overview.team}</span>
               </div>
               <div>
-                <span className="text-caption text-bauhaus-gray block mb-2">TOOLS</span>
+                <span className="text-caption text-swiss-muted block mb-2">TOOLS</span>
                 <span className="text-body">{study.overview.tools.join(", ")}</span>
               </div>
             </motion.div>
@@ -165,7 +165,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Challenge Section */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -175,7 +175,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">CHALLENGE</span>
+              <span className="text-caption text-swiss-muted">CHALLENGE</span>
             </motion.div>
 
             <motion.div
@@ -192,7 +192,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Process Section */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -202,7 +202,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">PROCESS</span>
+              <span className="text-caption text-swiss-muted">PROCESS</span>
             </motion.div>
 
             <div className="col-span-12 lg:col-span-9">
@@ -219,7 +219,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <h3 className="text-subheading mb-3">{step.title}</h3>
-                    <p className="text-body text-bauhaus-gray">{step.description}</p>
+                    <p className="text-body text-swiss-muted">{step.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -229,7 +229,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Solution Section */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -239,7 +239,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">SOLUTION</span>
+              <span className="text-caption text-swiss-muted">SOLUTION</span>
             </motion.div>
 
             <motion.div
@@ -267,7 +267,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               transition={{ duration: 0.6 }}
             />
             <motion.div
-              className="aspect-[4/3] bg-bauhaus-light"
+              className="aspect-[4/3] bg-zinc-800"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -278,7 +278,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Learnings Section */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -288,7 +288,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">LEARNINGS</span>
+              <span className="text-caption text-swiss-muted">LEARNINGS</span>
             </motion.div>
 
             <div className="col-span-12 lg:col-span-9">
@@ -313,7 +313,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Next Project */}
-      <section className="py-grid-4 border-t-2 border-bauhaus-black">
+      <section className="py-grid-4 border-t-2 border-swiss-gray">
         <div className="grid-container">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -321,12 +321,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-caption text-bauhaus-gray block mb-6">NEXT PROJECT</span>
+            <span className="text-caption text-swiss-muted block mb-6">NEXT PROJECT</span>
             <Link href={`/work/${nextStudy.slug}`} className="group inline-block">
-              <h2 className="text-display-lg group-hover:text-bauhaus-red transition-colors">
+              <h2 className="text-display-lg group-hover:text-swiss-yellow transition-colors">
                 {nextStudy.title}
               </h2>
-              <p className="text-subheading text-bauhaus-gray mt-2">{nextStudy.subtitle}</p>
+              <p className="text-subheading text-swiss-muted mt-2">{nextStudy.subtitle}</p>
             </Link>
           </motion.div>
         </div>

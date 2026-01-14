@@ -63,15 +63,15 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="bauhaus-line-red w-16 mb-8" />
+                <div className="swiss-line-yellow w-16 mb-8" />
 
                 <h1 className="text-display-xl mb-8">About</h1>
 
-                <p className="text-heading text-bauhaus-gray leading-relaxed max-w-3xl">
+                <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
                   I&apos;m a designer and developer based in {siteConfig.location}, focused on
                   creating digital products that are both{" "}
-                  <span className="text-bauhaus-black">beautiful</span> and{" "}
-                  <span className="text-bauhaus-black">functional</span>.
+                  <span className="text-swiss-white">beautiful</span> and{" "}
+                  <span className="text-swiss-white">functional</span>.
                 </p>
               </motion.div>
             </div>
@@ -84,8 +84,8 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="relative"
               >
-                <div className="w-32 h-32 bg-bauhaus-red" />
-                <div className="absolute -top-8 -left-8 w-32 h-32 border-4 border-bauhaus-black" />
+                <div className="w-32 h-32 bg-swiss-yellow" />
+                <div className="absolute -top-8 -left-8 w-32 h-32 border-4 border-swiss-gray" />
               </motion.div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bio Section */}
-      <section className="py-grid-3 border-t-2 border-bauhaus-black">
+      <section className="py-grid-6 border-t-2 border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -103,7 +103,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">BACKGROUND</span>
+              <span className="text-caption text-swiss-muted">BACKGROUND</span>
             </motion.div>
 
             <motion.div
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   possibilities, ensuring my designs are not just beautiful but
                   buildable.
                 </p>
-                <p className="text-bauhaus-gray">
+                <p className="text-swiss-muted">
                   When I&apos;m not designing, you&apos;ll find me exploring architecture,
                   reading about design history, or experimenting with generative
                   art.
@@ -142,7 +142,7 @@ export default function AboutPage() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-6 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -152,7 +152,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">EXPERIENCE</span>
+              <span className="text-caption text-swiss-muted">EXPERIENCE</span>
             </motion.div>
 
             <div className="col-span-12 lg:col-span-9">
@@ -167,16 +167,16 @@ export default function AboutPage() {
                     className="grid grid-cols-1 md:grid-cols-4 gap-4"
                   >
                     <div className="md:col-span-1">
-                      <span className="text-small text-bauhaus-gray">
+                      <span className="text-small text-swiss-muted">
                         {exp.period}
                       </span>
                     </div>
                     <div className="md:col-span-3">
                       <h3 className="text-subheading mb-1">{exp.role}</h3>
-                      <span className="text-body text-bauhaus-red block mb-3">
+                      <span className="text-body text-swiss-yellow block mb-3">
                         {exp.company}
                       </span>
-                      <p className="text-body text-bauhaus-gray">
+                      <p className="text-body text-swiss-muted">
                         {exp.description}
                       </p>
                     </div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
       </section>
 
       {/* Skills & Tools */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-6 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -199,7 +199,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">
+              <span className="text-caption text-swiss-muted">
                 SKILLS & TOOLS
               </span>
             </motion.div>
@@ -215,7 +215,7 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {skills.map((skill, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-bauhaus-red" />
+                      <span className="w-2 h-2 bg-swiss-yellow" />
                       <span className="text-body">{skill}</span>
                     </li>
                   ))}
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {tools.map((tool, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-bauhaus-blue" />
+                      <span className="w-2 h-2 bg-swiss-white" />
                       <span className="text-body">{tool}</span>
                     </li>
                   ))}
@@ -244,7 +244,7 @@ export default function AboutPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-grid-4 border-t-2 border-bauhaus-black">
+      <section className="py-grid-4 border-t-2 border-swiss-gray">
         <div className="grid-container">
           <motion.div
             className="grid grid-cols-12 gap-6"
@@ -254,17 +254,17 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="col-span-12 lg:col-span-8">
-              <span className="text-caption text-bauhaus-gray block mb-6">
+              <span className="text-caption text-swiss-muted block mb-6">
                 LET&apos;S WORK TOGETHER
               </span>
               <h2 className="text-display-lg mb-8">
                 Have a project in mind?
                 <br />
-                <span className="text-bauhaus-gray">Let&apos;s talk.</span>
+                <span className="text-swiss-muted">Let&apos;s talk.</span>
               </h2>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-4 text-heading hover:text-bauhaus-red transition-colors group"
+                className="inline-flex items-center gap-4 text-heading hover:text-swiss-yellow transition-colors group"
               >
                 {siteConfig.email}
                 <svg
@@ -290,7 +290,7 @@ export default function AboutPage() {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="w-32 h-32 border-4 border-bauhaus-black"
+                className="w-32 h-32 border-4 border-swiss-gray"
               />
             </div>
           </motion.div>
