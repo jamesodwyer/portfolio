@@ -184,55 +184,55 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    slug: "ticketmaster-mcp",
-    title: "Ticketmaster MCP",
-    subtitle: "Building an MCP server to bring live events into AI conversations",
-    category: "AI Engineering / Open Source",
+    slug: "gds-mcp",
+    title: "GDS-MCP",
+    subtitle: "AI-powered documentation workflow for the Global Design System",
+    category: "AI Engineering / Design Systems",
     year: "2024",
     color: "black",
-    thumbnail: "/images/ticketmaster/thumb.jpg",
-    hero: "/images/ticketmaster/hero.jpg",
+    thumbnail: "/images/gds-mcp/thumb.jpg",
+    hero: "/images/gds-mcp/hero.jpg",
     overview: {
       role: "Developer & Designer",
-      timeline: "2 weeks",
-      team: "Solo project",
-      tools: ["TypeScript", "MCP SDK", "Claude", "Ticketmaster API"],
+      timeline: "Ongoing",
+      team: "2 contributors",
+      tools: ["TypeScript", "MCP SDK", "Figma API", "Node.js"],
     },
     results: [
-      { metric: "GitHub stars", value: "150+" },
-      { metric: "API tools built", value: "12" },
-      { metric: "npm downloads", value: "500+" },
+      { metric: "Components documented", value: "50+" },
+      { metric: "Documentation layers", value: "5" },
+      { metric: "Tool integrations", value: "4" },
     ],
     challenge:
-      "AI assistants like Claude are powerful but lack access to real-time event data. Users asking about concerts, sports, or theatre shows get outdated information. I wanted to bridge this gap by connecting Claude directly to Ticketmaster's Discovery API through Anthropic's Model Context Protocol.",
+      "Design system documentation is time-consuming to write and quickly becomes outdated. Developers and AI assistants struggle to find accurate, structured information about components, tokens, and patterns. I wanted to automate documentation generation directly from Figma designs, optimised for LLM retrieval.",
     process: [
       {
-        title: "API Exploration",
+        title: "Figma API Integration",
         description:
-          "Mapped Ticketmaster's Discovery API endpoints—events, venues, attractions, and classifications. Identified which data would be most valuable in conversational context.",
+          "Built a Figma plugin and API integration to extract component data, variants, design tokens, and properties directly from design files.",
       },
       {
         title: "MCP Server Architecture",
         description:
-          "Designed the server structure using the official MCP TypeScript SDK. Built tools for event search, venue lookup, artist discovery, and filtering by date, location, and genre.",
+          "Designed an MCP server that exposes design system documentation to AI assistants. Structured content across atoms, molecules, organisms, foundations, and patterns.",
       },
       {
-        title: "Response Design",
+        title: "Documentation Schema",
         description:
-          "Crafted how event data should be returned to Claude—balancing completeness with readability. Structured responses so Claude can naturally discuss events, compare options, and help users make decisions.",
+          "Created a structured markdown format including component overviews, variants, accessibility requirements, Tailwind mappings, and CSS custom properties.",
       },
       {
-        title: "Testing & Documentation",
+        title: "Multi-tool Support",
         description:
-          "Tested edge cases like location ambiguity, date ranges, and API rate limits. Wrote comprehensive documentation for open-source release.",
+          "Enabled integration with Claude Code, Cursor, VS Code, and Windsurf—allowing teams to query design system docs directly in their workflow.",
       },
     ],
     solution:
-      "Shipped an open-source MCP server that gives Claude real-time access to Ticketmaster's event catalogue. Users can ask natural questions like 'What concerts are in London next weekend?' and get accurate, current results. The server handles 12 distinct tools including search, recommendations, and venue details.",
+      "Shipped an open-source MCP server that generates structured documentation from Figma designs. The /figma-doc command extracts component specs, design tokens, and accessibility guidelines. AI assistants can now answer questions about the design system with accurate, up-to-date information.",
     learnings: [
-      "MCP's tool-based architecture makes complex APIs feel conversational",
-      "Error handling is critical—AI needs graceful fallbacks for API failures",
-      "Open source projects need excellent documentation to gain adoption",
+      "MCP makes design system knowledge accessible to AI assistants in context",
+      "Structured documentation formats are essential for LLM retrieval accuracy",
+      "Automating from source (Figma) keeps documentation in sync with designs",
     ],
   },
 ];
