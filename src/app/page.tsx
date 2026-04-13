@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="flex items-center gap-6 mb-12">
                   <DotPattern rows={3} cols={3} dotSize={6} gap={4} className="text-swiss-yellow" />
                   <span className="text-caption text-swiss-muted">
-                    DIGITAL DESIGNER & DEVELOPER
+                    DIGITAL DESIGNER & DESIGN TECHNOLOGIST
                   </span>
                 </div>
 

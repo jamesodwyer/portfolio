@@ -437,7 +437,7 @@ export const caseStudies: CaseStudy[] = [
 export const siteConfig = {
   name: "James O'Dwyer",
   title: "Digital Designer",
-  subtitle: "& Developer",
+  subtitle: "& Design Technologist",
   email: "hello@jamesodwyer.com",
   location: "London, UK",
   bio: "I design and build digital products that balance form and function. With a background in both design and engineering, I bridge the gap between vision and implementation.",

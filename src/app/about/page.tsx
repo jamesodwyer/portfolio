@@ -169,10 +169,10 @@ export default function AboutPage() {
                 <h1 className="text-display-xl mb-8">About</h1>
 
                 <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
-                  I&apos;m a designer and developer based in {siteConfig.location}, passionate
-                  about technology, accessibility, design, and all things creative. I employ
-                  an out-of-the-box mindset to help clients fully leverage and reach their
-                  maximum potential.
+                  I&apos;m a designer and design technologist based in {siteConfig.location}.
+                  Currently scaling Ticketmaster&apos;s Global Design System across 8 products
+                  and pioneering AI-powered design operations that let a small team
+                  perform like a large one.
                 </p>
               </motion.div>
             </div>
@@ -216,19 +216,33 @@ export default function AboutPage() {
             >
               <div className="space-y-6 text-body leading-relaxed">
                 <p>
-                  My role is focused on translating ideas from the discovery and research
-                  phase right through to the delivery. The core stages I am involved in
-                  include discovery, prototyping, piloting, and creating high-fidelity
-                  POCs, then iterating to get an optimum and confident level.
+                  I&apos;m an Associate Director at Ticketmaster, where I own the Global
+                  Design System serving 8 products across two verticals. With one
+                  dedicated designer, I&apos;ve built a contribution model that lets 20+
+                  designers across product teams feed components back into a single,
+                  governed system - turning what could be a bottleneck into
+                  self-sustaining infrastructure.
                 </p>
                 <p>
-                  I am a confident leader and mentor. I take great joy in improving the
-                  team&apos;s skill set and helping people level up. Motivating and maintaining
-                  a healthy work environment is also key to the teams I manage.
+                  More recently, I&apos;ve been pioneering AI-powered design operations -
+                  building MCP servers that make our design system queryable by AI
+                  tools, creating executable workflows that let designers ship
+                  components independently, and developing a token architecture that
+                  unlocks multi-brand theming across the organisation.
                 </p>
                 <p>
-                  I&apos;ve had the privilege of working with some of the industry&apos;s leading
-                  brands, across multiple platforms and mobile applications.
+                  My role spans discovery through to delivery: prototyping,
+                  piloting, and creating high-fidelity POCs, then iterating to
+                  a confident level. I&apos;m a confident leader and mentor - I take
+                  great joy in improving my team&apos;s skill set and helping people
+                  level up.
+                </p>
+                <p>
+                  Before Ticketmaster, I&apos;ve had the privilege of working with
+                  some of the industry&apos;s leading brands across multiple platforms
+                  and mobile applications - from building design systems at ATG
+                  Tickets and Hargreaves Lansdown to product design at CMC Invest,
+                  Yell, and CX Partners.
                 </p>
                 <p className="text-swiss-muted">
                   My work has been recognised by Cardiff Design Festival, Glug Networking,
