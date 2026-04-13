@@ -2,52 +2,153 @@
 
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/data";
-import { Footer } from "@/components";
+import { Footer, DotPattern } from "@/components";
 
 const experience = [
   {
+    role: "Associate Director - Global Design Systems",
+    company: "Ticketmaster London",
+    period: "Mar 2024 - Present",
+    description:
+      "Scaling the Global Design System across 8 products and 2 verticals. Leading AI integration, token architecture, MCP documentation, and a contribution model with 20+ designers.",
+    skills: ["Design Systems", "Mentoring", "Team Leadership", "AI", "User Interface Design", "User-centered Design", "User Experience Design", "Creative Problem Solving", "Responsive Web Design"],
+  },
+  {
+    role: "Head of Digital / Principal Product Designer",
+    company: "ATG Tickets London (Ticketing/Ecom)",
+    period: "Aug 2022 - Jan 2024",
+    description:
+      "Built a multi-brand design system from the ground up - foundations, tokens, governance, and Git workflows to scale ATG's digital estate.",
+    skills: ["Team Leadership", "User Interface Design", "User-centered Design", "Service Design", "User Experience Design", "Design Systems", "Creative Problem Solving", "Responsive Web Design"],
+  },
+  {
+    role: "Principal Product Designer",
+    company: "CMC Invest London (Finance)",
+    period: "May 2022 - Aug 2022",
+    description:
+      "Product design for a finance platform, focusing on mobile design, design systems, and creative problem solving across iOS.",
+    skills: ["Team Leadership", "User Interface Design", "User Experience Design", "Mobile Design", "iOS", "Design Systems", "Creative Problem Solving"],
+  },
+  {
+    role: "Lead Product Designer",
+    company: "Yell (B2B)",
+    period: "Feb 2022 - May 2022",
+    description:
+      "Designed and tested new features for Yell's platform using lean research, systematic UI assets, and a reusable component approach across iOS, Android, and responsive web.",
+    skills: ["Team Leadership", "User Experience Design", "Mobile Design", "User Research", "iOS", "Design Systems", "Responsive Web Design"],
+  },
+  {
+    role: "Senior User Experience Consultant",
+    company: "CX Partners Bristol (Learning Platform)",
+    period: "Dec 2021 - Feb 2022",
+    description:
+      "Service design and UX consultancy for a learning platform, leading user research, user flows, and graphic design.",
+    skills: ["Team Leadership", "Service Design", "User Experience", "Graphic Design", "User-centered Design", "User Research", "User Flows"],
+  },
+  {
+    role: "Lead User Interface Designer",
+    company: "Hargreaves Lansdown Bristol (Finance)",
+    period: "Nov 2018 - Nov 2021",
+    description:
+      "Led the AEM migration and established a design system that brought consistency and reduced call centre volumes across all digital products.",
+    skills: ["Team Leadership", "User Interface Design", "User Experience Design", "Experience Design", "Design Systems", "Responsive Web Design"],
+  },
+  {
     role: "Senior Product Designer",
-    company: "Fintech Startup",
-    period: "2022 - Present",
+    company: "Parmenion Bristol (Finance)",
+    period: "Nov 2016 - Nov 2018",
     description:
-      "Leading design for a banking platform serving 2M+ users. Established design system and mentored junior designers.",
+      "Product design for a financial services platform, focusing on user experience, interaction design, and user research.",
+    skills: ["Team Leadership", "User Experience", "User Interface Design", "Interaction Design", "User Research"],
   },
   {
-    role: "Product Designer",
-    company: "Design Agency",
-    period: "2019 - 2022",
+    role: "User Experience & Digital Designer",
+    company: "Various Clients",
+    period: "2010 - 2016",
     description:
-      "Delivered end-to-end design solutions for clients including healthcare, e-commerce, and B2B SaaS companies.",
-  },
-  {
-    role: "UI/UX Designer",
-    company: "Tech Company",
-    period: "2017 - 2019",
-    description:
-      "Designed web and mobile applications. Collaborated closely with engineering teams to ship pixel-perfect implementations.",
+      "Start-ups, Nationwide Building Society, Expedia, SKY Sports, Booking.com, EA Sports, MySingleFriend, Muller, Sky Sports, Sky, ECCO, Nickelodeon, Hasbro Toys, Disney, UEFA, BBC, Comic Relief.",
+    skills: [],
   },
 ];
 
-const skills = [
-  "Product Strategy",
-  "User Research",
-  "Information Architecture",
-  "Interaction Design",
-  "Visual Design",
+const keySkills = [
+  "Product Design",
   "Design Systems",
-  "Prototyping",
-  "Front-end Development",
+  "Service Design",
+  "User-centred Design",
+  "Strategy",
+  "Team Leadership",
+  "Mentoring",
+  "Creative Problem Solving",
+  "Responsive Web Design",
+  "Native App Design",
+  "Building AI Workflows",
+  "Design System MCP",
+  "Custom Built Plugins for Figma",
 ];
 
 const tools = [
   "Figma",
-  "Protopie",
-  "Principle",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "Framer Motion",
+  "Sketch",
+  "Invision",
+  "Figma Tokens",
+  "MIRO",
+  "Axure",
+  "UXPin",
+  "Swift Prototyping in iOS",
+  "Git",
+  "HTML & CSS",
+  "Mentoring",
+  "Documenting",
+  "Notion",
+  "Confluence",
+  "JIRA",
+];
+
+const processes = [
+  "Design Thinking",
+  "Mental Models",
+  "Lean",
+  "Agile",
+  "Agile at Scale",
+  "Workshops",
+  "Interviewing",
+  "AB Testing",
+  "Remote Testing",
+];
+
+const brands = [
+  "Ticketmaster", "ATG Tickets", "Virgin Money", "Hargreaves Lansdown",
+  "Yell4Business", "Doctor Who", "Comic Relief", "Anchor", "Muller Cravendale",
+  "Guinness", "Sony", "SKY", "SKY Sports", "MySingleFriend",
+  "Expedia (Global)", "Nationwide Building Society", "Booking.com",
+  "EA Sports", "ECCO", "Nickelodeon", "Hasbro Toys", "Disney",
+  "UEFA", "BBC", "Bugatti", "CX Partners",
+];
+
+const favWork = [
+  { brand: "Ticketmaster", project: "Token Systems" },
+  { brand: "ATG Tickets", project: "Design System Set Up" },
+  { brand: "CX Partners", project: "Service Design" },
+  { brand: "Hargreaves Lansdown", project: "Design System" },
+  { brand: "Virgin Money", project: "iOS App" },
+  { brand: "Bugatti", project: "App Design" },
+  { brand: "BBC", project: "Doctor Who Games" },
+  { brand: "Cravendale", project: "Last Glass Online Version" },
+  { brand: "Muller Yogurts", project: "How Milk is Made" },
+  { brand: "Anchor Butter", project: "Make a Moooo" },
+  { brand: "Guinness", project: "Infinity Bar" },
+  { brand: "Comic Relief", project: "Donation iOS App" },
+  { brand: "Sky Sports", project: "Moments" },
+  { brand: "Expedia", project: "Responsive Conversion" },
+  { brand: "Nationwide", project: "Tablet Application" },
+];
+
+const recognition = [
+  "Cardiff Design Festival",
+  "Glug Networking",
+  "Teschan Books",
+  "World Travel Awards",
 ];
 
 export default function AboutPage() {
@@ -68,10 +169,10 @@ export default function AboutPage() {
                 <h1 className="text-display-xl mb-8">About</h1>
 
                 <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
-                  I&apos;m a designer and developer based in {siteConfig.location}, focused on
-                  creating digital products that are both{" "}
-                  <span className="text-swiss-white">beautiful</span> and{" "}
-                  <span className="text-swiss-white">functional</span>.
+                  I&apos;m a designer and developer based in {siteConfig.location}, passionate
+                  about technology, accessibility, design, and all things creative. I employ
+                  an out-of-the-box mindset to help clients fully leverage and reach their
+                  maximum potential.
                 </p>
               </motion.div>
             </div>
@@ -115,25 +216,23 @@ export default function AboutPage() {
             >
               <div className="space-y-6 text-body leading-relaxed">
                 <p>
-                  With over 7 years of experience in digital product design, I&apos;ve
-                  had the privilege of working with startups, agencies, and
-                  established companies to create meaningful digital experiences.
+                  My role is focused on translating ideas from the discovery and research
+                  phase right through to the delivery. The core stages I am involved in
+                  include discovery, prototyping, piloting, and creating high-fidelity
+                  POCs, then iterating to get an optimum and confident level.
                 </p>
                 <p>
-                  My approach is rooted in the principles of Swiss design-clarity,
-                  precision, and function. I believe that great design should feel
-                  invisible, serving the user without calling attention to itself.
+                  I am a confident leader and mentor. I take great joy in improving the
+                  team&apos;s skill set and helping people level up. Motivating and maintaining
+                  a healthy work environment is also key to the teams I manage.
                 </p>
                 <p>
-                  Beyond pixels, I&apos;m passionate about the intersection of design
-                  and engineering. I code to better understand constraints and
-                  possibilities, ensuring my designs are not just beautiful but
-                  buildable.
+                  I&apos;ve had the privilege of working with some of the industry&apos;s leading
+                  brands, across multiple platforms and mobile applications.
                 </p>
                 <p className="text-swiss-muted">
-                  When I&apos;m not designing, you&apos;ll find me exploring architecture,
-                  reading about design history, or experimenting with generative
-                  art.
+                  My work has been recognised by Cardiff Design Festival, Glug Networking,
+                  Teschan Books, and World Travel Awards.
                 </p>
               </div>
             </motion.div>
@@ -163,7 +262,7 @@ export default function AboutPage() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.05 }}
                     className="grid grid-cols-1 md:grid-cols-4 gap-4"
                   >
                     <div className="md:col-span-1">
@@ -176,9 +275,21 @@ export default function AboutPage() {
                       <span className="text-body text-swiss-yellow block mb-3">
                         {exp.company}
                       </span>
-                      <p className="text-body text-swiss-muted">
+                      <p className="text-body text-swiss-muted mb-3">
                         {exp.description}
                       </p>
+                      {exp.skills.length > 0 && (
+                        <div className="flex flex-wrap gap-2">
+                          {exp.skills.map((skill, i) => (
+                            <span
+                              key={i}
+                              className="text-micro px-2 py-1 border border-swiss-gray text-swiss-muted"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 ))}
@@ -188,7 +299,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Skills & Tools */}
+      {/* Skills, Tools & Process */}
       <section className="py-grid-6 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
@@ -204,18 +315,18 @@ export default function AboutPage() {
               </span>
             </motion.div>
 
-            <div className="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <h3 className="text-subheading mb-6">Capabilities</h3>
+                <h3 className="text-subheading mb-6">Key Skills</h3>
                 <ul className="space-y-3">
-                  {skills.map((skill, index) => (
+                  {keySkills.map((skill, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-swiss-yellow" />
+                      <span className="w-2 h-2 bg-swiss-yellow flex-shrink-0" />
                       <span className="text-body">{skill}</span>
                     </li>
                   ))}
@@ -232,13 +343,167 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {tools.map((tool, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-swiss-white" />
+                      <span className="w-2 h-2 bg-swiss-white flex-shrink-0" />
                       <span className="text-body">{tool}</span>
                     </li>
                   ))}
                 </ul>
               </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <h3 className="text-subheading mb-6">Process</h3>
+                <ul className="space-y-3">
+                  {processes.map((process, index) => (
+                    <li key={index} className="flex items-center gap-3">
+                      <span className="w-2 h-2 bg-swiss-gray flex-shrink-0" />
+                      <span className="text-body">{process}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Brands */}
+      <section className="py-grid-6 border-t border-swiss-gray">
+        <div className="grid-container">
+          <div className="grid grid-cols-12 gap-6">
+            <motion.div
+              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-caption text-swiss-muted">BRANDS</span>
+              <div className="mt-4">
+                <span className="text-number-sm text-swiss-yellow">{brands.length}+</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="col-span-12 lg:col-span-9"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="flex flex-wrap gap-3">
+                {brands.map((brand, index) => (
+                  <span
+                    key={index}
+                    className="text-small px-4 py-2 border border-swiss-gray text-swiss-white hover:border-swiss-yellow hover:text-swiss-yellow transition-colors"
+                  >
+                    {brand}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Favourite Work */}
+      <section className="py-grid-6 border-t border-swiss-gray">
+        <div className="grid-container">
+          <div className="grid grid-cols-12 gap-6">
+            <motion.div
+              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-caption text-swiss-muted">FAVOURITE WORK</span>
+            </motion.div>
+
+            <div className="col-span-12 lg:col-span-9">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {favWork.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-baseline gap-3"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.03 }}
+                  >
+                    <span className="text-body font-semibold">{item.brand}</span>
+                    <span className="text-small text-swiss-muted">- {item.project}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recognition */}
+      <section className="py-grid-4 border-t border-swiss-gray">
+        <div className="grid-container">
+          <div className="grid grid-cols-12 gap-6">
+            <motion.div
+              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-caption text-swiss-muted">RECOGNITION</span>
+            </motion.div>
+
+            <motion.div
+              className="col-span-12 lg:col-span-9"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="flex flex-wrap gap-6">
+                {recognition.map((item, index) => (
+                  <span key={index} className="text-body text-swiss-white">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* General Interests */}
+      <section className="py-grid-4 border-t border-swiss-gray">
+        <div className="grid-container">
+          <div className="grid grid-cols-12 gap-6">
+            <motion.div
+              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-caption text-swiss-muted">GENERAL</span>
+            </motion.div>
+
+            <motion.div
+              className="col-span-12 lg:col-span-9"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <p className="text-body text-swiss-muted leading-relaxed">
+                Cooking, surfing, gym, new technologies, eating, swimming, my lawn, my family,
+                cycling, meeting new people, travel, experimenting with Indian cooking, Lego!
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -287,10 +552,13 @@ export default function AboutPage() {
 
             {/* Geometric Element */}
             <div className="hidden lg:flex col-span-4 items-center justify-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="w-32 h-32 border-4 border-swiss-gray"
+              <DotPattern
+                rows={8}
+                cols={8}
+                dotSize={10}
+                gap={10}
+                circular={true}
+                className="text-swiss-yellow"
               />
             </div>
           </motion.div>
