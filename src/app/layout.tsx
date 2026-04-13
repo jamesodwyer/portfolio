@@ -4,10 +4,10 @@ import { Header } from "@/components/Header";
 import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — ${siteConfig.title}`,
+  title: `${siteConfig.name} - ${siteConfig.title}`,
   description: siteConfig.bio,
   openGraph: {
-    title: `${siteConfig.name} — ${siteConfig.title}`,
+    title: `${siteConfig.name} - ${siteConfig.title}`,
     description: siteConfig.bio,
     type: "website",
   },

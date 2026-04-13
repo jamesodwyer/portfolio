@@ -76,7 +76,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-6">
-              <span className="text-number text-swiss-yellow">4</span>
+              <span className="text-number text-swiss-yellow">{caseStudies.length}</span>
               <div>
                 <span className="text-caption text-swiss-muted block mb-2">SELECTED</span>
                 <span className="text-display">Case Studies</span>
@@ -120,7 +120,7 @@ export default function Home() {
                 and the products are not burdened with non-essentials. Back to purity,
                 back to simplicity.
               </p>
-              <span className="text-caption text-swiss-muted block mt-8">— DIETER RAMS</span>
+              <span className="text-caption text-swiss-muted block mt-8">- DIETER RAMS</span>
             </motion.div>
 
             {/* Geometric Element */}
@@ -159,7 +159,7 @@ export default function Home() {
             <h2 className="text-display-lg">
               Be Simple.
               <br />
-              Be Organized.
+              Be Organised.
               <br />
               Be Familiar.
             </h2>
@@ -176,7 +176,7 @@ export default function Home() {
               },
               {
                 number: "2",
-                title: "Be Organized",
+                title: "Be Organised",
                 subtitle: "Miller's Law",
                 description: "The average person can only keep 7 items in their working memory. Chunk information into digestible units.",
               },

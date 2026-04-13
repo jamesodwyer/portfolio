@@ -29,7 +29,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
               / {study.category.toUpperCase()} /
             </span>
           </div>
-          <span className="text-caption text-swiss-muted">{study.year}</span>
+          {study.year && <span className="text-caption text-swiss-muted">{study.year}</span>}
         </div>
 
         {/* Title */}
@@ -41,14 +41,14 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         <p className="text-body text-swiss-muted mb-10 leading-relaxed">{study.subtitle}</p>
 
         {/* Results Row */}
-        <div className="grid grid-cols-3 gap-6 pt-6 border-t border-swiss-gray">
+        <div className="grid grid-cols-3 gap-10 pt-8 border-t border-swiss-gray">
           {study.results.slice(0, 3).map((result, i) => (
             <div key={i}>
-              <span className="text-heading text-swiss-yellow block mb-2">
-                {result.value}
+              <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
+                {result.metric}
               </span>
-              <span className="text-micro text-swiss-muted">
-                {result.metric.toUpperCase()}
+              <span className="text-micro text-swiss-muted block leading-relaxed">
+                {result.value.toUpperCase()}
               </span>
             </div>
           ))}

@@ -6,17 +6,17 @@ import type { CaseStudy } from "@/lib/data";
 import { Footer } from "@/components";
 
 const colorMap = {
-  red: "bg-red-600",
-  blue: "bg-blue-600",
+  red: "bg-swiss-yellow",
+  blue: "bg-swiss-yellow",
   yellow: "bg-swiss-yellow",
-  black: "bg-swiss-black",
+  black: "bg-swiss-yellow",
 };
 
 const textColorMap = {
-  red: "text-red-500",
-  blue: "text-blue-500",
+  red: "text-swiss-yellow",
+  blue: "text-swiss-yellow",
   yellow: "text-swiss-yellow",
-  black: "text-swiss-white",
+  black: "text-swiss-yellow",
 };
 
 interface CaseStudyClientProps {
@@ -25,99 +25,105 @@ interface CaseStudyClientProps {
 }
 
 export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientProps) {
+  const gallery = study.gallery ?? [];
+  const hasImages = gallery.length > 0 || study.hero;
+
   return (
     <>
       {/* Hero Section */}
       <section className="min-h-[80vh] flex items-end pt-20 pb-grid-2">
         <div className="grid-container w-full">
-          <div className="grid grid-cols-12 gap-6">
-            {/* Back Link */}
-            <motion.div
-              className="col-span-12 mb-8"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+          {/* Back Link */}
+          <motion.div
+            className="mb-8"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link
+              href="/"
+              className="text-caption text-swiss-muted hover:text-swiss-white transition-colors inline-flex items-center gap-2"
             >
-              <Link
-                href="/"
-                className="text-caption text-swiss-muted hover:text-swiss-white transition-colors inline-flex items-center gap-2"
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M19 12H5M5 12L12 19M5 12L12 5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                BACK TO WORK
-              </Link>
-            </motion.div>
+                <path
+                  d="M19 12H5M5 12L12 19M5 12L12 5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              BACK TO WORK
+            </Link>
+          </motion.div>
 
-            {/* Title */}
-            <div className="col-span-12 lg:col-span-8">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-              >
-                <div className="bauhaus-line-red w-16 mb-8" style={{ backgroundColor: study.color === 'red' ? '#FF0000' : study.color === 'blue' ? '#0047FF' : study.color === 'yellow' ? '#FFCC00' : '#000000' }} />
+          {/* Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="max-w-4xl"
+          >
+            <div className="bauhaus-line-red w-16 mb-8" style={{ backgroundColor: '#FFE500' }} />
 
-                <span className="text-caption text-swiss-muted block mb-4">
-                  {study.category.toUpperCase()} — {study.year}
+            <span className="text-caption text-swiss-muted block mb-4">
+              {study.category.toUpperCase()}{study.year ? ` - ${study.year}` : ""}
+            </span>
+
+            <h1 className="text-display-xl mb-6">{study.title}</h1>
+
+            <p className="text-subheading text-swiss-muted max-w-2xl">
+              {study.subtitle}
+            </p>
+          </motion.div>
+
+          {/* Results Strip */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-3 gap-10 mt-16 pt-8 border-t border-swiss-gray"
+          >
+            {study.results.map((result, index) => (
+              <div key={index}>
+                <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
+                  {result.metric}
                 </span>
-
-                <h1 className="text-display-xl mb-6">{study.title}</h1>
-
-                <p className="text-subheading text-swiss-muted max-w-2xl">
-                  {study.subtitle}
-                </p>
-              </motion.div>
-            </div>
-
-            {/* Results Preview */}
-            <div className="col-span-12 lg:col-span-4 lg:flex lg:items-end">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="grid grid-cols-3 lg:grid-cols-1 gap-6"
-              >
-                {study.results.map((result, index) => (
-                  <div key={index}>
-                    <span className={`text-display ${textColorMap[study.color]}`}>
-                      {result.value}
-                    </span>
-                    <span className="text-caption text-swiss-muted block mt-1">
-                      {result.metric.toUpperCase()}
-                    </span>
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-          </div>
+                <span className="text-micro text-swiss-muted block leading-relaxed">
+                  {result.value.toUpperCase()}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* Hero Image Placeholder */}
+      {/* Hero Image */}
       <section className="py-grid">
         <div className="grid-container">
           <motion.div
-            className={`aspect-[21/9] ${colorMap[study.color]} relative overflow-hidden`}
+            className={`${hasImages ? "aspect-video" : "aspect-[21/9]"} ${colorMap[study.color]} relative overflow-hidden`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-64 h-64 border-8 border-white/20 rounded-full" />
-              <div className="absolute w-32 h-32 bg-white/10" />
-            </div>
+            {study.hero ? (
+              <img
+                src={study.hero}
+                alt={study.title}
+                className="absolute inset-0 w-full h-full object-contain bg-zinc-950"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-64 h-64 border-8 border-white/20 rounded-full" />
+                <div className="absolute w-32 h-32 bg-white/10" />
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
@@ -185,11 +191,53 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <p className="text-heading leading-relaxed">{study.challenge}</p>
+              {(() => {
+                const sentences = study.challenge.match(/[^.!?]+[.!?]+/g) || [study.challenge];
+                const lead = sentences[0].trim();
+                const rest = sentences.slice(1).map(s => s.trim()).filter(Boolean);
+                return (
+                  <>
+                    <p className="text-heading leading-relaxed mb-10">{lead}</p>
+                    {rest.length > 0 && (
+                      <div className="space-y-6">
+                        {rest.map((sentence, i) => (
+                          <p key={i} className="text-body text-swiss-muted leading-relaxed">{sentence}</p>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* Gallery - between Challenge and Process (first pair) */}
+      {gallery.length >= 2 && (
+        <section className="py-grid">
+          <div className="grid-container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {gallery.slice(0, 2).map((img, index) => (
+                <motion.div
+                  key={index}
+                  className="aspect-video relative overflow-hidden bg-zinc-950"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <img
+                    src={img}
+                    alt={`${study.title} - detail ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Process Section */}
       <section className="py-grid-5 border-t border-swiss-gray">
@@ -228,6 +276,53 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </div>
       </section>
 
+      {/* Gallery - between Process and Solution (middle pair) */}
+      {gallery.length >= 4 && (
+        <section className="py-grid">
+          <div className="grid-container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {gallery.slice(2, 4).map((img, index) => (
+                <motion.div
+                  key={index}
+                  className="aspect-video relative overflow-hidden bg-zinc-950"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <img
+                    src={img}
+                    alt={`${study.title} - detail ${index + 3}`}
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Full-width gallery image (5th image) */}
+      {gallery.length >= 5 && (
+        <section className="py-grid">
+          <div className="grid-container">
+            <motion.div
+              className="aspect-video relative overflow-hidden bg-zinc-950"
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <img
+                src={gallery[4]}
+                alt={`${study.title} - detail 5`}
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Solution Section */}
       <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
@@ -249,33 +344,83 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <p className="text-heading leading-relaxed">{study.solution}</p>
+              {(() => {
+                const sentences = study.solution.match(/[^.!?]+[.!?]+/g) || [study.solution];
+                const lead = sentences[0].trim();
+                const rest = sentences.slice(1).map(s => s.trim()).filter(Boolean);
+                return (
+                  <>
+                    <p className="text-heading leading-relaxed mb-10">{lead}</p>
+                    {rest.length > 0 && (
+                      <div className="space-y-6">
+                        {rest.map((sentence, i) => (
+                          <p key={i} className="text-body text-swiss-muted leading-relaxed">{sentence}</p>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Solution Image Placeholder */}
-      <section className="py-grid">
-        <div className="grid-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              className={`aspect-[4/3] ${colorMap[study.color]} opacity-80`}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 0.8, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            />
-            <motion.div
-              className="aspect-[4/3] bg-zinc-800"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            />
+      {/* Gallery - after Solution (remaining images) */}
+      {gallery.length >= 6 && (
+        <section className="py-grid">
+          <div className="grid-container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {gallery.slice(5).map((img, index) => {
+                const remaining = gallery.slice(5);
+                const isLastOdd = remaining.length % 2 !== 0 && index === remaining.length - 1;
+                return (
+                  <motion.div
+                    key={index}
+                    className={`aspect-video relative overflow-hidden bg-zinc-950 ${
+                      isLastOdd ? "md:col-span-2" : ""
+                    }`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <img
+                      src={img}
+                      alt={`${study.title} - detail ${index + 6}`}
+                      className="absolute inset-0 w-full h-full object-contain"
+                    />
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {/* Fallback placeholders when no gallery images */}
+      {gallery.length === 0 && (
+        <section className="py-grid">
+          <div className="grid-container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                className={`aspect-[4/3] ${colorMap[study.color]} opacity-80`}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 0.8, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              />
+              <motion.div
+                className="aspect-[4/3] bg-zinc-800"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Learnings Section */}
       <section className="py-grid-5 border-t border-swiss-gray">

@@ -8,21 +8,21 @@ const experience = [
   {
     role: "Senior Product Designer",
     company: "Fintech Startup",
-    period: "2022 — Present",
+    period: "2022 - Present",
     description:
       "Leading design for a banking platform serving 2M+ users. Established design system and mentored junior designers.",
   },
   {
     role: "Product Designer",
     company: "Design Agency",
-    period: "2019 — 2022",
+    period: "2019 - 2022",
     description:
       "Delivered end-to-end design solutions for clients including healthcare, e-commerce, and B2B SaaS companies.",
   },
   {
     role: "UI/UX Designer",
     company: "Tech Company",
-    period: "2017 — 2019",
+    period: "2017 - 2019",
     description:
       "Designed web and mobile applications. Collaborated closely with engineering teams to ship pixel-perfect implementations.",
   },
@@ -120,7 +120,7 @@ export default function AboutPage() {
                   established companies to create meaningful digital experiences.
                 </p>
                 <p>
-                  My approach is rooted in the principles of Swiss design—clarity,
+                  My approach is rooted in the principles of Swiss design-clarity,
                   precision, and function. I believe that great design should feel
                   invisible, serving the user without calling attention to itself.
                 </p>

@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2824 1608" width="2824" height="1608">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="2824" height="1608" fill="url(#bg)"/>
+
+  <!-- Pipeline visualization - 11 stages flowing left to right -->
+
+  <!-- Stage labels along top -->
+  <text x="1412" y="100" fill="#333333" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle" letter-spacing="6">11-STAGE COMPONENT PIPELINE</text>
+
+  <!-- Pipeline flow -->
+  <rect x="100" y="180" width="2624" height="4" fill="#1a1a1a"/>
+
+  <!-- Stage nodes -->
+  <g>
+    <!-- Stage 1: Request -->
+    <circle cx="220" cy="182" r="24" fill="#FFE500"/>
+    <text x="220" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">1</text>
+    <text x="220" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Request</text>
+
+    <!-- Stage 2 -->
+    <circle cx="460" cy="182" r="24" fill="#FFE500"/>
+    <text x="460" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">2</text>
+    <text x="460" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Research</text>
+
+    <!-- Stage 3 -->
+    <circle cx="700" cy="182" r="24" fill="#FFE500"/>
+    <text x="700" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">3</text>
+    <text x="700" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Stress Test</text>
+
+    <!-- Stage 4 -->
+    <circle cx="940" cy="182" r="24" fill="#FFE500" opacity="0.7"/>
+    <text x="940" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">4</text>
+    <text x="940" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Eng Check</text>
+
+    <!-- Stage 5 -->
+    <circle cx="1180" cy="182" r="24" fill="#FFE500" opacity="0.7"/>
+    <text x="1180" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">5</text>
+    <text x="1180" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Design</text>
+
+    <!-- Stage 6 -->
+    <circle cx="1420" cy="182" r="24" fill="#FFE500" opacity="0.5"/>
+    <text x="1420" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">6</text>
+    <text x="1420" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Review</text>
+
+    <!-- Stage 7 -->
+    <circle cx="1660" cy="182" r="24" fill="#FFE500" opacity="0.5"/>
+    <text x="1660" y="190" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">7</text>
+    <text x="1660" y="230" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Decision</text>
+
+    <!-- Stage 8 -->
+    <circle cx="1900" cy="182" r="24" fill="#333333"/>
+    <text x="1900" y="190" fill="#888888" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">8</text>
+    <text x="1900" y="230" fill="#666666" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Tokens</text>
+
+    <!-- Stage 9 -->
+    <circle cx="2140" cy="182" r="24" fill="#333333"/>
+    <text x="2140" y="190" fill="#888888" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">9</text>
+    <text x="2140" y="230" fill="#666666" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Docs</text>
+
+    <!-- Stage 10 -->
+    <circle cx="2380" cy="182" r="24" fill="#333333"/>
+    <text x="2380" y="190" fill="#888888" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">10</text>
+    <text x="2380" y="230" fill="#666666" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Publish</text>
+
+    <!-- Stage 11 -->
+    <circle cx="2620" cy="182" r="24" fill="#333333"/>
+    <text x="2620" y="190" fill="#888888" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">11</text>
+    <text x="2620" y="230" fill="#666666" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">MCP</text>
+  </g>
+
+  <!-- Active items in pipeline -->
+  <text x="200" y="320" fill="#FFE500" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" letter-spacing="4">ACTIVE PIPELINE</text>
+
+  <!-- Pipeline items as horizontal bars -->
+  <g transform="translate(200,350)">
+    <!-- Bottom Sheet - Stage 6 -->
+    <rect x="0" y="0" width="1320" height="44" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="0" width="1320" height="44" rx="6" fill="#FFE500" opacity="0.08"/>
+    <rect x="0" y="0" width="720" height="44" rx="6" fill="#FFE500" opacity="0.15"/>
+    <text x="20" y="28" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Bottom Sheet</text>
+    <text x="1300" y="28" fill="#888888" font-family="system-ui, sans-serif" font-size="16" text-anchor="end">Stage 6</text>
+
+    <!-- Chip - Stage 6 -->
+    <rect x="0" y="60" width="1320" height="44" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="60" width="720" height="44" rx="6" fill="#FFE500" opacity="0.15"/>
+    <text x="20" y="88" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Chip</text>
+    <text x="1300" y="88" fill="#888888" font-family="system-ui, sans-serif" font-size="16" text-anchor="end">Stage 6</text>
+
+    <!-- Filters - Stage 5 -->
+    <rect x="0" y="120" width="1320" height="44" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="120" width="600" height="44" rx="6" fill="#FFE500" opacity="0.15"/>
+    <text x="20" y="148" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Filters</text>
+    <text x="1300" y="148" fill="#888888" font-family="system-ui, sans-serif" font-size="16" text-anchor="end">Stage 5</text>
+
+    <!-- Selectable Card - Stage 5 -->
+    <rect x="0" y="180" width="1320" height="44" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="180" width="600" height="44" rx="6" fill="#FFE500" opacity="0.15"/>
+    <text x="20" y="208" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Selectable Card</text>
+    <text x="1300" y="208" fill="#888888" font-family="system-ui, sans-serif" font-size="16" text-anchor="end">Stage 5</text>
+
+    <!-- Icon Revamp - Stage 8 -->
+    <rect x="0" y="240" width="1320" height="44" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="240" width="960" height="44" rx="6" fill="#FFE500" opacity="0.15"/>
+    <text x="20" y="268" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Icon Library Revamp</text>
+    <text x="1300" y="268" fill="#888888" font-family="system-ui, sans-serif" font-size="16" text-anchor="end">Stage 8</text>
+
+    <!-- Toggle Button - Stage 2 -->
+    <rect x="0" y="300" width="1320" height="44" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <rect x="0" y="300" width="240" height="44" rx="6" fill="#FFE500" opacity="0.15"/>
+    <text x="20" y="328" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Toggle Button</text>
+    <text x="1300" y="328" fill="#888888" font-family="system-ui, sans-serif" font-size="16" text-anchor="end">Stage 2</text>
+  </g>
+
+  <!-- Right side: Product verticals -->
+  <g transform="translate(1680,350)">
+    <text x="0" y="-30" fill="#FFE500" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" letter-spacing="4">PRODUCTS</text>
+
+    <!-- Marketplace -->
+    <rect x="0" y="0" width="940" height="160" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
+    <text x="30" y="36" fill="#FFE500" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">MARKETPLACE</text>
+
+    <rect x="30" y="56" width="160" height="32" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <text x="110" y="78" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Discovery</text>
+
+    <rect x="210" y="56" width="140" height="32" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <text x="280" y="78" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">SmartQ</text>
+
+    <rect x="370" y="56" width="120" height="32" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <text x="430" y="78" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">EDP</text>
+
+    <rect x="510" y="56" width="160" height="32" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <text x="590" y="78" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Checkout</text>
+
+    <rect x="690" y="56" width="220" height="32" rx="6" fill="#1a1a1a" stroke="#333333" stroke-width="1"/>
+    <text x="800" y="78" fill="#888888" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Ancillary Revenue</text>
+
+    <text x="470" y="130" fill="#666666" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">5 sub-products · 15+ designers</text>
+
+    <!-- Sports -->
+    <rect x="0" y="184" width="940" height="160" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
+    <text x="30" y="220" fill="#FFE500" font-family="system-ui, sans-serif" font-size="20" font-weight="bold">SPORTS</text>
+
+    <rect x="30" y="240" width="120" height="32" rx="6" fill="#1a1a1a" stroke="#FFE500" stroke-width="1"/>
+    <text x="90" y="262" fill="#FFE500" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">XR</text>
+
+    <rect x="170" y="240" width="120" height="32" rx="6" fill="#1a1a1a" stroke="#FFE500" stroke-width="1"/>
+    <text x="230" y="262" fill="#FFE500" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">XT</text>
+
+    <rect x="310" y="240" width="200" height="32" rx="6" fill="#1a1a1a" stroke="#FFE500" stroke-width="1"/>
+    <text x="410" y="262" fill="#FFE500" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Tournaments</text>
+
+    <text x="470" y="316" fill="#666666" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">3 sub-products · Onboarding to GDS v2</text>
+  </g>
+
+  <!-- Stats bar at bottom -->
+  <rect x="200" y="1080" width="2424" height="2" fill="#333333"/>
+
+  <g transform="translate(200,1120)">
+    <text x="0" y="30" fill="#FFE500" font-family="system-ui, sans-serif" font-size="48" font-weight="900">50+</text>
+    <text x="0" y="56" fill="#666666" font-family="system-ui, sans-serif" font-size="16">Components</text>
+
+    <text x="300" y="30" fill="#FFE500" font-family="system-ui, sans-serif" font-size="48" font-weight="900">8</text>
+    <text x="300" y="56" fill="#666666" font-family="system-ui, sans-serif" font-size="16">Products</text>
+
+    <text x="520" y="30" fill="#FFE500" font-family="system-ui, sans-serif" font-size="48" font-weight="900">20+</text>
+    <text x="520" y="56" fill="#666666" font-family="system-ui, sans-serif" font-size="16">Contributors</text>
+
+    <text x="820" y="30" fill="#FFE500" font-family="system-ui, sans-serif" font-size="48" font-weight="900">11</text>
+    <text x="820" y="56" fill="#666666" font-family="system-ui, sans-serif" font-size="16">Pipeline Stages</text>
+
+    <text x="1100" y="30" fill="#FFE500" font-family="system-ui, sans-serif" font-size="48" font-weight="900">77d</text>
+    <text x="1100" y="56" fill="#666666" font-family="system-ui, sans-serif" font-size="16">Avg Cycle Time</text>
+  </g>
+</svg>

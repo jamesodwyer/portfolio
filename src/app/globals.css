@@ -10,7 +10,7 @@
   --color-swiss-yellow: #FFE500;
   --color-swiss-gray: #888888;
   --color-swiss-dark-gray: #333333;
-  --color-swiss-muted: #666666;
+  --color-swiss-muted: #999999;
 
   /* Typography Scale - Bold Helvetica-style */
   --font-display-hero: clamp(4rem, 15vw, 12rem);
