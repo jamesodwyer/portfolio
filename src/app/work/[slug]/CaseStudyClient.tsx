@@ -116,7 +116,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         <div className="grid-container">
           <motion.div
             ref={heroRef}
-            className={`${hasImages ? "aspect-video" : "aspect-[21/9]"} ${colorMap[study.color]} relative overflow-hidden`}
+            className={`${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -125,7 +125,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               <motion.img
                 src={study.hero}
                 alt={study.title}
-                className="absolute inset-0 w-full h-full object-cover bg-zinc-950"
+                className="absolute inset-0 w-full h-full object-cover"
                 style={{ y: heroY, scale: 1.15 }}
               />
             ) : (
