@@ -6,149 +6,125 @@ import { Footer, DotPattern } from "@/components";
 
 const experience = [
   {
-    role: "Associate Director - Global Design Systems",
-    company: "Ticketmaster London",
-    period: "Mar 2024 - Present",
-    description:
-      "Scaling the Global Design System across 8 products and 2 verticals. Leading AI integration, token architecture, MCP documentation, and a contribution model with 20+ designers.",
-    skills: ["Design Systems", "Mentoring", "Team Leadership", "AI", "User Interface Design", "User-centered Design", "User Experience Design", "Creative Problem Solving", "Responsive Web Design"],
+    role: "Associate Director – Global Design Systems",
+    company: "Ticketmaster, London",
+    period: "Mar 2024 – Present",
+    bullets: [
+      "Own and scale a global design system across 8 products and multiple business verticals",
+      "Established a federated contribution model enabling 20+ designers to contribute to a single governed system",
+      "Defined and implemented token architecture supporting multi-brand theming across platforms",
+      "Introduced AI-driven design workflows (MCP, Claude, Figma Make) to accelerate component delivery and reduce manual effort",
+      "Improved cross-team consistency and reduced duplication across product teams",
+      "Partner with product and engineering leadership to align design strategy with delivery outcomes",
+      "Mentor and develop designers, raising overall design maturity across teams",
+    ],
   },
   {
     role: "Head of Digital / Principal Product Designer",
-    company: "ATG Tickets London (Ticketing/Ecom)",
-    period: "Aug 2022 - Jan 2024",
-    description:
-      "Built a multi-brand design system from the ground up - foundations, tokens, governance, and Git workflows to scale ATG's digital estate.",
-    skills: ["Team Leadership", "User Interface Design", "User-centered Design", "Service Design", "User Experience Design", "Design Systems", "Creative Problem Solving", "Responsive Web Design"],
+    company: "ATG Tickets, London (Ticketing / Ecom)",
+    period: "Aug 2022 – Jan 2024",
+    bullets: [
+      "Led digital product design across web and mobile platforms for a global ticketing business",
+      "Established and rolled out a design system to improve consistency and delivery speed",
+      "Defined UX strategy across key customer journeys, improving usability and conversion",
+      "Built and led design capability, introducing scalable ways of working across teams",
+      "Collaborated with senior stakeholders to align design with commercial objectives",
+    ],
   },
   {
     role: "Principal Product Designer",
-    company: "CMC Invest London (Finance)",
-    period: "May 2022 - Aug 2022",
-    description:
-      "Product design for a finance platform, focusing on mobile design, design systems, and creative problem solving across iOS.",
-    skills: ["Team Leadership", "User Interface Design", "User Experience Design", "Mobile Design", "iOS", "Design Systems", "Creative Problem Solving"],
+    company: "CMC Invest, London (Finance)",
+    period: "May 2022 – Aug 2022",
+    bullets: [
+      "Led product design for mobile-first investment platform",
+      "Delivered high-quality UX/UI across complex financial workflows",
+      "Partnered with product and engineering to deliver scalable design solutions",
+      "Introduced design system thinking to improve consistency across the platform",
+    ],
   },
   {
     role: "Lead Product Designer",
     company: "Yell (B2B)",
-    period: "Feb 2022 - May 2022",
-    description:
-      "Designed and tested new features for Yell's platform using lean research, systematic UI assets, and a reusable component approach across iOS, Android, and responsive web.",
-    skills: ["Team Leadership", "User Experience Design", "Mobile Design", "User Research", "iOS", "Design Systems", "Responsive Web Design"],
+    period: "Feb 2022 – May 2022",
+    bullets: [
+      "Led UX and product design across B2B digital products",
+      "Delivered mobile and responsive experiences for SME customers",
+      "Introduced structured design processes and improved research practices",
+      "Contributed to design system development and scalable UI patterns",
+    ],
   },
   {
     role: "Senior User Experience Consultant",
-    company: "CX Partners Bristol (Learning Platform)",
-    period: "Dec 2021 - Feb 2022",
-    description:
-      "Service design and UX consultancy for a learning platform, leading user research, user flows, and graphic design.",
-    skills: ["Team Leadership", "Service Design", "User Experience", "Graphic Design", "User-centered Design", "User Research", "User Flows"],
+    company: "CX Partners, Bristol (Learning Platform)",
+    period: "Dec 2021 – Feb 2022",
+    bullets: [
+      "Delivered service design and UX strategy for large-scale digital platforms",
+      "Led user research and defined user journeys across complex systems",
+      "Facilitated workshops and stakeholder alignment sessions",
+      "Produced end-to-end UX deliverables from discovery through to delivery",
+    ],
   },
   {
     role: "Lead User Interface Designer",
-    company: "Hargreaves Lansdown Bristol (Finance)",
-    period: "Nov 2018 - Nov 2021",
-    description:
-      "Led the AEM migration and established a design system that brought consistency and reduced call centre volumes across all digital products.",
-    skills: ["Team Leadership", "User Interface Design", "User Experience Design", "Experience Design", "Design Systems", "Responsive Web Design"],
+    company: "Hargreaves Lansdown, Bristol (Finance)",
+    period: "Nov 2018 – Nov 2021",
+    bullets: [
+      "Led UI design across web platforms for a leading financial services provider",
+      "Contributed to and evolved the organisation\u2019s design system",
+      "Delivered responsive, accessible interfaces across multiple products",
+      "Worked closely with engineering teams to ensure high-quality implementation",
+    ],
   },
   {
     role: "Senior Product Designer",
-    company: "Parmenion Bristol (Finance)",
-    period: "Nov 2016 - Nov 2018",
-    description:
-      "Product design for a financial services platform, focusing on user experience, interaction design, and user research.",
-    skills: ["Team Leadership", "User Experience", "User Interface Design", "Interaction Design", "User Research"],
+    company: "Parmenion, Bristol (Finance)",
+    period: "Nov 2016 – Nov 2018",
+    bullets: [
+      "Delivered UX and UI design across financial platforms",
+      "Led interaction design and user research initiatives",
+      "Collaborated with cross-functional teams to deliver product improvements",
+    ],
   },
   {
     role: "User Experience & Digital Designer",
     company: "Various Clients",
-    period: "2010 - 2016",
-    description:
-      "Start-ups, Nationwide Building Society, Expedia, SKY Sports, Booking.com, EA Sports, MySingleFriend, Muller, Sky Sports, Sky, ECCO, Nickelodeon, Hasbro Toys, Disney, UEFA, BBC, Comic Relief.",
-    skills: [],
+    period: "2010 – 2016",
+    bullets: [
+      "Delivered UX and digital design across major brands including BBC, Sky, UEFA, Disney, and Expedia",
+      "Worked across multiple industries including media, sports, finance, and e-commerce",
+      "Led design delivery across web, mobile, and emerging platforms",
+      "Established early design system thinking across client projects",
+    ],
   },
 ];
 
-const keySkills = [
-  "Product Design",
-  "Design Systems",
-  "Service Design",
-  "User-centred Design",
-  "Strategy",
-  "Team Leadership",
-  "Mentoring",
-  "Creative Problem Solving",
-  "Responsive Web Design",
-  "Native App Design",
-  "Building AI Workflows",
-  "Design System MCP",
-  "Custom Built Plugins for Figma",
+const coreSkills = [
+  "Design Systems Strategy & Ownership",
+  "AI-Driven Design Workflows (MCP, Claude, Figma Make)",
+  "Design Operations & Governance",
+  "Token Architecture (Core, Semantic, Component)",
+  "Multi-Brand & Theming Systems",
+  "Federated Contribution Models",
+  "Cross-Functional Leadership (Design, Product, Engineering)",
+  "Product Design Leadership (Enterprise / Multi-Product)",
+  "End-to-End Product Design (Discovery \u2192 Delivery)",
+  "Scalable Component & Pattern Libraries",
+  "Design System Automation & Documentation",
+  "Figma, Token Studio & Front-End Collaboration",
 ];
 
 const tools = [
   "Figma",
-  "Sketch",
-  "Invision",
-  "Figma Tokens",
-  "MIRO",
-  "Axure",
-  "UXPin",
-  "Swift Prototyping in iOS",
+  "Token Studio",
+  "Storybook",
+  "React collaboration",
+  "HTML/CSS",
   "Git",
-  "HTML & CSS",
-  "Mentoring",
-  "Documenting",
+  "Miro",
   "Notion",
+  "Jira",
   "Confluence",
-  "JIRA",
-];
-
-const processes = [
-  "Design Thinking",
-  "Mental Models",
-  "Lean",
-  "Agile",
-  "Agile at Scale",
-  "Workshops",
-  "Interviewing",
-  "AB Testing",
-  "Remote Testing",
-];
-
-const brands = [
-  "Ticketmaster", "ATG Tickets", "Virgin Money", "Hargreaves Lansdown",
-  "Yell4Business", "Doctor Who", "Comic Relief", "Anchor", "Muller Cravendale",
-  "Guinness", "Sony", "SKY", "SKY Sports", "MySingleFriend",
-  "Expedia (Global)", "Nationwide Building Society", "Booking.com",
-  "EA Sports", "ECCO", "Nickelodeon", "Hasbro Toys", "Disney",
-  "UEFA", "BBC", "Bugatti", "CX Partners",
-];
-
-const favWork = [
-  { brand: "Ticketmaster", project: "Token Systems" },
-  { brand: "ATG Tickets", project: "Design System Set Up" },
-  { brand: "CX Partners", project: "Service Design" },
-  { brand: "Hargreaves Lansdown", project: "Design System" },
-  { brand: "Virgin Money", project: "iOS App" },
-  { brand: "Bugatti", project: "App Design" },
-  { brand: "BBC", project: "Doctor Who Games" },
-  { brand: "Cravendale", project: "Last Glass Online Version" },
-  { brand: "Muller Yogurts", project: "How Milk is Made" },
-  { brand: "Anchor Butter", project: "Make a Moooo" },
-  { brand: "Guinness", project: "Infinity Bar" },
-  { brand: "Comic Relief", project: "Donation iOS App" },
-  { brand: "Sky Sports", project: "Moments" },
-  { brand: "Expedia", project: "Responsive Conversion" },
-  { brand: "Nationwide", project: "Tablet Application" },
-];
-
-const recognition = [
-  "Cardiff Design Festival",
-  "Glug Networking",
-  "Teschan Books",
-  "World Travel Awards",
+  "AI tooling (Claude, MCP)",
 ];
 
 export default function AboutPage() {
@@ -291,21 +267,14 @@ export default function AboutPage() {
                       <span className="text-body text-swiss-yellow block mb-3">
                         {exp.company}
                       </span>
-                      <p className="text-body text-swiss-muted mb-3">
-                        {exp.description}
-                      </p>
-                      {exp.skills.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                          {exp.skills.map((skill, i) => (
-                            <span
-                              key={i}
-                              className="text-micro px-2 py-1 border border-swiss-gray text-swiss-muted"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                      <ul className="space-y-2">
+                        {exp.bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="w-1.5 h-1.5 bg-swiss-muted rounded-full mt-2 flex-shrink-0" />
+                            <span className="text-body text-swiss-muted">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </motion.div>
                 ))}
@@ -315,7 +284,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Skills, Tools & Process */}
+      {/* Core Skills & Tools */}
       <section className="py-grid-6 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
@@ -331,16 +300,16 @@ export default function AboutPage() {
               </span>
             </motion.div>
 
-            <div className="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="col-span-12 lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <h3 className="text-subheading mb-6">Key Skills</h3>
+                <h3 className="text-subheading mb-6">Core Skills</h3>
                 <ul className="space-y-3">
-                  {keySkills.map((skill, index) => (
+                  {coreSkills.map((skill, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-swiss-yellow flex-shrink-0" />
                       <span className="text-body">{skill}</span>
@@ -355,7 +324,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h3 className="text-subheading mb-6">Tools</h3>
+                <h3 className="text-subheading mb-6">Tools & Technology</h3>
                 <ul className="space-y-3">
                   {tools.map((tool, index) => (
                     <li key={index} className="flex items-center gap-3">
@@ -365,161 +334,7 @@ export default function AboutPage() {
                   ))}
                 </ul>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <h3 className="text-subheading mb-6">Process</h3>
-                <ul className="space-y-3">
-                  {processes.map((process, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-swiss-gray flex-shrink-0" />
-                      <span className="text-body">{process}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Brands */}
-      <section className="py-grid-6 border-t border-swiss-gray">
-        <div className="grid-container">
-          <div className="grid grid-cols-12 gap-6">
-            <motion.div
-              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-caption text-swiss-muted">BRANDS</span>
-              <div className="mt-4">
-                <span className="text-number-sm text-swiss-yellow">{brands.length}+</span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="col-span-12 lg:col-span-9"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="flex flex-wrap gap-3">
-                {brands.map((brand, index) => (
-                  <span
-                    key={index}
-                    className="text-small px-4 py-2 border border-swiss-gray text-swiss-white hover:border-swiss-yellow hover:text-swiss-yellow transition-colors"
-                  >
-                    {brand}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Favourite Work */}
-      <section className="py-grid-6 border-t border-swiss-gray">
-        <div className="grid-container">
-          <div className="grid grid-cols-12 gap-6">
-            <motion.div
-              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-caption text-swiss-muted">FAVOURITE WORK</span>
-            </motion.div>
-
-            <div className="col-span-12 lg:col-span-9">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {favWork.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-baseline gap-3"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.03 }}
-                  >
-                    <span className="text-body font-semibold">{item.brand}</span>
-                    <span className="text-small text-swiss-muted">- {item.project}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognition */}
-      <section className="py-grid-4 border-t border-swiss-gray">
-        <div className="grid-container">
-          <div className="grid grid-cols-12 gap-6">
-            <motion.div
-              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-caption text-swiss-muted">RECOGNITION</span>
-            </motion.div>
-
-            <motion.div
-              className="col-span-12 lg:col-span-9"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="flex flex-wrap gap-6">
-                {recognition.map((item, index) => (
-                  <span key={index} className="text-body text-swiss-white">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* General Interests */}
-      <section className="py-grid-4 border-t border-swiss-gray">
-        <div className="grid-container">
-          <div className="grid grid-cols-12 gap-6">
-            <motion.div
-              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-caption text-swiss-muted">GENERAL</span>
-            </motion.div>
-
-            <motion.div
-              className="col-span-12 lg:col-span-9"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <p className="text-body text-swiss-muted leading-relaxed">
-                Cooking, surfing, gym, new technologies, eating, swimming, my lawn, my family,
-                cycling, meeting new people, travel, experimenting with Indian cooking, Lego!
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
