@@ -398,29 +398,6 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </section>
       )}
 
-      {/* Fallback placeholders when no gallery images */}
-      {gallery.length === 0 && (
-        <section className="py-grid">
-          <div className="grid-container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                className={`aspect-[4/3] ${colorMap[study.color]} opacity-80`}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 0.8, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              />
-              <motion.div
-                className="aspect-[4/3] bg-zinc-800"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              />
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Learnings Section */}
       <section className="py-grid-5 border-t border-swiss-gray">

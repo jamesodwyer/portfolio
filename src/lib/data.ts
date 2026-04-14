@@ -36,7 +36,7 @@ export const caseStudies: CaseStudy[] = [
     year: "",
     color: "blue",
     thumbnail: "/images/ticketmaster-gds/thumb.svg",
-    hero: "/images/ticketmaster-gds/hero.svg",
+    hero: "/images/ticketmaster-gds/hero.png",
     overview: {
       role: "Associate Director, Product Design",
       timeline: "18 months (ongoing)",
@@ -89,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
     year: "",
     color: "black",
     thumbnail: "/images/gds-mcp/thumb.svg",
-    hero: "/images/gds-mcp/hero.svg",
+    hero: "/images/gds-mcp/hero.png",
     overview: {
       role: "Associate Director, Product Design",
       timeline: "6 months (ongoing)",
@@ -142,7 +142,7 @@ export const caseStudies: CaseStudy[] = [
     year: "",
     color: "yellow",
     thumbnail: "/images/token-migration/thumb.svg",
-    hero: "/images/token-migration/hero.svg",
+    hero: "/images/token-migration/hero.png",
     overview: {
       role: "Associate Director, Product Design",
       timeline: "3 months",
