@@ -216,37 +216,39 @@ export default function AboutPage() {
             >
               <div className="space-y-6 text-body leading-relaxed">
                 <p>
-                  I&apos;m an Associate Director at Ticketmaster, where I own the Global
-                  Design System serving 8 products across two verticals. With one
-                  dedicated designer, I&apos;ve built a contribution model that lets 20+
-                  designers across product teams feed components back into a single,
-                  governed system - turning what could be a bottleneck into
-                  self-sustaining infrastructure.
+                  Associate Director of Design Systems at Ticketmaster, responsible
+                  for defining and scaling a global design system across eight products
+                  and multiple business verticals. I lead the intersection of product,
+                  design, and engineering, building systems and operating models that
+                  improve speed, consistency, and measurable delivery outcomes at scale.
                 </p>
                 <p>
-                  More recently, I&apos;ve been pioneering AI-powered design operations -
-                  building MCP servers that make our design system queryable by AI
-                  tools, creating executable workflows that let designers ship
-                  components independently, and developing a token architecture that
-                  unlocks multi-brand theming across the organisation.
+                  I have established a federated contribution model that enables 20+
+                  designers across product teams to contribute into a single governed
+                  system, transforming design delivery from a centralised bottleneck
+                  into a distributed, self-sustaining capability. This has strengthened
+                  cross-team alignment, increased adoption, and accelerated delivery
+                  across complex product ecosystems.
                 </p>
                 <p>
-                  My role spans discovery through to delivery: prototyping,
-                  piloting, and creating high-fidelity POCs, then iterating to
-                  a confident level. I&apos;m a confident leader and mentor - I take
-                  great joy in improving my team&apos;s skill set and helping people
-                  level up.
+                  My current focus is on AI-enabled design operations. I design and
+                  implement workflows that make design systems queryable, executable,
+                  and embedded into the product lifecycle. This includes building
+                  MCP-based infrastructure, automating token pipelines, and creating
+                  documentation systems optimised for both human and AI consumption,
+                  enabling multi-brand scalability and faster product iteration.
                 </p>
                 <p>
-                  Before Ticketmaster, I&apos;ve had the privilege of working with
-                  some of the industry&apos;s leading brands across multiple platforms
-                  and mobile applications - from building design systems at ATG
-                  Tickets and Hargreaves Lansdown to product design at CMC Invest,
-                  Yell, and CX Partners.
+                  I operate end-to-end across discovery and delivery, from prototyping
+                  and piloting new approaches through to production-ready implementation.
+                  I lead through a combination of strategic direction and hands-on
+                  execution, mentoring teams, improving design maturity, and embedding
+                  scalable ways of working across organisations.
                 </p>
-                <p className="text-swiss-muted">
-                  My work has been recognised by Cardiff Design Festival, Glug Networking,
-                  Teschan Books, and World Travel Awards.
+                <p>
+                  Prior to Ticketmaster, I have delivered design systems and digital
+                  products across fintech and platform businesses including ATG Tickets,
+                  Hargreaves Lansdown, CMC Invest, Yell, and CX Partners.
                 </p>
               </div>
             </motion.div>
