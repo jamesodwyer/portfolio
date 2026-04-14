@@ -195,7 +195,7 @@ export const caseStudies: CaseStudy[] = [
     year: "",
     color: "red",
     thumbnail: "/images/ai-design-workflows/thumb.svg",
-    hero: "/images/ai-design-workflows/hero.svg",
+    hero: "/images/ai-design-workflows/hero.png",
     overview: {
       role: "Associate Director, Product Design",
       timeline: "12-month roadmap",
