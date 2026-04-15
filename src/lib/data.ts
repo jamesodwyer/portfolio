@@ -190,7 +190,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ai-design-workflows",
     title: "AI Design Workflows",
-    subtitle: "Pioneering AI-assisted design operations at Ticketmaster - from personal productivity system to organisation-wide design automation",
+    subtitle: "Building AI-powered design operations that scale a global system with minimal team overhead - Designed and implemented an AI-driven operational model that transforms how design systems are built, maintained, and scaled across multiple products",
     category: "AI / Design Operations",
     year: "",
     color: "red",
@@ -199,45 +199,45 @@ export const caseStudies: CaseStudy[] = [
     overview: {
       role: "Associate Director, Product Design",
       timeline: "12-month roadmap",
-      team: "GDS core + Discovery pilot group + Encore partnership",
+      team: "Cross-functional design, engineering, and platform teams",
       tools: ["Claude Code", "MCP SDK", "Figma", "GitLab", "Token Studio"],
     },
     results: [
-      { metric: "Skills shipped", value: "10 operational workflows live" },
-      { metric: "Cycle time", value: "Targeting 22% reduction" },
-      { metric: "Adoption", value: "3 teams piloting, org rollout planned" },
+      { metric: "Operational Coverage", value: "AI workflows supporting multiple products and design system operations" },
+      { metric: "Efficiency Gain", value: "Reduction in manual workload across design and documentation processes" },
+      { metric: "Adoption Model", value: "Transition from individual workflows to team-level and organisation-wide rollout" },
     ],
     challenge:
-      "I manage a Global Design System serving 8 products with one dedicated designer. The maths is brutal: 18+ concurrent threads, 16 pipeline items, bi-weekly leadership updates, cross-team coordination, and component quality review - all funnelling through one person. Traditional approaches don't scale. I didn't want AI as a novelty; I needed it as operational infrastructure that genuinely multiplies what a small team can deliver. The question wasn't whether to use AI, but how to embed it so deeply into design operations that it becomes invisible - the way electricity powers a building without anyone thinking about the wiring.",
+      "Managing a global design system across multiple products with limited resources exposed a fundamental constraint: traditional workflows do not scale. Workloads were fragmented across multiple threads and teams, manual processes created bottlenecks in delivery and quality, and increasing system complexity required more coordination, not less. The problem wasn't tooling. It was the operating model. To scale effectively, design operations needed to shift from manual execution to system-driven workflows.",
     process: [
       {
-        title: "Personal System (Phase 1)",
+        title: "Personal System (Proof of Value)",
         description:
-          "Built a comprehensive AI-powered second brain: session continuity across conversations, persistent state files that survive context resets, 8 operational skills (morning routine, meeting prep, daily focus, weekly planning, end-of-day reviews, sprint updates). The system tracks 18+ threads across 8 products, logs every decision with reasoning, and never loses context. I used myself as the test case - if AI couldn't transform my own productivity first, it had no business being rolled out to the team.",
+          "Built an AI-powered operational system to manage design system workflows, validating AI's ability to handle complexity before scaling.",
       },
       {
-        title: "Team Skills (Phase 2)",
+        title: "Team Workflows (Scalable Execution)",
         description:
-          "Built and published two executable AI skills for designers: a component creation workflow (end-to-end from research to GDS publication) and a token attachment workflow. Tested both with my direct report, who now uses Claude Code daily for GDS work. Piloted a code-ready design workflow with two Discovery designers, proving that designers can work directly in GitLab without an engineering intermediary. Each skill is a packaged, repeatable workflow - not a prompt, but a process.",
+          "Developed repeatable AI workflows that enable designers to create components and outputs aligned with system standards.",
       },
       {
-        title: "Encore Partnership",
+        title: "Platform Integration",
         description:
-          "Architected a two-repo integration with Ticketmaster's Encore platform: a general design intelligence repository and an Encore-approved branch for validated skills. Scoped a research agent that takes Figma URLs and competitive sites as input and produces heuristic evaluations and 20,000-word competitor analyses in under two minutes. Built a confidence scoring framework with a colleague to ensure AI research outputs are trustworthy before they influence design decisions.",
+          "Integrated AI workflows into existing tools and repositories, ensuring outputs align with production systems and engineering processes.",
       },
       {
-        title: "Organisation Rollout (Phase 3)",
+        title: "Organisation Rollout",
         description:
-          "Designed a 12-month roadmap from personal adoption to organisation-wide self-service. Phase one: foundation (MCP coverage, first skills, direct report as daily user). Phase two: scale (GDS v2 launch, accuracy checks, documentation automation). Phase three: self-service (product designer rollout, cross-product consistency checks, shared skills repo). Phase four: maturity (full self-service, AI embedded in operations). Measurable targets: pipeline cycle time from 77 to 60 days, same-week documentation updates, self-serve component guidance eliminating support tickets.",
+          "Defined a structured rollout model to scale adoption across teams, transitioning from centralised execution to distributed capability.",
       },
     ],
     solution:
-      "Created a three-phase AI adoption model that's already transforming how design operations work at Ticketmaster. Phase 1 proved the concept: my own productivity system manages the complexity of 8 products without dropping threads. Phase 2 is scaling it: designers are independently creating components with AI assistance, and a pilot group is shipping code-ready designs directly. Phase 3 has a clear roadmap to make every designer self-sufficient. The AI strategy isn't a side project - it's been presented to leadership as the mechanism by which one designer and an Associate Director can credibly serve an entire organisation. My manager called me a 'key partner as we transition to AI.' This is what that looks like in practice.",
+      "Designed and implemented a three-phase AI adoption model that transforms design operations from manual workflows into scalable systems. The approach focused on embedding AI directly into day-to-day work rather than introducing it as a separate toolset. Phase 1 established a personal system proving AI can manage complex design operations. Phase 2 introduced team workflows enabling designers to produce consistent, production-ready outputs. Phase 3 defined organisation-wide rollout to establish self-service and reduce dependency on central teams. This model shifts design systems from resource-constrained teams to scalable operational infrastructure.",
     learnings: [
-      "Start with yourself - if AI can't demonstrably transform your own work, you have no credibility asking a team to adopt it",
-      "Skills beat prompts. A packaged, repeatable workflow that anyone can run is worth a hundred clever one-off prompts",
-      "The real value of AI in design ops isn't speed - it's eliminating entire categories of work that shouldn't require human attention",
-      "Progressive rollout (personal → team → org) builds genuine adoption because each phase has proof from the last",
+      "AI adoption must start with real operational problems, not tooling experiments",
+      "Repeatable workflows outperform isolated prompts every time",
+      "The value of AI is eliminating work, not just accelerating it",
+      "Adoption scales when each phase proves value before expanding",
     ],
   },
   {
