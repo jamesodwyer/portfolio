@@ -214,7 +214,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </div>
       </section>
 
-      {/* Gallery - between Challenge and Process (first pair) */}
+      {/* Gallery - between Challenge and Process (first group) */}
       {gallery.length >= 2 && (
         <section className="py-grid">
           <div className="grid-container">
@@ -236,6 +236,21 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 </motion.div>
               ))}
             </div>
+            {gallery.length >= 3 && (
+              <motion.div
+                className="aspect-video relative overflow-hidden bg-zinc-950 mt-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <img
+                  src={gallery[2]}
+                  alt={`${study.title} - detail 3`}
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </motion.div>
+            )}
           </div>
         </section>
       )}
@@ -278,11 +293,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Gallery - between Process and Solution (middle pair) */}
-      {gallery.length >= 4 && (
+      {gallery.length >= 5 && (
         <section className="py-grid">
           <div className="grid-container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {gallery.slice(2, 4).map((img, index) => (
+              {gallery.slice(3, 5).map((img, index) => (
                 <motion.div
                   key={index}
                   className="aspect-video relative overflow-hidden bg-zinc-950"
@@ -293,7 +308,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 >
                   <img
                     src={img}
-                    alt={`${study.title} - detail ${index + 3}`}
+                    alt={`${study.title} - detail ${index + 4}`}
                     className="absolute inset-0 w-full h-full object-contain"
                   />
                 </motion.div>
@@ -303,8 +318,8 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </section>
       )}
 
-      {/* Full-width gallery image (5th image) */}
-      {gallery.length >= 5 && (
+      {/* Full-width gallery image (6th image) */}
+      {gallery.length >= 6 && (
         <section className="py-grid">
           <div className="grid-container">
             <motion.div
@@ -315,8 +330,8 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               transition={{ duration: 0.6 }}
             >
               <img
-                src={gallery[4]}
-                alt={`${study.title} - detail 5`}
+                src={gallery[5]}
+                alt={`${study.title} - detail 6`}
                 className="absolute inset-0 w-full h-full object-contain"
               />
             </motion.div>
@@ -368,12 +383,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       </section>
 
       {/* Gallery - after Solution (remaining images) */}
-      {gallery.length >= 6 && (
+      {gallery.length >= 7 && (
         <section className="py-grid">
           <div className="grid-container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {gallery.slice(5).map((img, index) => {
-                const remaining = gallery.slice(5);
+              {gallery.slice(6).map((img, index) => {
+                const remaining = gallery.slice(6);
                 const isLastOdd = remaining.length % 2 !== 0 && index === remaining.length - 1;
                 return (
                   <motion.div
@@ -388,7 +403,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                   >
                     <img
                       src={img}
-                      alt={`${study.title} - detail ${index + 6}`}
+                      alt={`${study.title} - detail ${index + 7}`}
                       className="absolute inset-0 w-full h-full object-contain"
                     />
                   </motion.div>

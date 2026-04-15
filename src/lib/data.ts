@@ -314,6 +314,7 @@ export const caseStudies: CaseStudy[] = [
     gallery: [
       "/images/hl/img_1.jpg",
       "/images/hl/img_2.jpg",
+      "/images/hl/img_3.jpg",
       "/images/hl/img_5.jpg",
       "/images/hl/img_6.jpg",
       "/images/hl/img_4.jpg",
