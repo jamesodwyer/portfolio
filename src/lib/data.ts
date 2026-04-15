@@ -137,7 +137,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "token-migration",
     title: "Token Migration",
-    subtitle: "Redesigning Ticketmaster's entire token architecture to unlock multi-brand theming, Sports onboarding, and GDS v2",
+    subtitle: "Re-architecting the design system foundation to enable scale, theming, and multi-product delivery - Transforming fragmented design tokens into a structured, scalable system that supports multiple products, brands, and future platform growth",
     category: "Design Systems / Architecture",
     year: "",
     color: "yellow",
@@ -146,45 +146,45 @@ export const caseStudies: CaseStudy[] = [
     overview: {
       role: "Associate Director, Product Design",
       timeline: "3 months",
-      team: "4 designers, Sports engineering, GDS core team",
+      team: "Cross-functional design and engineering teams",
       tools: ["Token Studio", "Figma", "Jira", "Claude Code"],
     },
     results: [
-      { metric: "Products unblocked", value: "All 8, simultaneously" },
-      { metric: "White-label reach", value: "300+ potential club clients" },
-      { metric: "Debt resolved", value: "33+ token misuses mapped and fixed" },
+      { metric: "Scope", value: "Supports multiple products and product verticals from a shared foundation" },
+      { metric: "Capability", value: "Enables multi-brand theming and white-label scalability" },
+      { metric: "Impact", value: "Removes architectural blockers across design and engineering workflows" },
     ],
     challenge:
-      "Ticketmaster's design tokens had grown organically: 33+ border tokens misused as backgrounds, 10+ hardcoded colours scattered across products, and no standardised naming convention. This wasn't cosmetic debt - it was blocking everything. EDP couldn't finalise components without confirmed naming. Sports couldn't onboard without a white-label theming system. Tournaments needed custom branding for 300+ potential club clients but had no token infrastructure to support it. Every product team was waiting on the same thing: a token architecture that actually scales.",
+      "The design system had evolved organically across multiple products, resulting in fragmentation at its core. Design decisions were inconsistent and difficult to scale, token usage varied across teams and implementations, and there was no shared structure to support theming or expansion. This wasn't simply design debt. It was an architectural limitation that prevented the system from scaling across products, brands, and future use cases. Without a clear token model, teams were blocked from moving forward.",
     process: [
       {
-        title: "Audit & Architecture",
+        title: "Architecture Design",
         description:
-          "Mapped every token misuse across the system - 33+ border tokens functioning as backgrounds, hardcoded values, broken connections from previous work. Designed a three-layer architecture: Foundation (core colours, typography, spacing), Semantic (component-specific tokens for product libraries), and Brand (client-specific theming above the core system). This single structure serves corporate Ticketmaster, Sports variants, and white-label tournament clients.",
+          "Defined a scalable token model that separates foundation, semantic, and brand layers, enabling consistency and flexibility across all products.",
       },
       {
-        title: "Token Studio as Source of Truth",
+        title: "Source of Truth",
         description:
-          "Made the architectural decision to use Token Studio over Figma variables as the single source of truth. This gave us version control, multi-theme support, and the ability to generate tokens for both design and engineering from one place. Established a naming convention - [tier].[category].[variant].[state] - that every team could adopt without ambiguity.",
+          "Established a centralised token system that aligns design and engineering, ensuring consistency across tools and platforms.",
       },
       {
-        title: "Designer Sprint",
+        title: "Migration Strategy",
         description:
-          "Assembled a dedicated team of 4 designers for a focused two-week sprint to execute the migration. Rather than a slow, rolling changeover, we concentrated effort: mapping the architecture, migrating values, reconnecting broken token references, and validating across all product libraries simultaneously.",
+          "Delivered a focused migration approach that replaced fragmented tokens with a unified system across products.",
       },
       {
-        title: "Sports & White-Label Extension",
+        title: "Scale Enablement",
         description:
-          "Extended the architecture to create a vanilla white-label foundation - the GDS stripped of Ticketmaster branding, with a clean Brand layer that any Sports product (or tournament client) can retheme in minutes. Three fonts, multiple colour palettes, all flowing from the same token structure. One system serving both Marketplace and Sports without duplication.",
+          "Extended the system to support multi-brand and white-label use cases without duplication or rework.",
       },
     ],
     solution:
-      "Delivered a multi-layer token architecture that unblocks all 8 products simultaneously. Foundation tokens give every team a consistent base. Semantic tokens let product teams customise without breaking the system. The Brand layer enables Tournaments to retheme for individual clubs - turning what would have been bespoke design work for 300+ clients into a configuration change. The migration fixes years of accumulated token debt and becomes the foundation for GDS v2. Sports teams are now actively onboarding. EDP has a confirmed naming convention. The token system went from the biggest blocker in the organisation to the biggest enabler.",
+      "Designed and implemented a multi-layer token architecture that established a single, scalable foundation for the entire design system. The system introduced clear separation between foundation tokens for consistency across all products, semantic tokens for flexible context-driven usage, and brand tokens for customisation and white-label support. This structure enabled teams to build independently while remaining aligned to a shared system. Rather than fixing individual inconsistencies, the solution eliminated the conditions that created them. The token system shifted from being a constraint to becoming a core enabler of product delivery.",
     learnings: [
-      "Token architecture is product strategy disguised as design infrastructure - get it right and you unblock entire business lines",
-      "Concentrated sprints with dedicated people outperform slow migrations every time - two weeks of focus beats three months of part-time effort",
-      "Multi-brand token systems need three layers minimum: foundation for consistency, semantic for flexibility, brand for customisation",
-      "Fixing 33 misused tokens is less interesting than the architectural decision that prevents the 34th",
+      "Token architecture is product strategy, not just design infrastructure",
+      "A well-structured system scales faster than incremental fixes",
+      "Layered token models are essential for multi-product and multi-brand environments",
+      "The goal isn't fixing token misuse, it's preventing it entirely",
     ],
   },
   {
