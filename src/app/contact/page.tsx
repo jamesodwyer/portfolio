@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Footer, DotPattern } from "@/components";
+import { DotPattern } from "@/components";
 import { siteConfig } from "@/lib/data";
 
 export default function Contact() {
@@ -41,9 +41,25 @@ export default function Contact() {
                 {/* Email */}
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-heading text-swiss-white hover:text-swiss-yellow transition-colors"
+                  className="inline-flex items-center gap-4 text-heading text-swiss-white hover:text-swiss-yellow transition-colors group"
                 >
                   {siteConfig.email}
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                    className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H7M17 7V17"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </a>
               </motion.div>
             </div>
@@ -69,7 +85,6 @@ export default function Contact() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }
