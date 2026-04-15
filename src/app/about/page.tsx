@@ -153,7 +153,7 @@ export default function AboutPage() {
                 <h1 className="text-display-xl mb-8">About</h1>
 
                 <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
-                  I&apos;m a design systems leader and design technologist based in London, currently scaling Ticketmaster&apos;s Global Design System across eight products and pioneering AI-driven design operations that enable small teams to deliver at enterprise scale.
+                  I&apos;m a design systems leader and design technologist based in the UK, currently scaling Ticketmaster&apos;s Global Design System across eight products and pioneering AI-driven design operations that enable small teams to deliver at enterprise scale.
                 </p>
               </motion.div>
             </div>
