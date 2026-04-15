@@ -434,7 +434,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
-                    <span className={`${textColorMap[study.color]} text-heading`}>→</span>
+                    <span className="w-3 h-3 rounded-full bg-swiss-yellow mt-2 flex-shrink-0" />
                     <span className="text-subheading">{learning}</span>
                   </motion.li>
                 ))}
