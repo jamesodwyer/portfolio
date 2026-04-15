@@ -9,6 +9,7 @@ const experience = [
     role: "Associate Director – Global Design Systems",
     company: "Ticketmaster, London",
     period: "Mar 2024 – Present",
+    freelance: false,
     bullets: [
       "Own and scale a global design system across 8 products and multiple business verticals",
       "Established a federated contribution model enabling 20+ designers to contribute to a single governed system",
@@ -23,6 +24,7 @@ const experience = [
     role: "Head of Digital / Principal Product Designer",
     company: "ATG Tickets, London (Ticketing / Ecom)",
     period: "Aug 2022 – Jan 2024",
+    freelance: true,
     bullets: [
       "Led digital product design across web and mobile platforms for a global ticketing business",
       "Established and rolled out a design system to improve consistency and delivery speed",
@@ -35,6 +37,7 @@ const experience = [
     role: "Principal Product Designer",
     company: "CMC Invest, London (Finance)",
     period: "May 2022 – Aug 2022",
+    freelance: true,
     bullets: [
       "Led product design for mobile-first investment platform",
       "Delivered high-quality UX/UI across complex financial workflows",
@@ -46,6 +49,7 @@ const experience = [
     role: "Lead Product Designer",
     company: "Yell (B2B)",
     period: "Feb 2022 – May 2022",
+    freelance: true,
     bullets: [
       "Led UX and product design across B2B digital products",
       "Delivered mobile and responsive experiences for SME customers",
@@ -57,6 +61,7 @@ const experience = [
     role: "Senior User Experience Consultant",
     company: "CX Partners, Bristol (Learning Platform)",
     period: "Dec 2021 – Feb 2022",
+    freelance: true,
     bullets: [
       "Delivered service design and UX strategy for large-scale digital platforms",
       "Led user research and defined user journeys across complex systems",
@@ -68,6 +73,7 @@ const experience = [
     role: "Lead User Interface Designer",
     company: "Hargreaves Lansdown, Bristol (Finance)",
     period: "Nov 2018 – Nov 2021",
+    freelance: true,
     bullets: [
       "Led UI design across web platforms for a leading financial services provider",
       "Contributed to and evolved the organisation\u2019s design system",
@@ -79,6 +85,7 @@ const experience = [
     role: "Senior Product Designer",
     company: "Parmenion, Bristol (Finance)",
     period: "Nov 2016 – Nov 2018",
+    freelance: true,
     bullets: [
       "Delivered UX and UI design across financial platforms",
       "Led interaction design and user research initiatives",
@@ -89,6 +96,7 @@ const experience = [
     role: "User Experience & Digital Designer",
     company: "Various Clients",
     period: "2010 – 2016",
+    freelance: true,
     bullets: [
       "Delivered UX and digital design across major brands including BBC, Sky, UEFA, Disney, and Expedia",
       "Worked across multiple industries including media, sports, finance, and e-commerce",
@@ -145,10 +153,7 @@ export default function AboutPage() {
                 <h1 className="text-display-xl mb-8">About</h1>
 
                 <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
-                  I&apos;m a designer and design technologist based in {siteConfig.location}.
-                  Currently scaling Ticketmaster&apos;s Global Design System across 8 products
-                  and pioneering AI-powered design operations that let a small team
-                  perform like a large one.
+                  I&apos;m a design systems leader and design technologist based in London, currently scaling Ticketmaster&apos;s Global Design System across eight products and pioneering AI-driven design operations that enable small teams to deliver at enterprise scale.
                 </p>
               </motion.div>
             </div>
@@ -263,7 +268,14 @@ export default function AboutPage() {
                       </span>
                     </div>
                     <div className="md:col-span-3">
-                      <h3 className="text-subheading mb-1">{exp.role}</h3>
+                      <div className="flex items-center gap-3 mb-1">
+                        <h3 className="text-subheading">{exp.role}</h3>
+                        {exp.freelance && (
+                          <span className="text-[10px] tracking-widest uppercase text-swiss-muted border border-swiss-gray px-2 py-0.5 rounded-full">
+                            Freelance
+                          </span>
+                        )}
+                      </div>
                       <span className="text-body text-swiss-yellow block mb-3">
                         {exp.company}
                       </span>
