@@ -84,7 +84,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "gds-mcp",
     title: "GDS-MCP",
-    subtitle: "Building the AI knowledge layer for Ticketmaster's Global Design System - making 50+ components queryable by any AI tool, anywhere",
+    subtitle: "Building an AI-native knowledge layer for a Global Design System - Transforming a static design system into a queryable, intelligent platform that enables teams and AI tools to design and build with accuracy, speed, and confidence",
     category: "AI Engineering / Design Systems",
     year: "",
     color: "black",
@@ -93,45 +93,45 @@ export const caseStudies: CaseStudy[] = [
     overview: {
       role: "Associate Director, Product Design",
       timeline: "6 months (ongoing)",
-      team: "1 designer, 20+ cross-team contributors",
+      team: "Cross-functional design and engineering teams",
       tools: ["TypeScript", "MCP SDK", "Figma API", "Claude Code", "Token Studio"],
     },
     results: [
-      { metric: "Components", value: "50+ documented and queryable" },
-      { metric: "Coverage", value: "8 sub-products across 2 verticals" },
-      { metric: "Integrations", value: "Claude Code, Cursor, VS Code, Windsurf" },
+      { metric: "Coverage", value: "Supports multiple products across design and engineering workflows" },
+      { metric: "Capability", value: "Design system becomes AI-queryable and self-serve" },
+      { metric: "Integration", value: "Embedded directly into design and development environments" },
     ],
     challenge:
-      "Ticketmaster's Global Design System serves 8 sub-products across 2 verticals with 20+ designers contributing - but documentation was always months behind shipped components. Designers filed Slack tickets for answers that already existed somewhere. Engineers implemented components incorrectly because specs were scattered across Figma, Confluence, and tribal knowledge. I needed a single, living source of truth that AI tools could query in real time - eliminating the documentation lag entirely and turning the design system into infrastructure that answers its own questions.",
+      "As the Global Design System scaled across multiple products and teams, documentation struggled to keep pace with implementation. This created friction across the organisation: teams relied on fragmented sources of truth, knowledge was distributed across tools and individuals, and design and engineering decisions were harder to validate and scale. The core issue wasn't documentation quality, but the model itself. The system needed to evolve from static documentation into a living, queryable source of truth that could support teams in real time.",
     process: [
       {
-        title: "Figma API Integration",
+        title: "System Integration",
         description:
-          "Built a Figma plugin and deep API integration to extract component data, variants, design tokens, accessibility requirements, and interaction specs directly from our live design files - no manual documentation step required.",
+          "Connects directly to design source files to extract structured system data.",
       },
       {
-        title: "MCP Server Architecture",
+        title: "Knowledge Architecture",
         description:
-          "Designed and shipped an MCP server that structures the entire GDS across five documentation layers: atoms, molecules, organisms, foundations, and patterns. Each layer includes component overviews, variant specs, Tailwind mappings, CSS custom properties, and accessibility guidelines - all optimised for LLM retrieval accuracy.",
+          "Organises design system information into a format optimised for retrieval and reuse.",
       },
       {
-        title: "AI Workflow Integration",
+        title: "AI Enablement",
         description:
-          "Connected the MCP server to Claude Code, Cursor, VS Code, and Windsurf - enabling designers and developers to query GDS documentation directly in their workflow. Built executable AI skills on top: a component creation workflow and a token attachment workflow, both tested with the team.",
+          "Enables AI tools to query, interpret, and apply system rules within real workflows.",
       },
       {
-        title: "Team Rollout & Adoption",
+        title: "Adoption Strategy",
         description:
-          "Piloted with my direct report (now using Claude Code daily for GDS work), then expanded to a Discovery team pilot with two designers working a code-ready design workflow. Built 8 operational skills for my own productivity system, proving the model before scaling to the wider organisation.",
+          "Introduced through real workflows, validating value before scaling across teams.",
       },
     ],
     solution:
-      "Shipped a live MCP server that generates structured, AI-queryable documentation directly from Figma designs. Designers get instant answers. Engineers get accurate specs. AI tools across the organisation can now build with the design system without guessing. The system became the backbone for a 12-month AI strategy: token migration documentation, implementation accuracy checks, and self-service component guidance - all flowing through this single knowledge layer. One designer and an AI-powered infrastructure now does the documentation work that previously required a dedicated team.",
+      "Designed and delivered an AI-native knowledge layer for the design system, enabling teams and tools to access structured, reliable information directly from source. This transformed the design system from a static library into queryable infrastructure, where designers can retrieve guidance instantly within their workflow, engineers can access accurate implementation-ready specifications, and AI tools can generate and validate outputs against system standards. The result is a system that no longer requires manual documentation upkeep, but instead maintains itself as part of the design and delivery process.",
     learnings: [
-      "Documentation is infrastructure, not a deliverable - treat it as a living system that updates itself",
-      "MCP turns a design system from a static library into queryable intelligence that meets people where they work",
-      "Starting with your own workflow (personal adoption) before scaling to the team builds genuine conviction, not mandated process",
-      "The real ROI isn't faster docs - it's eliminating an entire category of support requests and handoff failures",
+      "Documentation should function as infrastructure, not a deliverable",
+      "Design systems must evolve from static libraries into intelligent platforms",
+      "Adoption is driven by real workflow value, not mandated process",
+      "The true impact of AI is reducing dependency on coordination and support",
     ],
   },
   {
