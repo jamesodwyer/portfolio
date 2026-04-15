@@ -369,69 +369,6 @@ export const caseStudies: CaseStudy[] = [
       "A design system born from a migration project has stronger adoption than one built in isolation - teams already need it",
     ],
   },
-  {
-    slug: "yell",
-    title: "Yell for Business",
-    subtitle: "Designing and testing a new feature for Yell's platform - using lean research, systematic UI assets, and a reusable component approach",
-    category: "Product Design / Design Systems",
-    year: "",
-    color: "red",
-    thumbnail: "/images/yell/thumb.png",
-    hero: "/images/yell/img_3.jpg",
-    gallery: [
-      "/images/yell/hero.jpg",
-      "/images/yell/img_5.jpg",
-      "/images/yell/img_6.jpg",
-      "/images/yell/img_4.jpg",
-      "/images/yell/img_7.jpg",
-      "/images/yell/img_8.jpg",
-      "/images/yell/img_1.jpg",
-      "/images/yell/img_2.jpg",
-    ],
-    overview: {
-      role: "Lead UX / UI Designer",
-      timeline: "4 months",
-      team: "James Loar (Product Director), Kevin Duncan (Product Owner), Gareth Cooney (Scrum Master), Josh Roberts (Lead iOS Developer), Gavin Haines (Lead Android Developer)",
-      tools: ["Figma", "Miro", "Usability Hub", "Optimal Sort"],
-    },
-    results: [
-      { metric: "Platforms", value: "iOS, Android & responsive web" },
-      { metric: "Component library", value: "Shared across all 3 platforms" },
-      { metric: "Validation", value: "Concept tested in days, not weeks" },
-    ],
-    challenge:
-      "Yell wanted to release a series of new features to enhance their offering and make finding a professional as frictionless as possible. We explored various options for the 'Find a Quote' idea, producing a prototype to gauge where users were at and how we could serve this business need. The work needed to be delivered consistently across iOS, Android, and responsive web - making a systematic, reusable approach to UI assets essential from the start.",
-    process: [
-      {
-        title: "Mock Up Ideas & Test",
-        description:
-          "Simple, lean user testing with first-click testing in Usability Hub. This enabled us to ascertain the correct place to inject the latest feature into the user journey - validating placement before committing to full design and build.",
-      },
-      {
-        title: "Produce New UI Assets",
-        description:
-          "With the user journey validated, we produced a systematic set of UI assets in Figma - designed to be reusable across iOS, Android, and web. Components were built with consistency in mind, ensuring the same design language translated cleanly across all three platforms.",
-      },
-      {
-        title: "Final Page Designs",
-        description:
-          "Brought everything together into polished, high-fidelity page designs for each platform. The component-based approach meant final designs were assembled quickly from the asset library, with platform-specific adjustments handled through variants rather than one-off designs.",
-      },
-      {
-        title: "Cross-Platform Handoff",
-        description:
-          "Worked closely with the iOS and Android leads to ensure the designs translated faithfully into native implementations. The structured Figma library and consistent naming conventions made handoff straightforward and reduced back-and-forth during development.",
-      },
-    ],
-    solution:
-      "Delivered a fully tested, cross-platform feature across iOS, Android, and responsive web - all built from a shared set of UI assets and components. The lean testing approach validated the 'Find a Quote' concept early, avoiding wasted effort on untested ideas. The systematic component library created during this project laid groundwork for Yell's broader design consistency, giving the team reusable assets that extended well beyond this single feature.",
-    learnings: [
-      "Lean testing with tools like Usability Hub can validate feature placement in days, not weeks - test the journey before designing the screens",
-      "Building UI assets as a reusable system from day one pays off immediately when delivering across three platforms simultaneously",
-      "Cross-platform consistency comes from shared design language and naming conventions, not from pixel-matching each platform",
-      "Working embedded with iOS and Android leads from the start eliminates the handoff gap that typically causes platform drift",
-    ],
-  },
 ];
 
 export const siteConfig = {
