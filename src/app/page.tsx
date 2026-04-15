@@ -88,7 +88,7 @@ export default function Home() {
           </motion.div>
 
           {/* Case Studies Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-grid-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ columnGap: 'var(--spacing-grid-4)' }}>
             {caseStudies.map((study, index) => (
               <CaseStudyCard key={study.slug} study={study} index={index} />
             ))}

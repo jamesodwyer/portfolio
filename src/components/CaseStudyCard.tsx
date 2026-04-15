@@ -16,11 +16,11 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group"
+      className="group grid gap-0 lg:grid-rows-subgrid lg:row-span-5 pb-grid-4"
     >
-      <Link href={`/work/${study.slug}`} className="block">
-        {/* Number and Category Header */}
-        <div className="flex items-baseline justify-between mb-6 border-b border-swiss-gray pb-6">
+      <Link href={`/work/${study.slug}`} className="contents">
+        {/* Row 1: Number and Category Header */}
+        <div className="flex items-baseline justify-between border-b border-swiss-gray pb-6 self-start">
           <div className="flex items-baseline gap-6">
             <span className="text-number-sm text-swiss-white">
               {String(index + 1).padStart(2, "0")}
@@ -32,16 +32,16 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
           {study.year && <span className="text-caption text-swiss-muted">{study.year}</span>}
         </div>
 
-        {/* Title */}
-        <h3 className="text-display-lg mb-6 transition-colors group-hover:text-swiss-yellow">
+        {/* Row 2: Title */}
+        <h3 className="text-display-lg pt-6 transition-colors group-hover:text-swiss-yellow self-start">
           {study.title}
         </h3>
 
-        {/* Description */}
-        <p className="text-body text-swiss-muted mb-10 leading-relaxed">{study.subtitle}</p>
+        {/* Row 3: Description */}
+        <p className="text-body text-swiss-muted pt-6 leading-relaxed self-start">{study.subtitle}</p>
 
-        {/* Results Row */}
-        <div className="grid grid-cols-3 gap-10 pt-8 border-t border-swiss-gray">
+        {/* Row 4: Results Row */}
+        <div className="grid grid-cols-3 gap-10 pt-8 border-t border-swiss-gray mt-10 self-start">
           {study.results.slice(0, 3).map((result, i) => (
             <div key={i}>
               <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
@@ -54,8 +54,8 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
           ))}
         </div>
 
-        {/* Arrow indicator */}
-        <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-yellow transition-colors">
+        {/* Row 5: Arrow indicator */}
+        <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-yellow transition-colors self-end">
           <span className="text-caption">VIEW PROJECT</span>
           <motion.svg
             width="20"
