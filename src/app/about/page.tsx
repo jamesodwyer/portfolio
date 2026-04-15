@@ -368,7 +368,7 @@ export default function AboutPage() {
               <h2 className="text-display-lg mb-8">
                 Looking to build what&apos;s next?
                 <br />
-                <span className="text-swiss-muted">Let&apos;s talk.</span>
+                <span className="text-swiss-yellow">Let&apos;s talk.</span>
               </h2>
               <a
                 href={`mailto:${siteConfig.email}`}
