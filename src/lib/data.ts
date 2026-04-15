@@ -31,7 +31,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ticketmaster-gds",
     title: "Ticketmaster GDS",
-    subtitle: "Scaling a Global Design System across 8 products with a team of one - using architecture, AI, and relentless prioritisation",
+    subtitle: "Scaling a Global Design System Across Products and Teams - Transforming fragmented workflows into a scalable design platform that enables consistent, high-quality product delivery at scale",
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
@@ -40,45 +40,45 @@ export const caseStudies: CaseStudy[] = [
     overview: {
       role: "Associate Director, Product Design",
       timeline: "18 months (ongoing)",
-      team: "1 dedicated designer, 20+ product contributors, 8 sub-product teams",
+      team: "Cross-functional product teams, design contributors, engineering partners",
       tools: ["Figma", "Token Studio", "Jira", "Claude Code", "Confluence"],
     },
     results: [
-      { metric: "Scale", value: "8 products across 2 verticals" },
-      { metric: "Contributors", value: "20+ designers feeding into GDS" },
-      { metric: "Pipeline", value: "11-stage process, benchmarked" },
+      { metric: "Scale", value: "Multiple products across distinct business verticals" },
+      { metric: "Adoption", value: "Widely used across product teams, enabling consistent delivery" },
+      { metric: "Operating Model", value: "A structured system for contribution, governance, and continuous evolution" },
     ],
     challenge:
-      "Ticketmaster has 8 sub-products across two verticals - Marketplace (Discovery, SmartQ, EDP, Checkout, Ancillary Revenue) and Sports (XR, XT, Tournaments) - each with their own designers, engineers, and product priorities. I own the Global Design System with one dedicated designer. The maths doesn't work: one person can't review every component, write every spec, and keep eight teams consistent. I needed to turn the GDS from a bottleneck into a self-sustaining system where teams contribute back, quality is maintained at scale, and nothing falls through the cracks.",
+      "Ticketmaster operates across a complex ecosystem of products, each with its own priorities, workflows, and technical constraints. This created fragmentation across teams, inconsistent user experiences, and duplication of effort, making it difficult to scale effectively. The challenge was not just to define a design system, but to embed a model that enables teams to build consistently, efficiently, and at scale.",
     process: [
       {
-        title: "Pipeline Architecture",
+        title: "System Architecture",
         description:
-          "Designed an 11-stage component pipeline - from initial request through research, stress testing, engineering feasibility, Figma design, dual review, decision gate, token attachment, documentation, and publication. Every component follows the same path. Cycle time is measured and benchmarked. Nothing ships without passing every gate.",
+          "A scalable foundation designed to support multiple products and use cases.",
       },
       {
         title: "Contribution Model",
         description:
-          "Built a contribution framework that lets 20+ designers across product teams feed components back into the GDS. Each team owns their components through the pipeline - I provide governance, quality review, and architectural decisions. The system scales because I'm not the bottleneck for creation, only for promotion to global.",
+          "A federated approach enabling teams to contribute while maintaining quality and consistency.",
       },
       {
-        title: "Cross-Team Visibility",
+        title: "Cross-Team Alignment",
         description:
-          "Created a tiered tracking system across all 8 sub-products: Active (I'm personally driving), Watching (others are driving, I monitor), and Blocked (waiting on external). At any point I can see 18+ concurrent threads, who owns what, and where things are stuck - without a single thread dropping.",
+          "Shared visibility and structured workflows across product teams.",
       },
       {
-        title: "AI as Force Multiplier",
+        title: "AI as an Enabler",
         description:
-          "Layered AI workflows on top of the system: MCP documentation keeps specs current, executable skills help designers create and amend components independently, and an AI-powered productivity system manages the cognitive load of coordinating 8 products simultaneously. The AI doesn't replace the team - it makes a team of two perform like a team of ten.",
+          "AI-driven workflows supporting documentation, contribution, and delivery at scale.",
       },
     ],
     solution:
-      "The GDS now serves all 8 Ticketmaster products with a standardised component library, a contribution pipeline that product teams actively use, and AI infrastructure that keeps documentation current and teams self-sufficient. We've shipped components like ComboBox, Countdown, and FVR Banner through the pipeline. 16 more are actively in flight - from Bottom Sheet and Chip to Filters and the Icon Library Revamp. The system handles mobile-first Marketplace patterns and is now onboarding three Sports products with a white-label token architecture that could serve 300+ tournament clients. It's a design system that doesn't just document decisions - it enforces them at scale.",
+      "The Global Design System now supports multiple products through a standardised, scalable approach to design and development. It enables teams to build consistently using shared components and patterns, contribute back into the system through a governed model, and move faster with reduced duplication and clearer workflows. AI-driven infrastructure supports ongoing documentation and enables teams to work more independently, reducing reliance on central coordination. The result is a system that doesn't just document decisions, but enables them at scale.",
     learnings: [
-      "A design system is an operating model, not a component library - the pipeline and governance matter more than the Figma files",
-      "Contribution models only work when teams feel ownership, not obligation - make their components the best version of themselves",
-      "Tracking 18 threads across 8 products is a systems problem, not a memory problem - build the system, trust the system",
-      "With the right infrastructure, a team of two can genuinely serve an organisation of hundreds",
+      "A design system is an operating model, not just a component library",
+      "Scalable contribution requires ownership, not central control",
+      "Complexity at scale must be solved through systems, not coordination",
+      "The right infrastructure enables small teams to operate at organisational scale",
     ],
   },
   {
