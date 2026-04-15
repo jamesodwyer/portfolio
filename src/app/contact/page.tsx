@@ -164,53 +164,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Closing Section with Dot Pattern */}
-      <section className="py-grid-7 border-t border-swiss-gray">
-        <div className="grid-container">
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <motion.div
-              className="col-span-12 lg:col-span-7"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="text-caption text-swiss-muted block mb-8">
-                AVAILABILITY
-              </span>
-              <p className="text-subheading text-swiss-muted max-w-xl leading-relaxed mb-6">
-                I'm currently available for freelance projects and full-time opportunities.
-                Let's create something great together.
-              </p>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="inline-block text-heading text-swiss-white hover:text-swiss-yellow transition-colors duration-300"
-              >
-                Send me a message →
-              </a>
-            </motion.div>
-
-            {/* Decorative Dot Pattern */}
-            <div className="hidden lg:flex col-span-5 items-center justify-center">
-              <motion.div
-                initial={{ opacity: 0, rotate: -90 }}
-                whileInView={{ opacity: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                <DotPattern
-                  rows={10}
-                  cols={10}
-                  dotSize={14}
-                  gap={12}
-                  circular={true}
-                  className="text-swiss-yellow"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </>
