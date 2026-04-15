@@ -247,7 +247,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems",
     year: "",
     color: "yellow",
-    thumbnail: "/images/atg/thumb.png",
+    thumbnail: "/images/atg/hero.png",
     hero: "/images/atg/hero.png",
     gallery: [
       "/images/atg/img_1.png",
@@ -309,8 +309,8 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems / Product Design",
     year: "",
     color: "blue",
-    thumbnail: "/images/hl/thumb.png",
-    hero: "/images/hl/hero.jpg",
+    thumbnail: "/images/hl/hero.png",
+    hero: "/images/hl/hero.png",
     gallery: [
       "/images/hl/img_1.jpg",
       "/images/hl/img_2.jpg",
@@ -318,7 +318,6 @@ export const caseStudies: CaseStudy[] = [
       "/images/hl/img_6.jpg",
       "/images/hl/img_4.jpg",
       "/images/hl/img_7.jpg",
-      "/images/hl/img_8.jpg",
       "/images/hl/img_9.jpg",
       "/images/hl/img_10.jpg",
       "/images/hl/img_11.jpg",
