@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { PasswordGate } from "@/components/PasswordGate";
 import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Header />
-        <main>{children}</main>
+        <PasswordGate>
+          <Header />
+          <main>{children}</main>
+        </PasswordGate>
       </body>
     </html>
   );
