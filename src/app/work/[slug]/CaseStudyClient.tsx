@@ -57,6 +57,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 height="16"
                 viewBox="0 0 24 24"
                 fill="none"
+                aria-hidden="true"
               >
                 <path
                   d="M19 12H5M5 12L12 19M5 12L12 5"
@@ -95,7 +96,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-3 gap-10 mt-16 pt-8 border-t border-swiss-gray"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-16 pt-8 border-t border-swiss-gray"
           >
             {study.results.map((result, index) => (
               <div key={index}>
@@ -124,7 +125,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             {study.hero ? (
               <motion.img
                 src={study.hero}
-                alt={study.title}
+                alt={`Hero image for ${study.title} case study`}
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{ y: heroY, scale: 1.15 }}
               />
@@ -462,6 +463,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                   height="32"
                   viewBox="0 0 24 24"
                   fill="none"
+                  aria-hidden="true"
                   className="transform group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform flex-shrink-0 relative top-1"
                 >
                   <path

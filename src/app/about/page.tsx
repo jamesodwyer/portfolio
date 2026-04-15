@@ -380,6 +380,7 @@ export default function AboutPage() {
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
+                  aria-hidden="true"
                   className="transform group-hover:translate-x-2 transition-transform"
                 >
                   <path

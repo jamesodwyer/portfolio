@@ -18,7 +18,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="group grid gap-0 lg:grid-rows-subgrid lg:row-span-5 pb-grid-4"
     >
-      <Link href={`/work/${study.slug}`} className="contents">
+      <Link href={`/work/${study.slug}`} className="contents" aria-label={`View case study: ${study.title}`}>
         {/* Row 1: Number and Category Header */}
         <div className="flex items-baseline justify-between border-b border-swiss-gray pb-6 self-start">
           <div className="flex items-baseline gap-6">
@@ -41,7 +41,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         <p className="text-body text-swiss-muted pt-6 leading-relaxed self-start">{study.subtitle}</p>
 
         {/* Row 4: Results Row */}
-        <div className="grid grid-cols-3 gap-10 pt-8 border-t border-swiss-gray mt-10 self-start">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 pt-8 border-t border-swiss-gray mt-10 self-start">
           {study.results.slice(0, 3).map((result, i) => (
             <div key={i}>
               <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
@@ -62,6 +62,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
             height="20"
             viewBox="0 0 24 24"
             fill="none"
+            aria-hidden="true"
             className="transform group-hover:translate-x-1 transition-transform"
           >
             <path

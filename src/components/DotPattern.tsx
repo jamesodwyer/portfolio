@@ -41,6 +41,8 @@ export function DotPattern({
   return (
     <div
       className={className}
+      aria-hidden="true"
+      role="presentation"
       style={{
         display: "grid",
         gridTemplateColumns: `repeat(${cols}, ${dotSize}px)`,

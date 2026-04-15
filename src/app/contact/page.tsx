@@ -156,7 +156,7 @@ export default function Contact() {
                   / {social.name.toUpperCase()} /
                 </span>
                 <span className="text-heading text-swiss-white group-hover:text-swiss-yellow transition-colors duration-300">
-                  View Profile →
+                  View Profile →<span className="sr-only"> (opens in new tab)</span>
                 </span>
               </motion.a>
             ))}

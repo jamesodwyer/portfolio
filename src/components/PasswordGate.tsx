@@ -41,7 +41,9 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
           Enter the password to continue.
         </p>
         <form onSubmit={handleSubmit}>
+          <label htmlFor="password-input" className="sr-only">Password</label>
           <input
+            id="password-input"
             type="password"
             value={input}
             onChange={(e) => {
@@ -50,10 +52,11 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
             }}
             placeholder="Password"
             autoFocus
+            aria-describedby={error ? "password-error" : undefined}
             className="w-full bg-transparent border border-swiss-gray text-swiss-white text-body px-4 py-3 focus:outline-none focus:border-swiss-yellow transition-colors"
           />
           {error && (
-            <p className="text-sm text-red-400 mt-2">Incorrect password.</p>
+            <p id="password-error" role="alert" className="text-sm text-red-400 mt-2">Incorrect password.</p>
           )}
           <button
             type="submit"

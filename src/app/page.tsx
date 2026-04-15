@@ -79,7 +79,7 @@ export default function Home() {
               <span className="text-number text-swiss-yellow">{caseStudies.length}</span>
               <div>
                 <span className="text-caption text-swiss-muted block mb-2">SELECTED</span>
-                <span className="text-display">Case Studies</span>
+                <h2 className="text-display">Case Studies</h2>
               </div>
             </div>
             <div className="hidden md:block">
