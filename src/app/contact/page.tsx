@@ -125,7 +125,7 @@ export default function Contact() {
           </motion.div>
 
           {/* Social Links Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-grid-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-grid-3">
             {[
               {
                 number: "1",
@@ -136,11 +136,6 @@ export default function Contact() {
                 number: "2",
                 name: "GitHub",
                 url: siteConfig.social.github,
-              },
-              {
-                number: "3",
-                name: "Twitter",
-                url: siteConfig.social.twitter,
               },
             ].map((social, index) => (
               <motion.a
