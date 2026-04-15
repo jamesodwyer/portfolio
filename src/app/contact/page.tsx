@@ -35,7 +35,7 @@ export default function Contact() {
 
                 {/* Description */}
                 <p className="text-subheading text-swiss-muted max-w-md leading-relaxed">
-                  Have a project in mind or want to discuss design and development?
+                  Looking to build what&apos;s next or want to discuss design and development?
                   I'd love to hear from you.
                 </p>
               </motion.div>

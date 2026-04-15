@@ -366,7 +366,7 @@ export default function AboutPage() {
                 LET&apos;S WORK TOGETHER
               </span>
               <h2 className="text-display-lg mb-8">
-                Have a project in mind?
+                Looking to build what&apos;s next?
                 <br />
                 <span className="text-swiss-muted">Let&apos;s talk.</span>
               </h2>
@@ -374,7 +374,7 @@ export default function AboutPage() {
                 href={`mailto:${siteConfig.email}`}
                 className="inline-flex items-center gap-4 text-heading hover:text-swiss-yellow transition-colors group"
               >
-                {siteConfig.email}
+                Get in touch → {siteConfig.email}
                 <svg
                   width="24"
                   height="24"
