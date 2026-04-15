@@ -458,7 +458,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               <h2 className="text-display-lg group-hover:text-swiss-yellow transition-colors">
                 {nextStudy.title}
               </h2>
-              <p className="text-subheading text-swiss-muted mt-2">{nextStudy.subtitle}</p>
+              <p className="text-subheading text-swiss-muted mt-2 max-w-2xl">{nextStudy.subtitle}</p>
             </Link>
           </motion.div>
         </div>
