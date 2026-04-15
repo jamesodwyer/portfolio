@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
 import { Footer } from "@/components";
 
@@ -28,13 +27,6 @@ interface CaseStudyClientProps {
 export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientProps) {
   const gallery = study.gallery ?? [];
   const hasImages = gallery.length > 0 || study.hero;
-
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start end", "end start"],
-  });
-  const heroY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
 
   return (
     <>
@@ -116,18 +108,16 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       <section className="py-grid">
         <div className="grid-container">
           <motion.div
-            ref={heroRef}
             className={`${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {study.hero ? (
-              <motion.img
+              <img
                 src={study.hero}
                 alt={`Hero image for ${study.title} case study`}
                 className="absolute inset-0 w-full h-full object-cover"
-                style={{ y: heroY, scale: 1.15 }}
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
