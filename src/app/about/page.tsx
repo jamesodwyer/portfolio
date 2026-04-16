@@ -323,7 +323,7 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {coreSkills.map((skill, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-swiss-muted rounded-full mt-2 flex-shrink-0" />
+                      <span className="w-3 h-3 bg-swiss-yellow rounded-full mt-1.5 flex-shrink-0" />
                       <span className="text-body text-swiss-muted">{skill}</span>
                     </li>
                   ))}
@@ -340,7 +340,7 @@ export default function AboutPage() {
                 <ul className="space-y-3">
                   {tools.map((tool, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-swiss-muted rounded-full mt-2 flex-shrink-0" />
+                      <span className="w-3 h-3 bg-swiss-white rounded-full mt-1.5 flex-shrink-0" />
                       <span className="text-body text-swiss-muted">{tool}</span>
                     </li>
                   ))}
