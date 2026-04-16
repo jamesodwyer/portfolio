@@ -440,7 +440,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
-                    <span className="w-3 h-3 rounded-full bg-swiss-yellow mt-2 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-swiss-muted mt-3 flex-shrink-0" />
                     <span className="text-subheading">{learning}</span>
                   </motion.li>
                 ))}
