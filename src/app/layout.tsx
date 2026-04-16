@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { PasswordGate } from "@/components/PasswordGate";
 import { siteConfig } from "@/lib/data";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} - ${siteConfig.title}`,
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Header />
           <main id="main-content">{children}</main>
         </PasswordGate>
+        <Analytics />
       </body>
     </html>
   );
