@@ -322,9 +322,9 @@ export default function AboutPage() {
                 <h3 className="text-subheading mb-6">Core Skills</h3>
                 <ul className="space-y-3">
                   {coreSkills.map((skill, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-swiss-yellow flex-shrink-0" />
-                      <span className="text-body">{skill}</span>
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-swiss-muted rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-body text-swiss-muted">{skill}</span>
                     </li>
                   ))}
                 </ul>
@@ -339,9 +339,9 @@ export default function AboutPage() {
                 <h3 className="text-subheading mb-6">Tools & Technology</h3>
                 <ul className="space-y-3">
                   {tools.map((tool, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-swiss-white flex-shrink-0" />
-                      <span className="text-body">{tool}</span>
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-swiss-muted rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-body text-swiss-muted">{tool}</span>
                     </li>
                   ))}
                 </ul>
