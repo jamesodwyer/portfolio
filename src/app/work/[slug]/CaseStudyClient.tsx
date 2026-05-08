@@ -3,7 +3,15 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
-import { Footer } from "@/components";
+import { Footer, OrganicLoader } from "@/components";
+import type { OrganicLoaderVariant } from "@/components";
+
+const loaderVariantBySlug: Record<string, OrganicLoaderVariant> = {
+  "ticketmaster-gds": "03",
+  "gds-mcp": "11",
+  "token-migration": "20",
+  "ai-design-workflows": "21",
+};
 
 const colorMap = {
   red: "bg-swiss-yellow",
@@ -26,7 +34,8 @@ interface CaseStudyClientProps {
 
 export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientProps) {
   const gallery = study.gallery ?? [];
-  const hasImages = gallery.length > 0 || study.hero;
+  const loaderVariant = loaderVariantBySlug[study.slug];
+  const hasImages = gallery.length > 0 || Boolean(study.hero) || Boolean(loaderVariant);
 
   return (
     <>
@@ -113,7 +122,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {study.hero ? (
+            {loaderVariant ? (
+              <OrganicLoader
+                variant={loaderVariant}
+                ariaLabel={`${study.title} loading animation`}
+              />
+            ) : study.hero ? (
               <img
                 src={study.hero}
                 alt={`Hero image for ${study.title} case study`}
