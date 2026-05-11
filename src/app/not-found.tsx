@@ -13,25 +13,26 @@ export default function NotFound() {
           transition={{ duration: 0.8 }}
         >
           <div className="inline-flex items-center justify-center mb-8">
-            <div className="w-24 h-24 border-4 border-bauhaus-black flex items-center justify-center">
+            <div className="w-24 h-24 border-4 border-swiss-gray flex items-center justify-center">
               <span className="text-display-xl">?</span>
             </div>
           </div>
 
           <h1 className="text-display-xl mb-4">404</h1>
-          <p className="text-subheading text-bauhaus-gray mb-12">
+          <p className="text-subheading text-swiss-muted mb-12">
             This page doesn&apos;t exist.
           </p>
 
           <Link
             href="/"
-            className="inline-flex items-center gap-3 text-caption tracking-widest hover:text-bauhaus-red transition-colors"
+            className="inline-flex items-center gap-3 text-caption tracking-widest hover:text-swiss-yellow transition-colors"
           >
             <svg
               width="16"
               height="16"
               viewBox="0 0 24 24"
               fill="none"
+              aria-hidden="true"
             >
               <path
                 d="M19 12H5M5 12L12 19M5 12L12 5"

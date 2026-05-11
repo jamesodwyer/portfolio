@@ -2,52 +2,137 @@
 
 import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/data";
-import { Footer } from "@/components";
+import { Footer, DotPattern } from "@/components";
 
 const experience = [
   {
+    role: "Associate Director – Global Design Systems",
+    company: "Ticketmaster, London",
+    period: "Mar 2024 – Present",
+    freelance: false,
+    bullets: [
+      "Own and scale a global design system across 8 products and multiple business verticals",
+      "Established a federated contribution model enabling 20+ designers to contribute to a single governed system",
+      "Defined and implemented token architecture supporting multi-brand theming across platforms",
+      "Introduced AI-driven design workflows (MCP, Claude, Figma Make) to accelerate component delivery and reduce manual effort",
+      "Improved cross-team consistency and reduced duplication across product teams",
+      "Partner with product and engineering leadership to align design strategy with delivery outcomes",
+      "Mentor and develop designers, raising overall design maturity across teams",
+    ],
+  },
+  {
+    role: "Head of Digital / Principal Product Designer",
+    company: "ATG Tickets, London (Ticketing / Ecom)",
+    period: "Aug 2022 – Jan 2024",
+    freelance: true,
+    bullets: [
+      "Led digital product design across web and mobile platforms for a global ticketing business",
+      "Established and rolled out a design system to improve consistency and delivery speed",
+      "Defined UX strategy across key customer journeys, improving usability and conversion",
+      "Built and led design capability, introducing scalable ways of working across teams",
+      "Collaborated with senior stakeholders to align design with commercial objectives",
+    ],
+  },
+  {
+    role: "Principal Product Designer",
+    company: "CMC Invest, London (Finance)",
+    period: "May 2022 – Aug 2022",
+    freelance: true,
+    bullets: [
+      "Led product design for mobile-first investment platform",
+      "Delivered high-quality UX/UI across complex financial workflows",
+      "Partnered with product and engineering to deliver scalable design solutions",
+      "Introduced design system thinking to improve consistency across the platform",
+    ],
+  },
+  {
+    role: "Lead Product Designer",
+    company: "Yell (B2B)",
+    period: "Feb 2022 – May 2022",
+    freelance: true,
+    bullets: [
+      "Led UX and product design across B2B digital products",
+      "Delivered mobile and responsive experiences for SME customers",
+      "Introduced structured design processes and improved research practices",
+      "Contributed to design system development and scalable UI patterns",
+    ],
+  },
+  {
+    role: "Senior User Experience Consultant",
+    company: "CX Partners, Bristol (Learning Platform)",
+    period: "Dec 2021 – Feb 2022",
+    freelance: true,
+    bullets: [
+      "Delivered service design and UX strategy for large-scale digital platforms",
+      "Led user research and defined user journeys across complex systems",
+      "Facilitated workshops and stakeholder alignment sessions",
+      "Produced end-to-end UX deliverables from discovery through to delivery",
+    ],
+  },
+  {
+    role: "Lead User Interface Designer",
+    company: "Hargreaves Lansdown, Bristol (Finance)",
+    period: "Nov 2018 – Nov 2021",
+    freelance: true,
+    bullets: [
+      "Led UI design across web platforms for a leading financial services provider",
+      "Contributed to and evolved the organisation\u2019s design system",
+      "Delivered responsive, accessible interfaces across multiple products",
+      "Worked closely with engineering teams to ensure high-quality implementation",
+    ],
+  },
+  {
     role: "Senior Product Designer",
-    company: "Fintech Startup",
-    period: "2022 — Present",
-    description:
-      "Leading design for a banking platform serving 2M+ users. Established design system and mentored junior designers.",
+    company: "Parmenion, Bristol (Finance)",
+    period: "Nov 2016 – Nov 2018",
+    freelance: true,
+    bullets: [
+      "Delivered UX and UI design across financial platforms",
+      "Led interaction design and user research initiatives",
+      "Collaborated with cross-functional teams to deliver product improvements",
+    ],
   },
   {
-    role: "Product Designer",
-    company: "Design Agency",
-    period: "2019 — 2022",
-    description:
-      "Delivered end-to-end design solutions for clients including healthcare, e-commerce, and B2B SaaS companies.",
-  },
-  {
-    role: "UI/UX Designer",
-    company: "Tech Company",
-    period: "2017 — 2019",
-    description:
-      "Designed web and mobile applications. Collaborated closely with engineering teams to ship pixel-perfect implementations.",
+    role: "User Experience & Digital Designer",
+    company: "Various Clients",
+    period: "2010 – 2016",
+    freelance: true,
+    bullets: [
+      "Delivered UX and digital design across major brands including BBC, Sky, UEFA, Disney, and Expedia",
+      "Worked across multiple industries including media, sports, finance, and e-commerce",
+      "Led design delivery across web, mobile, and emerging platforms",
+      "Established early design system thinking across client projects",
+    ],
   },
 ];
 
-const skills = [
-  "Product Strategy",
-  "User Research",
-  "Information Architecture",
-  "Interaction Design",
-  "Visual Design",
-  "Design Systems",
-  "Prototyping",
-  "Front-end Development",
+const coreSkills = [
+  "Design Systems Strategy & Ownership",
+  "AI-Driven Design Workflows (MCP, Claude, Figma Make)",
+  "Design Operations & Governance",
+  "Token Architecture (Core, Semantic, Component)",
+  "Multi-Brand & Theming Systems",
+  "Federated Contribution Models",
+  "Cross-Functional Leadership (Design, Product, Engineering)",
+  "Product Design Leadership (Enterprise / Multi-Product)",
+  "End-to-End Product Design (Discovery \u2192 Delivery)",
+  "Scalable Component & Pattern Libraries",
+  "Design System Automation & Documentation",
+  "Figma, Token Studio & Front-End Collaboration",
 ];
 
 const tools = [
   "Figma",
-  "Protopie",
-  "Principle",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "Framer Motion",
+  "Token Studio",
+  "Storybook",
+  "React collaboration",
+  "HTML/CSS",
+  "Git",
+  "Miro",
+  "Notion",
+  "Jira",
+  "Confluence",
+  "AI tooling (Claude, MCP)",
 ];
 
 export default function AboutPage() {
@@ -63,15 +148,12 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="bauhaus-line-red w-16 mb-8" />
+                <div className="swiss-line-yellow w-16 mb-8" />
 
                 <h1 className="text-display-xl mb-8">About</h1>
 
-                <p className="text-heading text-bauhaus-gray leading-relaxed max-w-3xl">
-                  I&apos;m a designer and developer based in {siteConfig.location}, focused on
-                  creating digital products that are both{" "}
-                  <span className="text-bauhaus-black">beautiful</span> and{" "}
-                  <span className="text-bauhaus-black">functional</span>.
+                <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
+                  I&apos;m a design systems leader and design technologist based in the UK, currently scaling Ticketmaster&apos;s Global Design System across eight products and pioneering AI-driven design operations that enable small teams to deliver at enterprise scale.
                 </p>
               </motion.div>
             </div>
@@ -84,8 +166,8 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="relative"
               >
-                <div className="w-32 h-32 bg-bauhaus-red" />
-                <div className="absolute -top-8 -left-8 w-32 h-32 border-4 border-bauhaus-black" />
+                <div className="w-32 h-32 bg-swiss-yellow" />
+                <div className="absolute -top-8 -left-8 w-32 h-32 border-4 border-swiss-gray" />
               </motion.div>
             </div>
           </div>
@@ -93,7 +175,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bio Section */}
-      <section className="py-grid-3 border-t-2 border-bauhaus-black">
+      <section className="py-grid-6 border-t-2 border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -103,7 +185,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">BACKGROUND</span>
+              <span className="text-caption text-swiss-muted">BACKGROUND</span>
             </motion.div>
 
             <motion.div
@@ -115,25 +197,39 @@ export default function AboutPage() {
             >
               <div className="space-y-6 text-body leading-relaxed">
                 <p>
-                  With over 7 years of experience in digital product design, I&apos;ve
-                  had the privilege of working with startups, agencies, and
-                  established companies to create meaningful digital experiences.
+                  Associate Director of Design Systems at Ticketmaster, responsible
+                  for defining and scaling a global design system across eight products
+                  and multiple business verticals. I lead the intersection of product,
+                  design, and engineering, building systems and operating models that
+                  improve speed, consistency, and measurable delivery outcomes at scale.
                 </p>
                 <p>
-                  My approach is rooted in the principles of Swiss design—clarity,
-                  precision, and function. I believe that great design should feel
-                  invisible, serving the user without calling attention to itself.
+                  I have established a federated contribution model that enables 20+
+                  designers across product teams to contribute into a single governed
+                  system, transforming design delivery from a centralised bottleneck
+                  into a distributed, self-sustaining capability. This has strengthened
+                  cross-team alignment, increased adoption, and accelerated delivery
+                  across complex product ecosystems.
                 </p>
                 <p>
-                  Beyond pixels, I&apos;m passionate about the intersection of design
-                  and engineering. I code to better understand constraints and
-                  possibilities, ensuring my designs are not just beautiful but
-                  buildable.
+                  My current focus is on AI-enabled design operations. I design and
+                  implement workflows that make design systems queryable, executable,
+                  and embedded into the product lifecycle. This includes building
+                  MCP-based infrastructure, automating token pipelines, and creating
+                  documentation systems optimised for both human and AI consumption,
+                  enabling multi-brand scalability and faster product iteration.
                 </p>
-                <p className="text-bauhaus-gray">
-                  When I&apos;m not designing, you&apos;ll find me exploring architecture,
-                  reading about design history, or experimenting with generative
-                  art.
+                <p>
+                  I operate end-to-end across discovery and delivery, from prototyping
+                  and piloting new approaches through to production-ready implementation.
+                  I lead through a combination of strategic direction and hands-on
+                  execution, mentoring teams, improving design maturity, and embedding
+                  scalable ways of working across organisations.
+                </p>
+                <p>
+                  Prior to Ticketmaster, I have delivered design systems and digital
+                  products across fintech and platform businesses including ATG Tickets,
+                  Hargreaves Lansdown, CMC Invest, Yell, and CX Partners.
                 </p>
               </div>
             </motion.div>
@@ -142,7 +238,7 @@ export default function AboutPage() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      <section className="py-grid-6 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -152,7 +248,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">EXPERIENCE</span>
+              <span className="text-caption text-swiss-muted">EXPERIENCE</span>
             </motion.div>
 
             <div className="col-span-12 lg:col-span-9">
@@ -163,22 +259,34 @@ export default function AboutPage() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.05 }}
                     className="grid grid-cols-1 md:grid-cols-4 gap-4"
                   >
                     <div className="md:col-span-1">
-                      <span className="text-small text-bauhaus-gray">
+                      <span className="text-small text-swiss-muted">
                         {exp.period}
                       </span>
                     </div>
                     <div className="md:col-span-3">
-                      <h3 className="text-subheading mb-1">{exp.role}</h3>
-                      <span className="text-body text-bauhaus-red block mb-3">
+                      <div className="flex items-center gap-3 mb-1">
+                        <h3 className="text-subheading">{exp.role}</h3>
+                        {exp.freelance && (
+                          <span className="text-[10px] tracking-widest uppercase text-swiss-muted border border-swiss-gray px-2 py-0.5 rounded-full">
+                            Freelance
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-body text-swiss-yellow block mb-3">
                         {exp.company}
                       </span>
-                      <p className="text-body text-bauhaus-gray">
-                        {exp.description}
-                      </p>
+                      <ul className="space-y-2">
+                        {exp.bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="w-1.5 h-1.5 bg-swiss-muted rounded-full mt-2 flex-shrink-0" />
+                            <span className="text-body text-swiss-muted">{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </motion.div>
                 ))}
@@ -188,8 +296,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Skills & Tools */}
-      <section className="py-grid-3 border-t border-bauhaus-black/20">
+      {/* Core Skills & Tools */}
+      <section className="py-grid-6 border-t border-swiss-gray">
         <div className="grid-container">
           <div className="grid grid-cols-12 gap-6">
             <motion.div
@@ -199,7 +307,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-caption text-bauhaus-gray">
+              <span className="text-caption text-swiss-muted">
                 SKILLS & TOOLS
               </span>
             </motion.div>
@@ -211,12 +319,12 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <h3 className="text-subheading mb-6">Capabilities</h3>
+                <h3 className="text-subheading mb-6">Core Skills</h3>
                 <ul className="space-y-3">
-                  {skills.map((skill, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-bauhaus-red" />
-                      <span className="text-body">{skill}</span>
+                  {coreSkills.map((skill, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-3 h-3 bg-swiss-yellow rounded-full mt-1.5 flex-shrink-0" />
+                      <span className="text-body text-swiss-muted">{skill}</span>
                     </li>
                   ))}
                 </ul>
@@ -228,12 +336,12 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h3 className="text-subheading mb-6">Tools</h3>
+                <h3 className="text-subheading mb-6">Tools & Technology</h3>
                 <ul className="space-y-3">
                   {tools.map((tool, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-bauhaus-blue" />
-                      <span className="text-body">{tool}</span>
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-3 h-3 bg-swiss-muted rounded-full mt-1.5 flex-shrink-0" />
+                      <span className="text-body text-swiss-muted">{tool}</span>
                     </li>
                   ))}
                 </ul>
@@ -244,7 +352,7 @@ export default function AboutPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-grid-4 border-t-2 border-bauhaus-black">
+      <section className="py-grid-4 border-t-2 border-swiss-gray">
         <div className="grid-container">
           <motion.div
             className="grid grid-cols-12 gap-6"
@@ -254,24 +362,25 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="col-span-12 lg:col-span-8">
-              <span className="text-caption text-bauhaus-gray block mb-6">
+              <span className="text-caption text-swiss-muted block mb-6">
                 LET&apos;S WORK TOGETHER
               </span>
               <h2 className="text-display-lg mb-8">
-                Have a project in mind?
+                Looking to build what&apos;s next?
                 <br />
-                <span className="text-bauhaus-gray">Let&apos;s talk.</span>
+                <span className="text-swiss-yellow">Let&apos;s talk.</span>
               </h2>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-4 text-heading hover:text-bauhaus-red transition-colors group"
+                className="inline-flex items-center gap-4 text-heading hover:text-swiss-yellow transition-colors group"
               >
-                {siteConfig.email}
+                Get in touch → {siteConfig.email}
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
+                  aria-hidden="true"
                   className="transform group-hover:translate-x-2 transition-transform"
                 >
                   <path
@@ -287,10 +396,13 @@ export default function AboutPage() {
 
             {/* Geometric Element */}
             <div className="hidden lg:flex col-span-4 items-center justify-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="w-32 h-32 border-4 border-bauhaus-black"
+              <DotPattern
+                rows={8}
+                cols={8}
+                dotSize={10}
+                gap={10}
+                circular={true}
+                className="text-swiss-yellow"
               />
             </div>
           </motion.div>

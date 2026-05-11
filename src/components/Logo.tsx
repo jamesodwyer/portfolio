@@ -84,27 +84,98 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
   );
 }
 
-// Alternative minimal version - just JO monogram
+// JO Monogram - matches CV logo style with J and superscript O
 export function LogoMark({ className = "", size = 32 }: { className?: string; size?: number }) {
   return (
     <div
       className={`inline-flex items-center justify-center ${className}`}
       style={{
-        width: size * 2,
+        width: size,
         height: size,
       }}
     >
       <svg
-        viewBox="0 0 60 30"
+        viewBox="0 0 100 100"
         fill="currentColor"
         style={{ width: "100%", height: "100%" }}
       >
-        {/* J */}
-        <path d="M0 0h8v22c0 4-2 6-6 6H0v-4h2c2 0 2-1 2-2V0z" />
+        {/* Large J with curved hook */}
+        <path d="
+          M25 18
+          h18
+          v52
+          c0 8 -4 14 -14 14
+          h-8
+          v-10
+          h6
+          c4 0 6 -2 6 -6
+          V18
+          z
+        " />
 
-        {/* O with center dot */}
-        <circle cx="38" cy="15" r="14" fill="none" stroke="currentColor" strokeWidth="6" />
-        <circle cx="38" cy="15" r="3" />
+        {/* Superscript O with center dot */}
+        <circle cx="68" cy="32" r="16" fill="none" stroke="currentColor" strokeWidth="8" />
+        <circle cx="68" cy="32" r="4" />
+      </svg>
+    </div>
+  );
+}
+
+// Circular badge version - matches CV exactly
+export function LogoBadge({ className = "", size = 48 }: { className?: string; size?: number }) {
+  return (
+    <div
+      className={`inline-flex items-center justify-center ${className}`}
+      style={{
+        width: size,
+        height: size,
+      }}
+    >
+      <svg
+        viewBox="0 0 100 100"
+        style={{ width: "100%", height: "100%" }}
+      >
+        {/* Black circle background */}
+        <circle cx="50" cy="50" r="50" fill="currentColor" />
+
+        {/* White J with curved hook */}
+        <path
+          d="
+            M28 22
+            h16
+            v44
+            c0 7 -3 12 -12 12
+            h-7
+            v-8
+            h5
+            c4 0 5 -2 5 -5
+            V22
+            z
+          "
+          fill="black"
+          className="fill-swiss-black dark:fill-swiss-white"
+          style={{ fill: 'var(--color-swiss-black, #000)' }}
+        />
+
+        {/* White superscript O with center dot */}
+        <circle
+          cx="62"
+          cy="34"
+          r="14"
+          fill="none"
+          stroke="black"
+          className="stroke-swiss-black dark:stroke-swiss-white"
+          style={{ stroke: 'var(--color-swiss-black, #000)' }}
+          strokeWidth="7"
+        />
+        <circle
+          cx="62"
+          cy="34"
+          r="3.5"
+          fill="black"
+          className="fill-swiss-black dark:fill-swiss-white"
+          style={{ fill: 'var(--color-swiss-black, #000)' }}
+        />
       </svg>
     </div>
   );
