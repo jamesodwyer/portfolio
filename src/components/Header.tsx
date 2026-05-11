@@ -22,7 +22,7 @@ export function Header() {
         <nav aria-label="Main navigation" className="flex items-center justify-between h-24 border-b border-swiss-gray">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 link-hover" aria-label="James O'Dwyer - Home">
-            <LogoMark size={24} />
+            <LogoMark size={48} />
           </Link>
 
           {/* Desktop Navigation */}

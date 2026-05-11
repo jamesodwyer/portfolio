@@ -113,9 +113,8 @@ export function LogoMark({ className = "", size = 32 }: { className?: string; si
           z
         " />
 
-        {/* Superscript O with center dot */}
+        {/* Superscript O */}
         <circle cx="68" cy="32" r="16" fill="none" stroke="currentColor" strokeWidth="8" />
-        <circle cx="68" cy="32" r="4" />
       </svg>
     </div>
   );
