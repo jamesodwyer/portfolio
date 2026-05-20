@@ -413,7 +413,7 @@ button:focus-visible {
   50%      { transform: rotate(60deg)  translate(calc(14px * var(--loader-spread)), 0) scale(0.75); }
 }
 
-/* ---------- MacBook mockup slideshow (gds-mcp case study) ---------- */
+/* ---------- MacBook mockup slideshow ---------- */
 .mockup {
   position: relative;
   width: 100%;
@@ -437,7 +437,6 @@ button:focus-visible {
   background: #000;
   overflow: hidden;
   z-index: 2;
-  contain: layout paint size;
 }
 .mockup-slideshow {
   position: absolute;
@@ -451,12 +450,13 @@ button:focus-visible {
   object-fit: cover;
   object-position: 50% 0%;
   opacity: 0;
-  will-change: opacity;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  image-rendering: auto;
-  image-rendering: high-quality;
 }
+
+.mockup-slideshow--2 .mockup-slide {
+  animation: mockup-fade-2 14s ease-in-out infinite;
+}
+.mockup-slideshow--2 .mockup-slide:nth-child(1) { animation-delay: 0s; }
+.mockup-slideshow--2 .mockup-slide:nth-child(2) { animation-delay: 7s; }
 
 .mockup-slideshow--3 .mockup-slide {
   animation: mockup-fade-3 21s ease-in-out infinite;
@@ -465,14 +465,6 @@ button:focus-visible {
 .mockup-slideshow--3 .mockup-slide:nth-child(2) { animation-delay: 7s; }
 .mockup-slideshow--3 .mockup-slide:nth-child(3) { animation-delay: 14s; }
 
-@keyframes mockup-fade-3 {
-  0%     { opacity: 0; }
-  5.71%  { opacity: 1; }
-  27.62% { opacity: 1; }
-  33.33% { opacity: 0; }
-  100%   { opacity: 0; }
-}
-
 .mockup-slideshow--4 .mockup-slide {
   animation: mockup-fade-4 28s ease-in-out infinite;
 }
@@ -480,6 +472,22 @@ button:focus-visible {
 .mockup-slideshow--4 .mockup-slide:nth-child(2) { animation-delay: 7s; }
 .mockup-slideshow--4 .mockup-slide:nth-child(3) { animation-delay: 14s; }
 .mockup-slideshow--4 .mockup-slide:nth-child(4) { animation-delay: 21s; }
+
+@keyframes mockup-fade-2 {
+  0%     { opacity: 0; }
+  8.57%  { opacity: 1; }
+  41.43% { opacity: 1; }
+  50%    { opacity: 0; }
+  100%   { opacity: 0; }
+}
+
+@keyframes mockup-fade-3 {
+  0%     { opacity: 0; }
+  5.71%  { opacity: 1; }
+  27.62% { opacity: 1; }
+  33.33% { opacity: 0; }
+  100%   { opacity: 0; }
+}
 
 @keyframes mockup-fade-4 {
   0%     { opacity: 0; }
@@ -492,18 +500,4 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .mockup-slide { animation: none !important; opacity: 0; }
   .mockup-slide:first-child { opacity: 1; }
-}
-
-.mockup-slideshow--2 .mockup-slide {
-  animation: mockup-fade-2 14s ease-in-out infinite;
-}
-.mockup-slideshow--2 .mockup-slide:nth-child(1) { animation-delay: 0s; }
-.mockup-slideshow--2 .mockup-slide:nth-child(2) { animation-delay: 7s; }
-
-@keyframes mockup-fade-2 {
-  0%     { opacity: 0; }
-  8.57%  { opacity: 1; }
-  41.43% { opacity: 1; }
-  50%    { opacity: 0; }
-  100%   { opacity: 0; }
 }
