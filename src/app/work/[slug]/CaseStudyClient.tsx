@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
-import { Footer } from "@/components";
+import { Footer, MockupSlideshow } from "@/components";
 
 const colorMap = {
   red: "bg-swiss-yellow",
@@ -108,12 +108,21 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       <section className="py-grid">
         <div className="grid-container">
           <motion.div
-            className={`${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`}
+            className={
+              study.heroSlideshow
+                ? "relative"
+                : `${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`
+            }
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {study.hero ? (
+            {study.heroSlideshow ? (
+              <MockupSlideshow
+                slides={study.heroSlideshow.slides}
+                mockup={study.heroSlideshow.mockup}
+              />
+            ) : study.hero ? (
               <img
                 src={study.hero}
                 alt={`Hero image for ${study.title} case study`}
@@ -381,6 +390,25 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           </div>
         </div>
       </section>
+
+      {/* Additional slideshow (e.g. second slide group for gds-mcp) */}
+      {study.additionalSlideshow && (
+        <section className="py-grid">
+          <div className="grid-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <MockupSlideshow
+                slides={study.additionalSlideshow.slides}
+                mockup={study.additionalSlideshow.mockup}
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Gallery - after Solution (remaining images) */}
       {gallery.length >= 7 && (
