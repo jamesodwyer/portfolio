@@ -23,29 +23,6 @@ export function Footer() {
           <div className="hidden md:block">
             <DotPattern rows={5} cols={5} dotSize={8} gap={8} className="text-swiss-muted" />
           </div>
-
-          {/* Social Links */}
-          <div className="flex flex-col gap-6">
-            <span className="text-caption text-swiss-muted">FOLLOW</span>
-            <div className="flex items-center gap-8">
-              <a
-                href={siteConfig.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-caption tracking-widest link-hover"
-              >
-                LI<span className="sr-only"> (opens in new tab)</span>
-              </a>
-              <a
-                href={siteConfig.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-caption tracking-widest link-hover"
-              >
-                GH<span className="sr-only"> (opens in new tab)</span>
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Copyright */}
