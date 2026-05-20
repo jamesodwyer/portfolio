@@ -48,22 +48,22 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/ticketmaster-gds/hero.png",
     heroSlideshow: {
       slides: [
-        "/gds-mcp-slides/images/Slide8.png",
-        "/gds-mcp-slides/images/Slide9.png",
+        "/gds-mcp-slides/images/slide8.png",
+        "/gds-mcp-slides/images/slide9.png",
       ],
     },
     additionalSlideshows: [
       {
         slides: [
-          "/gds-mcp-slides/images/Slide10.png",
-          "/gds-mcp-slides/images/Slide11.png",
+          "/gds-mcp-slides/images/slide10.png",
+          "/gds-mcp-slides/images/slide11.png",
         ],
         position: "after-challenge",
       },
       {
         slides: [
-          "/gds-mcp-slides/images/Slide12.png",
-          "/gds-mcp-slides/images/Slide13.png",
+          "/gds-mcp-slides/images/slide12.png",
+          "/gds-mcp-slides/images/slide13.png",
         ],
         position: "after-solution",
       },
