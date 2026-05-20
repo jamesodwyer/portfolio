@@ -20,14 +20,13 @@ export function MockupSlideshow({
     <div className={`mockup ${className}`}>
       <div className="mockup__screen">
         <div className={`mockup-slideshow ${groupClass}`}>
-          {slides.map((src, i) => (
+          {slides.map((src) => (
             <img
               key={src}
               className="mockup-slide"
               src={src}
               alt=""
               aria-hidden="true"
-              loading={i === 0 ? "eager" : "lazy"}
             />
           ))}
         </div>
