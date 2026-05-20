@@ -27,6 +27,31 @@ interface CaseStudyClientProps {
 export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientProps) {
   const gallery = study.gallery ?? [];
   const hasImages = gallery.length > 0 || Boolean(study.hero);
+  const additionalSlideshows = study.additionalSlideshows ?? [];
+  const slideshowsAfterChallenge = additionalSlideshows.filter(
+    (s) => s.position === "after-challenge"
+  );
+  const slideshowsAfterSolution = additionalSlideshows.filter(
+    (s) => s.position !== "after-challenge"
+  );
+
+  const renderSlideshow = (
+    slideshow: { slides: string[]; mockup?: string },
+    key: number
+  ) => (
+    <section key={key} className="py-grid">
+      <div className="grid-container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <MockupSlideshow slides={slideshow.slides} mockup={slideshow.mockup} />
+        </motion.div>
+      </div>
+    </section>
+  );
 
   return (
     <>
@@ -223,6 +248,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </div>
       </section>
 
+      {/* Additional slideshows positioned after the Challenge section */}
+      {slideshowsAfterChallenge.map((slideshow, index) =>
+        renderSlideshow(slideshow, index)
+      )}
+
       {/* Gallery - between Challenge and Process (first group) */}
       {gallery.length >= 2 && (
         <section className="py-grid">
@@ -391,23 +421,9 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </div>
       </section>
 
-      {/* Additional slideshow (e.g. second slide group for gds-mcp) */}
-      {study.additionalSlideshow && (
-        <section className="py-grid">
-          <div className="grid-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <MockupSlideshow
-                slides={study.additionalSlideshow.slides}
-                mockup={study.additionalSlideshow.mockup}
-              />
-            </motion.div>
-          </div>
-        </section>
+      {/* Additional slideshows positioned after the Solution section */}
+      {slideshowsAfterSolution.map((slideshow, index) =>
+        renderSlideshow(slideshow, index)
       )}
 
       {/* Gallery - after Solution (remaining images) */}

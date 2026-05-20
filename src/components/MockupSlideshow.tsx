@@ -6,11 +6,15 @@ interface MockupSlideshowProps {
 
 export function MockupSlideshow({
   slides,
-  mockup = "/gds-mcp-slides/images/mockup.png",
+  mockup = "/mockup-slides/images/mockup.png",
   className = "",
 }: MockupSlideshowProps) {
   const groupClass =
-    slides.length === 3 ? "mockup-slideshow--3" : "mockup-slideshow--4";
+    slides.length === 2
+      ? "mockup-slideshow--2"
+      : slides.length === 3
+      ? "mockup-slideshow--3"
+      : "mockup-slideshow--4";
 
   return (
     <div className={`mockup ${className}`}>
