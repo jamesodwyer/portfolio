@@ -8,6 +8,14 @@ export interface CaseStudy {
   thumbnail: string;
   hero: string;
   gallery?: string[];
+  heroSlideshow?: {
+    slides: string[];
+    mockup?: string;
+  };
+  additionalSlideshow?: {
+    slides: string[];
+    mockup?: string;
+  };
   overview: {
     role: string;
     timeline: string;
@@ -90,6 +98,21 @@ export const caseStudies: CaseStudy[] = [
     color: "black",
     thumbnail: "/images/gds-mcp/thumb.svg",
     hero: "/images/gds-mcp/hero.png",
+    heroSlideshow: {
+      slides: [
+        "/gds-mcp-slides/images/slide1.png",
+        "/gds-mcp-slides/images/slide2.png",
+        "/gds-mcp-slides/images/slide3.png",
+      ],
+    },
+    additionalSlideshow: {
+      slides: [
+        "/gds-mcp-slides/images/slide4.png",
+        "/gds-mcp-slides/images/slide5.png",
+        "/gds-mcp-slides/images/slide6.png",
+        "/gds-mcp-slides/images/slide7.png",
+      ],
+    },
     overview: {
       role: "Associate Director, Product Design",
       timeline: "6 months (ongoing)",
