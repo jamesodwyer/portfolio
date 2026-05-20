@@ -12,10 +12,11 @@ export interface CaseStudy {
     slides: string[];
     mockup?: string;
   };
-  additionalSlideshow?: {
+  additionalSlideshows?: Array<{
     slides: string[];
     mockup?: string;
-  };
+    position?: "after-challenge" | "after-solution";
+  }>;
   overview: {
     role: string;
     timeline: string;
@@ -45,6 +46,28 @@ export const caseStudies: CaseStudy[] = [
     color: "blue",
     thumbnail: "/images/ticketmaster-gds/thumb.svg",
     hero: "/images/ticketmaster-gds/hero.png",
+    heroSlideshow: {
+      slides: [
+        "/gds-mcp-slides/images/Slide8.png",
+        "/gds-mcp-slides/images/Slide9.png",
+      ],
+    },
+    additionalSlideshows: [
+      {
+        slides: [
+          "/gds-mcp-slides/images/Slide10.png",
+          "/gds-mcp-slides/images/Slide11.png",
+        ],
+        position: "after-challenge",
+      },
+      {
+        slides: [
+          "/gds-mcp-slides/images/Slide12.png",
+          "/gds-mcp-slides/images/Slide13.png",
+        ],
+        position: "after-solution",
+      },
+    ],
     overview: {
       role: "Associate Director, Product Design",
       timeline: "18 months (ongoing)",
@@ -105,14 +128,17 @@ export const caseStudies: CaseStudy[] = [
         "/gds-mcp-slides/images/slide3.png",
       ],
     },
-    additionalSlideshow: {
-      slides: [
-        "/gds-mcp-slides/images/slide4.png",
-        "/gds-mcp-slides/images/slide5.png",
-        "/gds-mcp-slides/images/slide6.png",
-        "/gds-mcp-slides/images/slide7.png",
-      ],
-    },
+    additionalSlideshows: [
+      {
+        slides: [
+          "/gds-mcp-slides/images/slide4.png",
+          "/gds-mcp-slides/images/slide5.png",
+          "/gds-mcp-slides/images/slide6.png",
+          "/gds-mcp-slides/images/slide7.png",
+        ],
+        position: "after-solution",
+      },
+    ],
     overview: {
       role: "Associate Director, Product Design",
       timeline: "6 months (ongoing)",
