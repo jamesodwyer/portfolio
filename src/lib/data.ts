@@ -48,22 +48,22 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/ticketmaster-gds/hero.png",
     heroSlideshow: {
       slides: [
-        "/gds-mcp-slides/images/slide8.png",
-        "/gds-mcp-slides/images/slide9.png",
+        "/mockup-slides/images/slide8.png",
+        "/mockup-slides/images/slide9.png",
       ],
     },
     additionalSlideshows: [
       {
         slides: [
-          "/gds-mcp-slides/images/slide10.png",
-          "/gds-mcp-slides/images/slide11.png",
+          "/mockup-slides/images/slide10.png",
+          "/mockup-slides/images/slide11.png",
         ],
         position: "after-challenge",
       },
       {
         slides: [
-          "/gds-mcp-slides/images/slide12.png",
-          "/gds-mcp-slides/images/slide13.png",
+          "/mockup-slides/images/slide12.png",
+          "/mockup-slides/images/slide13.png",
         ],
         position: "after-solution",
       },
@@ -123,18 +123,18 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/gds-mcp/hero.png",
     heroSlideshow: {
       slides: [
-        "/gds-mcp-slides/images/slide1.png",
-        "/gds-mcp-slides/images/slide2.png",
-        "/gds-mcp-slides/images/slide3.png",
+        "/mockup-slides/images/slide1.png",
+        "/mockup-slides/images/slide2.png",
+        "/mockup-slides/images/slide3.png",
       ],
     },
     additionalSlideshows: [
       {
         slides: [
-          "/gds-mcp-slides/images/slide4.png",
-          "/gds-mcp-slides/images/slide5.png",
-          "/gds-mcp-slides/images/slide6.png",
-          "/gds-mcp-slides/images/slide7.png",
+          "/mockup-slides/images/slide4.png",
+          "/mockup-slides/images/slide5.png",
+          "/mockup-slides/images/slide6.png",
+          "/mockup-slides/images/slide7.png",
         ],
         position: "after-solution",
       },

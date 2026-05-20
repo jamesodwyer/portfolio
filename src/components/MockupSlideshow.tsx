@@ -6,7 +6,7 @@ interface MockupSlideshowProps {
 
 export function MockupSlideshow({
   slides,
-  mockup = "/gds-mcp-slides/images/mockup.png",
+  mockup = "/mockup-slides/images/mockup.png",
   className = "",
 }: MockupSlideshowProps) {
   const groupClass =
