@@ -28,18 +28,18 @@ export default function Home() {
 
                 {/* Large Name */}
                 <h1 className="text-display-hero mb-12">
-                  Design
+                  Designing
                   <br />
-                  <span className="text-swiss-muted">Systems</span>
+                  <span className="text-swiss-muted">Products</span>
                   <br />
                   At Scale
                 </h1>
 
                 {/* Tagline */}
                 <p className="text-subheading text-swiss-muted max-w-xl leading-relaxed">
-                  I lead the design systems and operating models behind global
-                  products &mdash; at the intersection of design, engineering,
-                  and AI.
+                  Principal Product Designer and design leader. I shape products
+                  and the teams that build them &mdash; at the intersection of
+                  design, engineering, and AI.
                 </p>
               </motion.div>
             </div>
