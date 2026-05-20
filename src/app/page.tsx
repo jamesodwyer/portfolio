@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="flex items-center gap-6 mb-12">
                   <DotPattern rows={3} cols={3} dotSize={6} gap={4} className="text-swiss-yellow" />
                   <span className="text-caption text-swiss-muted">
-                    DIGITAL DESIGNER & DESIGN TECHNOLOGIST
+                    PRINCIPAL PRODUCT DESIGNER · DESIGN SYSTEMS LEADER
                   </span>
                 </div>
 
@@ -30,15 +30,16 @@ export default function Home() {
                 <h1 className="text-display-hero mb-12">
                   Design
                   <br />
-                  <span className="text-swiss-muted">For</span>
+                  <span className="text-swiss-muted">Systems</span>
                   <br />
-                  People
+                  At Scale
                 </h1>
 
                 {/* Tagline */}
-                <p className="text-subheading text-swiss-muted max-w-md leading-relaxed">
-                  I create digital products that balance form and function.
-                  With a focus on clarity, precision, and user experience.
+                <p className="text-subheading text-swiss-muted max-w-xl leading-relaxed">
+                  I lead the design systems and operating models behind global
+                  products &mdash; at the intersection of design, engineering,
+                  and AI.
                 </p>
               </motion.div>
             </div>
