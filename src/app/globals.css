@@ -281,6 +281,10 @@ a {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  /* Opacity-only crossfade is safe under reduced motion, keep it. */
+  .mockup-slide {
+    transition-duration: 1200ms !important;
+  }
 }
 
 /* Focus States */
