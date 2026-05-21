@@ -118,7 +118,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "gds-mcp",
-    title: "GDS-MCP",
+    title: "second brain for design - MCP",
     subtitle: "When the design system becomes infrastructure, product teams ship faster and AI ships smarter.",
     category: "AI Engineering / Design Systems",
     year: "",
