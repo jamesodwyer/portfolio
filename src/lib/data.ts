@@ -44,7 +44,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ticketmaster-gds",
     title: "Ticketmaster GDS",
-    subtitle: "Scaling a Global Design System Across Products and Teams - Transforming fragmented workflows into a scalable design platform that enables consistent, high-quality product delivery at scale",
+    subtitle: "A global design system that scales across products, teams, and brands.",
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "gds-mcp",
     title: "GDS-MCP",
-    subtitle: "Building an AI-native knowledge layer for a Global Design System - Transforming a static design system into a queryable, intelligent platform that enables teams and AI tools to design and build with accuracy, speed, and confidence",
+    subtitle: "An AI-native knowledge layer that makes the design system queryable.",
     category: "AI Engineering / Design Systems",
     year: "",
     color: "black",
@@ -190,7 +190,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "token-migration",
     title: "Token Migration",
-    subtitle: "Re-architecting the design system foundation to enable scale, theming, and multi-product delivery - Transforming fragmented design tokens into a structured, scalable system that supports multiple products, brands, and future platform growth",
+    subtitle: "Re-architected tokens that unlock theming, scale, and multi-brand delivery.",
     category: "Design Systems / Architecture",
     year: "",
     color: "yellow",
@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ai-design-workflows",
     title: "AI Design Workflows",
-    subtitle: "Building AI-powered design operations that scale a global system with minimal team overhead - Designed and implemented an AI-driven operational model that transforms how design systems are built, maintained, and scaled across multiple products",
+    subtitle: "AI-powered design ops that scale a global system without scaling the team.",
     category: "AI / Design Operations",
     year: "",
     color: "red",
@@ -300,7 +300,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "atg",
     title: "ATG Tickets",
-    subtitle: "Building a multi-brand design system from the ground up - foundations, tokens, governance, and Git workflows to scale ATG's digital estate",
+    subtitle: "A multi-brand design system, built from the ground up.",
     category: "Design Systems",
     year: "",
     color: "yellow",
@@ -362,7 +362,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "hargreaves-lansdown",
     title: "Hargreaves Lansdown",
-    subtitle: "Migrating a major financial platform to AEM while establishing a design system that brought consistency, confidence, and reduced call centre volumes",
+    subtitle: "An AEM migration and design system that cut call centre volumes.",
     category: "Design Systems / Product Design",
     year: "",
     color: "blue",
