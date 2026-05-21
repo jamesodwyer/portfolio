@@ -250,7 +250,7 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: "/images/ai-design-workflows/thumb.svg",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
-      src: "/interactive/index.html",
+      src: "/interactive/",
       title: "AI Design Workflows interactive pipeline explorer",
     },
     overview: {
