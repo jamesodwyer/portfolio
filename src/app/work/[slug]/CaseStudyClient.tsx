@@ -136,7 +136,9 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             className={
               study.heroSlideshow
                 ? "relative"
-                : `${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`
+                : study.heroEmbed
+                  ? "relative"
+                  : `${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`
             }
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -146,6 +148,15 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               <MockupSlideshow
                 slides={study.heroSlideshow.slides}
                 mockup={study.heroSlideshow.mockup}
+              />
+            ) : study.heroEmbed ? (
+              <iframe
+                src={study.heroEmbed.src}
+                title={study.heroEmbed.title}
+                scrolling="no"
+                className="block w-full border-0"
+                style={{ height: "680px" }}
+                loading="lazy"
               />
             ) : study.hero ? (
               <img
