@@ -156,7 +156,6 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 scrolling="no"
                 className="block w-full border-0"
                 style={{ height: "680px" }}
-                loading="lazy"
               />
             ) : study.hero ? (
               <img
