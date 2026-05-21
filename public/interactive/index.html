@@ -17,6 +17,42 @@
       ._pipeline_1bzg8_135 { scrollbar-width: none !important; padding-bottom: 4px !important; }
       ._pipeline_1bzg8_135::-webkit-scrollbar { display: none !important; }
     </style>
+    <script>
+      // Report the demo root's height to the parent so the embedding iframe
+      // can size itself to its content. Without this, the iframe has a fixed
+      // height and shows the body bg as empty gray below the carousel controls.
+      (function () {
+        if (window.parent === window) return;
+        var observer = null;
+        function postHeight() {
+          var root = document.querySelector('.gdsi');
+          if (!root) return;
+          var h = Math.ceil(root.getBoundingClientRect().height);
+          if (h > 0) window.parent.postMessage({ type: 'gdsi-resize', height: h }, '*');
+        }
+        function tryAttach() {
+          var root = document.querySelector('.gdsi');
+          if (!root) return false;
+          postHeight();
+          if ('ResizeObserver' in window && !observer) {
+            observer = new ResizeObserver(postHeight);
+            observer.observe(root);
+          }
+          if (document.fonts && document.fonts.ready) document.fonts.ready.then(postHeight);
+          return true;
+        }
+        function start() {
+          if (tryAttach()) return;
+          var attempts = 0;
+          var timer = setInterval(function () {
+            attempts++;
+            if (tryAttach() || attempts >= 60) clearInterval(timer);
+          }, 50);
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+        else start();
+      })();
+    </script>
   </head>
   <body style="margin:0;background:#f4f5f7;">
     <div id="root"></div>
