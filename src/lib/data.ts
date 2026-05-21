@@ -44,7 +44,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ticketmaster-gds",
     title: "Ticketmaster GDS",
-    subtitle: "Product design and a global system, scaled together across teams and brands.",
+    subtitle: "One shared system, scaling consistent product design across a global org.",
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "gds-mcp",
     title: "GDS-MCP",
-    subtitle: "Product design meets system architecture in an AI-native knowledge layer.",
+    subtitle: "When the design system becomes infrastructure, product teams ship faster and AI ships smarter.",
     category: "AI Engineering / Design Systems",
     year: "",
     color: "black",
@@ -190,7 +190,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "token-migration",
     title: "Token Migration",
-    subtitle: "System foundations that free product design to scale across brands.",
+    subtitle: "Rebuilding the token layer so creative work isn't bottlenecked by the system beneath it.",
     category: "Design Systems / Architecture",
     year: "",
     color: "yellow",
@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ai-design-workflows",
     title: "AI Design Workflows",
-    subtitle: "AI-powered workflows where product design and system thinking compound.",
+    subtitle: "A small team running product design at organisational scale — AI doing the heavy lifting.",
     category: "AI / Design Operations",
     year: "",
     color: "red",
@@ -300,7 +300,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "atg",
     title: "ATG Tickets",
-    subtitle: "Multi-brand product design, powered by a system built from the ground up.",
+    subtitle: "From foundations to governance: a multi-brand system that lets product design move fast.",
     category: "Design Systems",
     year: "",
     color: "yellow",
@@ -362,7 +362,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "hargreaves-lansdown",
     title: "Hargreaves Lansdown",
-    subtitle: "Product design and system foundations behind an AEM migration that cut call volumes.",
+    subtitle: "A financial platform redesigned on AEM, with a system underneath built to earn trust.",
     category: "Design Systems / Product Design",
     year: "",
     color: "blue",
