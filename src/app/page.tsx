@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Selected Work Section */}
-      <section className="py-grid-8 border-t border-swiss-gray">
+      <section className="pt-grid-8 border-t border-swiss-gray">
         <div className="grid-container">
           {/* Section Header */}
           <motion.div
