@@ -189,48 +189,6 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-grid-5 border-t-2 border-swiss-gray">
-        <div className="grid-container">
-          <div className="grid grid-cols-12 gap-6">
-            <motion.div
-              className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-caption text-swiss-muted">OVERVIEW</span>
-            </motion.div>
-
-            <motion.div
-              className="col-span-12 lg:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div>
-                <span className="text-caption text-swiss-muted block mb-2">ROLE</span>
-                <span className="text-body">{study.overview.role}</span>
-              </div>
-              <div>
-                <span className="text-caption text-swiss-muted block mb-2">TIMELINE</span>
-                <span className="text-body">{study.overview.timeline}</span>
-              </div>
-              <div>
-                <span className="text-caption text-swiss-muted block mb-2">TEAM</span>
-                <span className="text-body">{study.overview.team}</span>
-              </div>
-              <div>
-                <span className="text-caption text-swiss-muted block mb-2">TOOLS</span>
-                <span className="text-body">{study.overview.tools.join(", ")}</span>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Challenge Section */}
       <section className="py-grid-5 border-t border-swiss-gray">
         <div className="grid-container">
