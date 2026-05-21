@@ -6,13 +6,6 @@ import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
 import { Footer, MockupSlideshow } from "@/components";
 
-const colorMap = {
-  red: "bg-swiss-yellow",
-  blue: "bg-swiss-yellow",
-  yellow: "bg-swiss-yellow",
-  black: "bg-swiss-yellow",
-};
-
 const textColorMap = {
   red: "text-swiss-yellow",
   blue: "text-swiss-yellow",
@@ -70,12 +63,10 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="min-h-[80vh] flex items-end pt-32 pb-grid-2">
+      {/* Back link */}
+      <section className="pt-32 pb-grid">
         <div className="grid-container w-full">
-          {/* Back Link */}
           <motion.div
-            className="mb-8"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -102,50 +93,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               BACK TO WORK
             </Link>
           </motion.div>
-
-          {/* Title */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="max-w-4xl"
-          >
-            <div className="bauhaus-line-red w-16 mb-8" style={{ backgroundColor: '#FFE500' }} />
-
-            <span className="text-caption text-swiss-muted block mb-4">
-              {study.category.toUpperCase()}{study.year ? ` - ${study.year}` : ""}
-            </span>
-
-            <h1 className="text-display-xl mb-6">{study.title}</h1>
-
-            <p className="text-subheading text-swiss-muted max-w-2xl">
-              {study.subtitle}
-            </p>
-          </motion.div>
-
-          {/* Results Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-16 pt-8 border-t border-swiss-gray"
-          >
-            {study.results.map((result, index) => (
-              <div key={index}>
-                <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
-                  {result.metric}
-                </span>
-                <span className="text-micro text-swiss-muted block leading-relaxed">
-                  {result.value.toUpperCase()}
-                </span>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="py-grid">
+      {/* Hero Image - dominant visual */}
+      <section className="pb-grid-2">
         <div className="grid-container">
           <motion.div
             className={
@@ -153,11 +105,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 ? "relative"
                 : study.heroEmbed
                   ? "relative"
-                  : `${hasImages ? "aspect-video" : "aspect-[21/9]"} relative overflow-hidden`
+                  : `${hasImages ? "h-[60vh] md:h-[78vh]" : "aspect-[21/9]"} relative overflow-hidden`
             }
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8 }}
           >
             {study.heroSlideshow ? (
               <MockupSlideshow
@@ -185,6 +137,28 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 <div className="absolute w-32 h-32 bg-white/10" />
               </div>
             )}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Title - minimal description */}
+      <section className="pb-grid-3">
+        <div className="grid-container">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="max-w-4xl"
+          >
+            <span className="text-caption text-swiss-muted block mb-4">
+              {study.category.toUpperCase()}{study.year ? ` - ${study.year}` : ""}
+            </span>
+
+            <h1 className="text-display-xl mb-6">{study.title}</h1>
+
+            <p className="text-subheading text-swiss-muted max-w-2xl">
+              {study.subtitle}
+            </p>
           </motion.div>
         </div>
       </section>
