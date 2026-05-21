@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
@@ -34,6 +35,20 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   const slideshowsAfterSolution = additionalSlideshows.filter(
     (s) => s.position !== "after-challenge"
   );
+
+  const heroIframeRef = useRef<HTMLIFrameElement>(null);
+  useEffect(() => {
+    if (!study.heroEmbed) return;
+    function handleMessage(e: MessageEvent) {
+      const data = e.data;
+      if (!data || data.type !== "gdsi-resize" || typeof data.height !== "number") return;
+      if (heroIframeRef.current) {
+        heroIframeRef.current.style.height = `${data.height}px`;
+      }
+    }
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [study.heroEmbed]);
 
   const renderSlideshow = (
     slideshow: { slides: string[]; mockup?: string },
@@ -151,10 +166,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               />
             ) : study.heroEmbed ? (
               <iframe
+                ref={heroIframeRef}
                 src={study.heroEmbed.src}
                 title={study.heroEmbed.title}
                 scrolling="no"
-                className="block border-0 h-[820px] md:h-[640px] -mx-8 w-[calc(100%+64px)] md:mx-0 md:w-full"
+                className="block border-0 -mx-8 w-[calc(100%+64px)] md:mx-0 md:w-full"
+                style={{ height: "600px" }}
               />
             ) : study.hero ? (
               <img
