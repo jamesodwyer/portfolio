@@ -8,6 +8,10 @@ export interface CaseStudy {
   thumbnail: string;
   hero: string;
   gallery?: string[];
+  heroEmbed?: {
+    src: string;
+    title: string;
+  };
   heroSlideshow?: {
     slides: string[];
     mockup?: string;
@@ -245,6 +249,10 @@ export const caseStudies: CaseStudy[] = [
     color: "red",
     thumbnail: "/images/ai-design-workflows/thumb.svg",
     hero: "/images/ai-design-workflows/hero.png",
+    heroEmbed: {
+      src: "/interactive/index.html",
+      title: "AI Design Workflows interactive pipeline explorer",
+    },
     overview: {
       role: "Associate Director, Product Design",
       timeline: "12-month roadmap",
