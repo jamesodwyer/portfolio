@@ -44,7 +44,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ticketmaster-gds",
     title: "Ticketmaster GDS",
-    subtitle: "A global design system that scales across products, teams, and brands.",
+    subtitle: "Product design and a global system, scaled together across teams and brands.",
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "gds-mcp",
     title: "GDS-MCP",
-    subtitle: "An AI-native knowledge layer that makes the design system queryable.",
+    subtitle: "Product design meets system architecture in an AI-native knowledge layer.",
     category: "AI Engineering / Design Systems",
     year: "",
     color: "black",
@@ -190,7 +190,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "token-migration",
     title: "Token Migration",
-    subtitle: "Re-architected tokens that unlock theming, scale, and multi-brand delivery.",
+    subtitle: "System foundations that free product design to scale across brands.",
     category: "Design Systems / Architecture",
     year: "",
     color: "yellow",
@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ai-design-workflows",
     title: "AI Design Workflows",
-    subtitle: "AI-powered design ops that scale a global system without scaling the team.",
+    subtitle: "AI-powered workflows where product design and system thinking compound.",
     category: "AI / Design Operations",
     year: "",
     color: "red",
@@ -300,7 +300,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "atg",
     title: "ATG Tickets",
-    subtitle: "A multi-brand design system, built from the ground up.",
+    subtitle: "Multi-brand product design, powered by a system built from the ground up.",
     category: "Design Systems",
     year: "",
     color: "yellow",
@@ -362,7 +362,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "hargreaves-lansdown",
     title: "Hargreaves Lansdown",
-    subtitle: "An AEM migration and design system that cut call centre volumes.",
+    subtitle: "Product design and system foundations behind an AEM migration that cut call volumes.",
     category: "Design Systems / Product Design",
     year: "",
     color: "blue",
