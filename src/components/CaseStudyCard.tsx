@@ -16,7 +16,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group grid gap-0 lg:grid-rows-subgrid lg:row-span-5 pb-grid-4"
+      className="group grid gap-0 lg:grid-rows-subgrid lg:row-span-4 pb-grid-4"
     >
       <Link href={`/work/${study.slug}`} className="contents" aria-label={`View case study: ${study.title}`}>
         {/* Row 1: Number and Category Header */}
@@ -40,21 +40,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         {/* Row 3: Description */}
         <p className="text-body text-swiss-muted pt-6 leading-relaxed self-start">{study.subtitle}</p>
 
-        {/* Row 4: Results Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 pt-8 border-t border-swiss-gray mt-10 self-start">
-          {study.results.slice(0, 3).map((result, i) => (
-            <div key={i}>
-              <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
-                {result.metric}
-              </span>
-              <span className="text-micro text-swiss-muted block leading-relaxed">
-                {result.value.toUpperCase()}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Row 5: Arrow indicator */}
+        {/* Row 4: Arrow indicator */}
         <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-yellow transition-colors self-end">
           <span className="text-caption">VIEW PROJECT</span>
           <motion.svg
