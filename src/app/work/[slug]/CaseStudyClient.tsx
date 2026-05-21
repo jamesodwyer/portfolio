@@ -154,7 +154,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 src={study.heroEmbed.src}
                 title={study.heroEmbed.title}
                 scrolling="no"
-                className="block border-0 h-[920px] md:h-[680px] -mx-8 w-[calc(100%+64px)] md:mx-0 md:w-full"
+                className="block border-0 h-[820px] md:h-[640px] -mx-8 w-[calc(100%+64px)] md:mx-0 md:w-full"
               />
             ) : study.hero ? (
               <img
