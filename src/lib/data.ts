@@ -44,7 +44,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "ticketmaster-gds",
     title: "Ticketmaster GDS",
-    subtitle: "One shared system, scaling consistent product design across a global org.",
+    subtitle: "Scaling a global design system from its token foundations up — across products, teams, and brands.",
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
@@ -76,30 +76,36 @@ export const caseStudies: CaseStudy[] = [
       role: "Associate Director, Product Design",
       timeline: "18 months (ongoing)",
       team: "Cross-functional product teams, design contributors, engineering partners",
-      tools: ["Figma", "Token Studio", "Jira", "Claude Code", "Confluence"],
+      tools: ["Figma", "Token Studio", "Style Dictionary", "Jira", "Claude Code", "Confluence"],
     },
     results: [
       { metric: "Scale", value: "Multiple products across distinct business verticals" },
+      { metric: "Foundation", value: "Multi-layer token architecture supporting theming and multi-brand delivery" },
       { metric: "Adoption", value: "Widely used across product teams, enabling consistent delivery" },
       { metric: "Operating Model", value: "A structured system for contribution, governance, and continuous evolution" },
     ],
     challenge:
-      "Ticketmaster operates across a complex ecosystem of products, each with its own priorities, workflows, and technical constraints. This created fragmentation across teams, inconsistent user experiences, and duplication of effort, making it difficult to scale effectively. The challenge was not just to define a design system, but to embed a model that enables teams to build consistently, efficiently, and at scale.",
+      "Ticketmaster operates across a complex ecosystem of products, each with its own priorities, workflows, and technical constraints. At the core, design tokens had evolved organically and inconsistently — there was no shared structure to support theming, no clean separation between foundation, semantic, and brand layers, and no scalable token model. On top of that, the system itself was fragmented across teams, with inconsistent user experiences and duplication of effort. The challenge was twofold: re-architect the token foundation, and embed an operating model that lets teams build consistently, efficiently, and at scale.",
     process: [
+      {
+        title: "Token Foundation",
+        description:
+          "A multi-layer token model — foundation, semantic, and brand layers — replacing fragmented values with a single source of truth that enables theming and white-label scalability.",
+      },
       {
         title: "System Architecture",
         description:
-          "A scalable foundation designed to support multiple products and use cases.",
+          "A scalable component and pattern foundation built on top of the new token layer, designed to support multiple products and use cases.",
       },
       {
         title: "Contribution Model",
         description:
-          "A federated approach enabling teams to contribute while maintaining quality and consistency.",
+          "A federated approach enabling teams to contribute back while maintaining quality and consistency.",
       },
       {
         title: "Cross-Team Alignment",
         description:
-          "Shared visibility and structured workflows across product teams.",
+          "Shared visibility and structured workflows across product teams, anchored to the token system as a common source of truth.",
       },
       {
         title: "AI as an Enabler",
@@ -108,11 +114,11 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     solution:
-      "The Global Design System now supports multiple products through a standardised, scalable approach to design and development. It enables teams to build consistently using shared components and patterns, contribute back into the system through a governed model, and move faster with reduced duplication and clearer workflows. AI-driven infrastructure supports ongoing documentation and enables teams to work more independently, reducing reliance on central coordination. The result is a system that doesn't just document decisions, but enables them at scale.",
+      "Re-architected the design system from the tokens up. A new multi-layer token model replaced fragmented values with a structured foundation that supports multi-brand theming, white-label scalability, and consistency across products. On top of that foundation, the Global Design System now supports multiple products through a standardised, scalable approach to design and development — shared components, a governed contribution model, and AI-driven infrastructure that maintains documentation and reduces reliance on central coordination. The result is a system that doesn't just document decisions, but enables them at scale.",
     learnings: [
       "A design system is an operating model, not just a component library",
+      "Token architecture is product strategy, not just design infrastructure",
       "Scalable contribution requires ownership, not central control",
-      "Complexity at scale must be solved through systems, not coordination",
       "The right infrastructure enables small teams to operate at organisational scale",
     ],
   },
@@ -185,59 +191,6 @@ export const caseStudies: CaseStudy[] = [
       "Design systems must evolve from static libraries into intelligent platforms",
       "Adoption is driven by real workflow value, not mandated process",
       "The true impact of AI is reducing dependency on coordination and support",
-    ],
-  },
-  {
-    slug: "token-migration",
-    title: "Token Migration",
-    subtitle: "Rebuilding the token layer so creative work isn't bottlenecked by the system beneath it.",
-    category: "Design Systems / Architecture",
-    year: "",
-    color: "yellow",
-    thumbnail: "/images/token-migration/thumb.svg",
-    hero: "/images/token-migration/hero.png",
-    overview: {
-      role: "Associate Director, Product Design",
-      timeline: "3 months",
-      team: "Cross-functional design and engineering teams",
-      tools: ["Token Studio", "Figma", "Jira", "Claude Code"],
-    },
-    results: [
-      { metric: "Scope", value: "Supports multiple products and product verticals from a shared foundation" },
-      { metric: "Capability", value: "Enables multi-brand theming and white-label scalability" },
-      { metric: "Impact", value: "Removes architectural blockers across design and engineering workflows" },
-    ],
-    challenge:
-      "The design system had evolved organically across multiple products, resulting in fragmentation at its core. Design decisions were inconsistent and difficult to scale, token usage varied across teams and implementations, and there was no shared structure to support theming or expansion. This wasn't simply design debt. It was an architectural limitation that prevented the system from scaling across products, brands, and future use cases. Without a clear token model, teams were blocked from moving forward.",
-    process: [
-      {
-        title: "Architecture Design",
-        description:
-          "Defined a scalable token model that separates foundation, semantic, and brand layers, enabling consistency and flexibility across all products.",
-      },
-      {
-        title: "Source of Truth",
-        description:
-          "Established a centralised token system that aligns design and engineering, ensuring consistency across tools and platforms.",
-      },
-      {
-        title: "Migration Strategy",
-        description:
-          "Delivered a focused migration approach that replaced fragmented tokens with a unified system across products.",
-      },
-      {
-        title: "Scale Enablement",
-        description:
-          "Extended the system to support multi-brand and white-label use cases without duplication or rework.",
-      },
-    ],
-    solution:
-      "Designed and implemented a multi-layer token architecture that established a single, scalable foundation for the entire design system. The system introduced clear separation between foundation tokens for consistency across all products, semantic tokens for flexible context-driven usage, and brand tokens for customisation and white-label support. This structure enabled teams to build independently while remaining aligned to a shared system. Rather than fixing individual inconsistencies, the solution eliminated the conditions that created them. The token system shifted from being a constraint to becoming a core enabler of product delivery.",
-    learnings: [
-      "Token architecture is product strategy, not just design infrastructure",
-      "A well-structured system scales faster than incremental fixes",
-      "Layered token models are essential for multi-product and multi-brand environments",
-      "The goal isn't fixing token misuse, it's preventing it entirely",
     ],
   },
   {
