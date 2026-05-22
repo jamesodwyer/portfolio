@@ -287,7 +287,7 @@ a {
   }
   /* Brand marquee is required to scroll continuously by design. */
   .brand-marquee-track {
-    animation-duration: 90s !important;
+    animation-duration: 45s !important;
     animation-iteration-count: infinite !important;
   }
 }
@@ -314,7 +314,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   width: max-content;
-  animation: brand-marquee-scroll 90s linear infinite;
+  animation: brand-marquee-scroll 45s linear infinite;
   will-change: transform;
 }
 
@@ -331,7 +331,16 @@ button:focus-visible {
   display: block;
   height: 2.5rem;
   width: auto;
-  filter: brightness(0) invert(1);
+  /*
+   * Some of the uploaded PNGs have opaque white backgrounds rather than
+   * transparent ones. Inverting the colours turns those backgrounds into
+   * black, and `mix-blend-mode: lighten` lets that black merge into the
+   * page's black background — leaving only the (now-light) logo shape
+   * visible. The grayscale + brightness step forces a consistent
+   * monotone treatment regardless of the brand's original colour.
+   */
+  filter: invert(1) grayscale(1) brightness(1.2);
+  mix-blend-mode: lighten;
   opacity: 1;
 }
 
