@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CaseStudyCard, Footer, DotPattern } from "@/components";
+import { BrandMarquee, CaseStudyCard, Footer, DotPattern } from "@/components";
 import { caseStudies } from "@/lib/data";
 
 export default function Home() {
@@ -65,8 +65,10 @@ export default function Home() {
         </div>
       </section>
 
+      <BrandMarquee />
+
       {/* Selected Work Section */}
-      <section className="pt-grid-4 border-t border-swiss-gray">
+      <section className="pt-grid-4">
         <div className="grid-container">
           {/* Section Header */}
           <motion.div
