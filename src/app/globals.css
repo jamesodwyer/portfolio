@@ -285,6 +285,11 @@ a {
   .mockup-slide {
     transition-duration: 1200ms !important;
   }
+  /* Brand marquee is required to scroll continuously by design. */
+  .brand-marquee-track {
+    animation-duration: 90s !important;
+    animation-iteration-count: infinite !important;
+  }
 }
 
 /* Focus States */
@@ -316,14 +321,18 @@ button:focus-visible {
 .brand-marquee-item {
   flex-shrink: 0;
   padding: 0 var(--spacing-grid-3);
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
 }
 
 .brand-marquee-logo {
+  display: block;
   height: 2.5rem;
   width: auto;
   filter: brightness(0) invert(1);
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* Card Style - From Dieter Rams poster */

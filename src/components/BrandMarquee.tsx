@@ -6,6 +6,7 @@ const brands = [
   { name: "Virgin Money", logo: "/images/virgin-money.png" },
   { name: "Comic Relief", logo: "/images/comic-relief.png" },
   { name: "Cravendale", logo: "/images/cravendale.png" },
+  { name: "Dr Who", logo: "/images/dr-who.png" },
 ];
 
 export function BrandMarquee() {
@@ -18,13 +19,17 @@ export function BrandMarquee() {
     >
       <div className="brand-marquee-track">
         {loop.map((brand, i) => (
-          <img
+          <div
             key={`${brand.name}-${i}`}
-            src={brand.logo}
-            alt={i < brands.length ? brand.name : ""}
             aria-hidden={i >= brands.length || undefined}
-            className="brand-marquee-item brand-marquee-logo"
-          />
+            className="brand-marquee-item"
+          >
+            <img
+              src={brand.logo}
+              alt={i < brands.length ? brand.name : ""}
+              className="brand-marquee-logo"
+            />
+          </div>
         ))}
       </div>
     </section>
