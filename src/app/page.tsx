@@ -69,26 +69,6 @@ export default function Home() {
       {/* Selected Work Section */}
       <section className="pt-grid-4">
         <div className="grid-container">
-          {/* Section Header */}
-          <motion.div
-            className="flex items-center justify-between mb-grid-3"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex items-center gap-6">
-              <span className="text-number text-swiss-yellow">{caseStudies.length}</span>
-              <div>
-                <span className="text-caption text-swiss-muted block mb-2">SELECTED</span>
-                <h2 className="text-display">Case Studies</h2>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <DotPattern rows={3} cols={6} dotSize={6} gap={8} className="text-swiss-muted" />
-            </div>
-          </motion.div>
-
           {/* Case Studies + Designs Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2" style={{ columnGap: 'var(--spacing-grid-4)' }}>
             {caseStudies.map((study, index) => (

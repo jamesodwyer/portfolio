@@ -28,16 +28,11 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
           />
         </div>
 
-        {/* Row 2: Number and Category Header */}
+        {/* Row 2: Category Header */}
         <div className="flex items-baseline justify-between border-b border-swiss-gray pb-6 self-start">
-          <div className="flex items-baseline gap-6">
-            <span className="text-number-sm text-swiss-white">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <span className="text-caption text-swiss-muted">
-              / {study.category.toUpperCase()} /
-            </span>
-          </div>
+          <span className="text-caption text-swiss-muted">
+            / {study.category.toUpperCase()} /
+          </span>
           {study.year && <span className="text-caption text-swiss-muted">{study.year}</span>}
         </div>
 
