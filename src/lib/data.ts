@@ -48,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
-    thumbnail: "/images/ticketmaster-gds/thumb.svg",
+    thumbnail: "/images/tm1.png",
     hero: "/images/ticketmaster-gds/hero.png",
     heroSlideshow: {
       slides: [
@@ -129,7 +129,7 @@ export const caseStudies: CaseStudy[] = [
     category: "AI Engineering / Design Systems",
     year: "",
     color: "black",
-    thumbnail: "/images/gds-mcp/thumb.svg",
+    thumbnail: "/images/tm2.png",
     hero: "/images/gds-mcp/hero.png",
     heroSlideshow: {
       slides: [
@@ -200,7 +200,7 @@ export const caseStudies: CaseStudy[] = [
     category: "AI / Design Operations",
     year: "",
     color: "red",
-    thumbnail: "/images/ai-design-workflows/thumb.svg",
+    thumbnail: "/images/virgin-money.jpg",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
       src: "/interactive/",
@@ -257,7 +257,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems",
     year: "",
     color: "yellow",
-    thumbnail: "/images/atg/hero.png",
+    thumbnail: "/images/atg.png",
     hero: "/images/atg/hero.png",
     gallery: [
       "/images/atg/img_1.png",
@@ -319,7 +319,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems / Product Design",
     year: "",
     color: "blue",
-    thumbnail: "/images/hl/hero.png",
+    thumbnail: "/images/hl.png",
     hero: "/images/hl/hero.png",
     gallery: [
       "/images/hl/img_1.jpg",
