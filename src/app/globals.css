@@ -294,6 +294,38 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+/* Brand Marquee */
+.brand-marquee {
+  padding-top: calc(var(--spacing-grid-3) / 2);
+  padding-bottom: calc(var(--spacing-grid-3) / 2);
+}
+
+@keyframes brand-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.brand-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: brand-marquee-scroll 90s linear infinite;
+  will-change: transform;
+}
+
+.brand-marquee-item {
+  flex-shrink: 0;
+  padding: 0 var(--spacing-grid-3);
+  white-space: nowrap;
+}
+
+.brand-marquee-logo {
+  height: 2.5rem;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+}
+
 /* Card Style - From Dieter Rams poster */
 .swiss-card {
   background-color: var(--color-swiss-white);
