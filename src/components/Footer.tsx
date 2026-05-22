@@ -5,7 +5,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-swiss-gray mt-grid-6">
+    <footer className="border-t border-swiss-gray mt-grid-4">
       <div className="grid-container">
         <div className="py-grid-5 flex flex-col md:flex-row md:items-start md:justify-between gap-12">
           {/* Contact */}
