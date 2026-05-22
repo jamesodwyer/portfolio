@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Poster Style with generous whitespace */}
-      <section className="min-h-screen flex items-center pt-32 pb-grid-6">
+      <section className="min-h-screen flex items-center pt-32 pb-grid-4">
         <div className="grid-container w-full">
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Main Title - Left */}
@@ -66,11 +66,11 @@ export default function Home() {
       </section>
 
       {/* Selected Work Section */}
-      <section className="pt-grid-8 border-t border-swiss-gray">
+      <section className="pt-grid-4 border-t border-swiss-gray">
         <div className="grid-container">
           {/* Section Header */}
           <motion.div
-            className="flex items-center justify-between mb-grid-4"
+            className="flex items-center justify-between mb-grid-3"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
