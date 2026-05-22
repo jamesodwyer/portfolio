@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrandMarquee, CaseStudyCard, Footer, DotPattern } from "@/components";
-import { caseStudies } from "@/lib/data";
+import { BrandMarquee, CaseStudyCard, DesignCard, Footer, DotPattern } from "@/components";
+import { caseStudies, designs } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -89,10 +89,17 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Case Studies Grid */}
+          {/* Case Studies + Designs Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2" style={{ columnGap: 'var(--spacing-grid-4)' }}>
             {caseStudies.map((study, index) => (
               <CaseStudyCard key={study.slug} study={study} index={index} />
+            ))}
+            {designs.map((design, index) => (
+              <DesignCard
+                key={design.slug}
+                design={design}
+                index={caseStudies.length + index}
+              />
             ))}
           </div>
         </div>

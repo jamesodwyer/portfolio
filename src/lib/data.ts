@@ -48,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems / Leadership",
     year: "",
     color: "blue",
-    thumbnail: "/images/ticketmaster-gds/thumb.svg",
+    thumbnail: "/images/tm1.png",
     hero: "/images/ticketmaster-gds/hero.png",
     heroSlideshow: {
       slides: [
@@ -129,7 +129,7 @@ export const caseStudies: CaseStudy[] = [
     category: "AI Engineering / Design Systems",
     year: "",
     color: "black",
-    thumbnail: "/images/gds-mcp/thumb.svg",
+    thumbnail: "/images/tm2.png",
     hero: "/images/gds-mcp/hero.png",
     heroSlideshow: {
       slides: [
@@ -200,7 +200,7 @@ export const caseStudies: CaseStudy[] = [
     category: "AI / Design Operations",
     year: "",
     color: "red",
-    thumbnail: "/images/ai-design-workflows/thumb.svg",
+    thumbnail: "/images/tm3.png",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
       src: "/interactive/",
@@ -257,7 +257,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems",
     year: "",
     color: "yellow",
-    thumbnail: "/images/atg/hero.png",
+    thumbnail: "/images/atg.png",
     hero: "/images/atg/hero.png",
     gallery: [
       "/images/atg/img_1.png",
@@ -319,7 +319,7 @@ export const caseStudies: CaseStudy[] = [
     category: "Design Systems / Product Design",
     year: "",
     color: "blue",
-    thumbnail: "/images/hl/hero.png",
+    thumbnail: "/images/hl.png",
     hero: "/images/hl/hero.png",
     gallery: [
       "/images/hl/img_1.jpg",
@@ -377,6 +377,28 @@ export const caseStudies: CaseStudy[] = [
       "Inviting the wider team into user testing sessions builds advocacy for design decisions far more effectively than presenting findings after the fact",
       "A design system born from a migration project has stronger adoption than one built in isolation - teams already need it",
     ],
+  },
+];
+
+export interface Design {
+  slug: string;
+  title: string;
+  category: string;
+  thumbnail: string;
+}
+
+export const designs: Design[] = [
+  {
+    slug: "yell",
+    title: "Yell",
+    category: "Visual Design",
+    thumbnail: "/images/yell.jpg",
+  },
+  {
+    slug: "virgin-money",
+    title: "Virgin Money",
+    category: "Visual Design",
+    thumbnail: "/images/virgin-money.jpg",
   },
 ];
 

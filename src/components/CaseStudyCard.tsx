@@ -16,10 +16,19 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="group grid gap-0 lg:grid-rows-subgrid lg:row-span-4 pb-grid-4"
+      className="group grid gap-0 lg:grid-rows-subgrid lg:row-span-5 pb-grid-4"
     >
       <Link href={`/work/${study.slug}`} className="contents" aria-label={`View case study: ${study.title}`}>
-        {/* Row 1: Number and Category Header */}
+        {/* Row 1: Hero image */}
+        <div className="relative aspect-video overflow-hidden mb-8 self-start">
+          <img
+            src={study.thumbnail}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        </div>
+
+        {/* Row 2: Number and Category Header */}
         <div className="flex items-baseline justify-between border-b border-swiss-gray pb-6 self-start">
           <div className="flex items-baseline gap-6">
             <span className="text-number-sm text-swiss-white">
@@ -32,15 +41,15 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
           {study.year && <span className="text-caption text-swiss-muted">{study.year}</span>}
         </div>
 
-        {/* Row 2: Title */}
+        {/* Row 3: Title */}
         <h3 className="text-display-lg pt-6 transition-colors group-hover:text-swiss-yellow self-start">
           {study.title}
         </h3>
 
-        {/* Row 3: Description */}
+        {/* Row 4: Description */}
         <p className="text-body text-swiss-muted pt-6 leading-relaxed self-start">{study.subtitle}</p>
 
-        {/* Row 4: Arrow indicator */}
+        {/* Row 5: Arrow indicator */}
         <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-yellow transition-colors self-end">
           <span className="text-caption">VIEW PROJECT</span>
           <motion.svg
