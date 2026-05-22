@@ -42,7 +42,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         </div>
 
         {/* Row 3: Title */}
-        <h3 className="text-display-lg pt-6 transition-colors group-hover:text-swiss-yellow self-start">
+        <h3 className="text-heading pt-6 transition-colors group-hover:text-swiss-yellow self-start">
           {study.title}
         </h3>
 

@@ -39,7 +39,7 @@ export function DesignCard({ design, index }: DesignCardProps) {
       </div>
 
       {/* Row 3: Title */}
-      <h3 className="text-display-lg pt-6 self-start">{design.title}</h3>
+      <h3 className="text-heading pt-6 self-start">{design.title}</h3>
     </motion.article>
   );
 }
