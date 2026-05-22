@@ -1,3 +1,7 @@
+"use client";
+
+import Marquee from "react-fast-marquee";
+
 const brands = [
   { name: "BBC", logo: "/images/bbc.png" },
   { name: "Disney", logo: "/images/disney.png" },
@@ -10,28 +14,21 @@ const brands = [
 ];
 
 export function BrandMarquee() {
-  const loop = [...brands, ...brands];
-
   return (
     <section
       aria-label="Brands I have worked with"
-      className="brand-marquee border-t border-b border-swiss-gray overflow-hidden"
+      className="brand-marquee border-t border-b border-swiss-gray"
     >
-      <div className="brand-marquee-track">
-        {loop.map((brand, i) => (
-          <div
-            key={`${brand.name}-${i}`}
-            aria-hidden={i >= brands.length || undefined}
-            className="brand-marquee-item"
-          >
-            <img
-              src={brand.logo}
-              alt={i < brands.length ? brand.name : ""}
-              className="brand-marquee-logo"
-            />
-          </div>
+      <Marquee speed={80} gradient={false} autoFill direction="left">
+        {brands.map((brand) => (
+          <img
+            key={brand.name}
+            src={brand.logo}
+            alt={brand.name}
+            className="brand-marquee-logo"
+          />
         ))}
-      </div>
+      </Marquee>
     </section>
   );
 }
