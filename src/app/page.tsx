@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Poster Style with generous whitespace */}
-      <section className="min-h-screen flex items-center pt-16 pb-grid-4">
+      <section className="pt-16 pb-grid-4">
         <div className="grid-container w-full">
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Main Title - Left */}
