@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Poster Style with generous whitespace */}
-      <section className="min-h-screen flex items-center pt-32 pb-grid-4">
+      <section className="min-h-screen flex items-center pt-16 pb-grid-4">
         <div className="grid-container w-full">
           <div className="grid grid-cols-12 gap-8 items-center">
             {/* Main Title - Left */}
@@ -19,8 +19,7 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
                 {/* Title Label */}
-                <div className="flex items-center gap-6 mb-12">
-                  <DotPattern rows={3} cols={3} dotSize={6} gap={4} className="text-swiss-yellow" />
+                <div className="mb-12">
                   <span className="text-caption text-swiss-muted">
                     PRINCIPAL PRODUCT DESIGNER · DESIGN SYSTEMS LEADER
                   </span>
