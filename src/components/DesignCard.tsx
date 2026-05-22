@@ -26,16 +26,11 @@ export function DesignCard({ design, index }: DesignCardProps) {
         />
       </div>
 
-      {/* Row 2: Number and Category Header */}
-      <div className="flex items-baseline justify-between border-b border-swiss-gray pb-6 self-start">
-        <div className="flex items-baseline gap-6">
-          <span className="text-number-sm text-swiss-white">
-            {String(index + 1).padStart(2, "0")}
-          </span>
-          <span className="text-caption text-swiss-muted">
-            / {design.category.toUpperCase()} /
-          </span>
-        </div>
+      {/* Row 2: Category Header */}
+      <div className="flex items-baseline border-b border-swiss-gray pb-6 self-start">
+        <span className="text-caption text-swiss-muted">
+          / {design.category.toUpperCase()} /
+        </span>
       </div>
 
       {/* Row 3: Title */}
