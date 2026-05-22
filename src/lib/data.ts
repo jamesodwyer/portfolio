@@ -200,7 +200,7 @@ export const caseStudies: CaseStudy[] = [
     category: "AI / Design Operations",
     year: "",
     color: "red",
-    thumbnail: "/images/virgin-money.jpg",
+    thumbnail: "/images/ai-design-workflows/hero.png",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
       src: "/interactive/",
@@ -377,6 +377,28 @@ export const caseStudies: CaseStudy[] = [
       "Inviting the wider team into user testing sessions builds advocacy for design decisions far more effectively than presenting findings after the fact",
       "A design system born from a migration project has stronger adoption than one built in isolation - teams already need it",
     ],
+  },
+];
+
+export interface Design {
+  slug: string;
+  title: string;
+  category: string;
+  thumbnail: string;
+}
+
+export const designs: Design[] = [
+  {
+    slug: "yell",
+    title: "Yell",
+    category: "Visual Design",
+    thumbnail: "/images/yell.jpg",
+  },
+  {
+    slug: "virgin-money",
+    title: "Virgin Money",
+    category: "Visual Design",
+    thumbnail: "/images/virgin-money.jpg",
   },
 ];
 
