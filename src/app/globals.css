@@ -287,7 +287,7 @@ a {
   }
   /* Brand marquee is required to scroll continuously by design. */
   .brand-marquee-track {
-    animation-duration: 90s !important;
+    animation-duration: 45s !important;
     animation-iteration-count: infinite !important;
   }
 }
@@ -314,7 +314,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   width: max-content;
-  animation: brand-marquee-scroll 90s linear infinite;
+  animation: brand-marquee-scroll 45s linear infinite;
   will-change: transform;
 }
 
@@ -329,10 +329,10 @@ button:focus-visible {
 
 .brand-marquee-logo {
   display: block;
-  height: 2.5rem;
+  height: 3rem;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 1;
+  max-width: 12rem;
+  object-fit: contain;
 }
 
 /* Card Style - From Dieter Rams poster */
