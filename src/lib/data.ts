@@ -200,7 +200,7 @@ export const caseStudies: CaseStudy[] = [
     category: "AI / Design Operations",
     year: "",
     color: "red",
-    thumbnail: "/images/ai-design-workflows/hero.png",
+    thumbnail: "/images/tm3.png",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
       src: "/interactive/",
