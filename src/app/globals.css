@@ -317,6 +317,14 @@ button:focus-visible {
   margin: 0 4.5rem;
 }
 
+@media (max-width: 768px) {
+  .brand-marquee-logo {
+    height: 2.25rem;
+    max-width: 9rem;
+    margin: 0 3.375rem;
+  }
+}
+
 /* Card Style - From Dieter Rams poster */
 .swiss-card {
   background-color: var(--color-swiss-white);
