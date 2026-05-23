@@ -25,7 +25,9 @@ export function BrandMarquee() {
             key={brand.name}
             src={brand.logo}
             alt={brand.name}
-            className="brand-marquee-logo"
+            className={`brand-marquee-logo${
+              brand.name === "BBC" ? " brand-marquee-logo--bbc" : ""
+            }`}
           />
         ))}
       </Marquee>
