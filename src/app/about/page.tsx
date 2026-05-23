@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { siteConfig } from "@/lib/data";
-import { Footer, DotPattern } from "@/components";
+import { Footer } from "@/components";
 
 const experience = [
   {
@@ -341,64 +340,6 @@ export default function AboutPage() {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-grid-4 border-t-2 border-swiss-gray">
-        <div className="grid-container">
-          <motion.div
-            className="grid grid-cols-12 gap-6"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="col-span-12 lg:col-span-8">
-              <span className="text-caption text-swiss-muted block mb-6">
-                LET&apos;S WORK TOGETHER
-              </span>
-              <h2 className="text-display-lg mb-8">
-                Looking to build what&apos;s next?
-                <br />
-                <span className="text-swiss-yellow">Let&apos;s talk.</span>
-              </h2>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-4 text-heading hover:text-swiss-yellow transition-colors group"
-              >
-                Get in touch → {siteConfig.email}
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                  className="transform group-hover:translate-x-2 transition-transform"
-                >
-                  <path
-                    d="M7 17L17 7M17 7H7M17 7V17"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Geometric Element */}
-            <div className="hidden lg:flex col-span-4 items-center justify-center">
-              <DotPattern
-                rows={8}
-                cols={8}
-                dotSize={10}
-                gap={10}
-                circular={true}
-                className="text-swiss-yellow"
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
