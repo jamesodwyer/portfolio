@@ -473,19 +473,29 @@ button:focus-visible {
 }
 
 /* ---------- JO logo bounce ----------
- * SVG transforms operate in the SVG user coordinate system (viewBox 0 0 100 100),
- * so the px values below are user units, not screen pixels. */
+ * SVG transforms use the SVG user coordinate system (viewBox 0 0 100 100),
+ * so the px values below are user units, not screen pixels.
+ * The -hover keyframes is identical to the load one — only the animation-name
+ * differs, which is what makes CSS restart the animation on each hover. */
 @keyframes jo-logo-bounce {
-  0%   { transform: translateY(0); }
-  25%  { transform: translateY(-14px); }
-  45%  { transform: translateY(0); }
-  60%  { transform: translateY(-7px); }
-  75%  { transform: translateY(0); }
-  90%  { transform: translateY(-3px); }
-  100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0); }
+  25%      { transform: translateY(-14px); }
+  50%      { transform: translateY(0); }
+  75%      { transform: translateY(-6px); }
+}
+@keyframes jo-logo-bounce-hover {
+  0%, 100% { transform: translateY(0); }
+  25%      { transform: translateY(-14px); }
+  50%      { transform: translateY(0); }
+  75%      { transform: translateY(-6px); }
 }
 .jo-logo-bounce {
-  animation: jo-logo-bounce 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: jo-logo-bounce 0.8s ease-out;
+}
+@media (hover: hover) {
+  .jo-logo-mark:hover .jo-logo-bounce {
+    animation: jo-logo-bounce-hover 0.8s ease-out;
+  }
 }
 
 /* ---------- MacBook mockup slideshow ---------- */

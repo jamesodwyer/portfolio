@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 interface LogoProps {
   className?: string;
   size?: "sm" | "md" | "lg";
@@ -88,22 +86,13 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
 
 // JO Monogram - matches CV logo style with J and superscript O
 export function LogoMark({ className = "", size = 32 }: { className?: string; size?: number }) {
-  const [bounceKey, setBounceKey] = useState(0);
-
-  const handleMouseEnter = () => {
-    if (typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches) {
-      setBounceKey((k) => k + 1);
-    }
-  };
-
   return (
     <div
-      className={`inline-flex items-center justify-center ${className}`}
+      className={`jo-logo-mark inline-flex items-center justify-center ${className}`}
       style={{
         width: size,
         height: size,
       }}
-      onMouseEnter={handleMouseEnter}
     >
       <svg
         viewBox="0 0 100 100"
@@ -124,9 +113,9 @@ export function LogoMark({ className = "", size = 32 }: { className?: string; si
           z
         " />
 
-        {/* Superscript O — wrapped in <g> so we can animate without disturbing
-            the circle's own coordinates. key change replays the animation on hover. */}
-        <g key={bounceKey} className="jo-logo-bounce">
+        {/* Superscript O — wrapped in <g> so the bounce transform doesn't move
+            the circle's reference point. */}
+        <g className="jo-logo-bounce">
           <circle cx="68" cy="32" r="16" fill="none" stroke="currentColor" strokeWidth="8" />
         </g>
       </svg>
