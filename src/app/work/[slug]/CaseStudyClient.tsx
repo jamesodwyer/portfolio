@@ -110,7 +110,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             transition={{ duration: 0.8, delay: 0.1 }}
             className="max-w-4xl"
           >
-            <div className="bauhaus-line-red w-16 mb-8" style={{ backgroundColor: '#FFE500' }} />
+            <div className="bauhaus-line-red w-16 mb-8" style={{ backgroundColor: '#FFFFFF' }} />
 
             <span className="text-caption text-swiss-muted block mb-4">
               {study.category.toUpperCase()}{study.year ? ` - ${study.year}` : ""}
@@ -489,7 +489,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           >
             <span className="text-caption text-swiss-muted block mb-6">NEXT PROJECT</span>
             <Link href={`/work/${nextStudy.slug}`} className="group inline-block">
-              <h2 className="text-display-lg group-hover:text-swiss-yellow transition-colors inline-flex items-baseline gap-4">
+              <h2 className="text-display-lg group-hover:text-swiss-muted transition-colors inline-flex items-baseline gap-4">
                 {nextStudy.title}
                 <svg
                   width="32"
