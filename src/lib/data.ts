@@ -391,13 +391,13 @@ export const designs: Design[] = [
   {
     slug: "yell",
     title: "Yell",
-    category: "Native Mobile App",
+    category: "Product Design / iOS / Android",
     thumbnail: "/images/yell.jpg",
   },
   {
     slug: "virgin-money",
     title: "Virgin Money",
-    category: "Native Mobile App",
+    category: "Product Design / iOS / Android",
     thumbnail: "/images/virgin-money.jpg",
   },
 ];

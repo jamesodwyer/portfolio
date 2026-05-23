@@ -21,7 +21,7 @@ export function Footer() {
 
           {/* Dot Pattern */}
           <div className="hidden md:block">
-            <DotPattern rows={5} cols={5} dotSize={8} gap={8} className="text-swiss-muted" />
+            <DotPattern rows={3} cols={3} dotSize={8} gap={8} className="text-swiss-muted" />
           </div>
         </div>
 
