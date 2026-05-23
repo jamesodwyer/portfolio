@@ -51,10 +51,10 @@ export default function Home() {
                 transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
                 <DotPattern
-                  rows={12}
-                  cols={12}
-                  dotSize={10}
-                  gap={10}
+                  rows={3}
+                  cols={3}
+                  dotSize={40}
+                  gap={40}
                   circular={true}
                   className="text-swiss-white"
                 />
