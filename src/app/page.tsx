@@ -31,7 +31,7 @@ export default function Home() {
                   <br />
                   <span className="text-swiss-muted">Products</span>
                   <br />
-                  At Scale
+                  That Scale
                 </h1>
 
                 {/* Tagline */}
