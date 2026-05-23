@@ -41,7 +41,7 @@ export default function Contact() {
                 {/* Email */}
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="inline-flex items-center gap-4 text-heading text-swiss-white hover:text-swiss-yellow transition-colors group"
+                  className="inline-flex items-center gap-4 text-heading text-swiss-white hover:text-swiss-muted transition-colors group"
                 >
                   {siteConfig.email}
                   <svg

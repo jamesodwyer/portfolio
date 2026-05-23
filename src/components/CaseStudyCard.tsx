@@ -37,7 +37,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         </div>
 
         {/* Row 3: Title */}
-        <h3 className="text-heading pt-6 transition-colors group-hover:text-swiss-yellow self-start">
+        <h3 className="text-heading pt-6 transition-colors group-hover:text-swiss-muted self-start">
           {study.title}
         </h3>
 
@@ -45,7 +45,7 @@ export function CaseStudyCard({ study, index }: CaseStudyCardProps) {
         <p className="text-body text-swiss-muted pt-6 leading-relaxed self-start">{study.subtitle}</p>
 
         {/* Row 5: Arrow indicator */}
-        <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-yellow transition-colors self-end">
+        <div className="mt-10 flex items-center gap-3 text-swiss-muted group-hover:text-swiss-white transition-colors self-end">
           <span className="text-caption">VIEW PROJECT</span>
           <motion.svg
             width="20"

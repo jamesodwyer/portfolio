@@ -13,14 +13,14 @@
   <!-- Row 1 -->
   <rect x="200" y="160" width="580" height="380" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
   <rect x="220" y="200" width="540" height="48" rx="8" fill="#1a1a1a"/>
-  <rect x="240" y="212" width="160" height="24" rx="4" fill="#FFE500" opacity="0.8"/>
+  <rect x="240" y="212" width="160" height="24" rx="4" fill="#FFFFFF" opacity="0.8"/>
   <rect x="420" y="212" width="100" height="24" rx="4" fill="#333333"/>
   <rect x="540" y="212" width="100" height="24" rx="4" fill="#333333"/>
   <rect x="220" y="270" width="540" height="240" rx="8" fill="#0d0d0d"/>
-  <rect x="250" y="300" width="200" height="32" rx="6" fill="#FFE500"/>
+  <rect x="250" y="300" width="200" height="32" rx="6" fill="#FFFFFF"/>
   <text x="350" y="322" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Primary</text>
-  <rect x="470" y="300" width="200" height="32" rx="6" fill="none" stroke="#FFE500" stroke-width="2"/>
-  <text x="570" y="322" fill="#FFE500" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">Secondary</text>
+  <rect x="470" y="300" width="200" height="32" rx="6" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="570" y="322" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">Secondary</text>
   <rect x="250" y="360" width="200" height="32" rx="6" fill="#333333"/>
   <text x="350" y="382" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">Ghost</text>
   <rect x="470" y="360" width="200" height="32" rx="6" fill="#dc2626"/>
@@ -32,8 +32,8 @@
   <rect x="820" y="160" width="580" height="380" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
   <rect x="860" y="200" width="500" height="60" rx="8" fill="#0d0d0d" stroke="#333333" stroke-width="1"/>
   <text x="880" y="236" fill="#666666" font-family="system-ui, sans-serif" font-size="20">Search...</text>
-  <rect x="1280" y="210" width="60" height="40" rx="6" fill="#FFE500"/>
-  <rect x="860" y="280" width="500" height="60" rx="8" fill="#0d0d0d" stroke="#FFE500" stroke-width="2"/>
+  <rect x="1280" y="210" width="60" height="40" rx="6" fill="#FFFFFF"/>
+  <rect x="860" y="280" width="500" height="60" rx="8" fill="#0d0d0d" stroke="#FFFFFF" stroke-width="2"/>
   <text x="880" y="316" fill="#ffffff" font-family="system-ui, sans-serif" font-size="20">London, UK</text>
   <rect x="860" y="360" width="240" height="50" rx="8" fill="#0d0d0d" stroke="#333333" stroke-width="1"/>
   <text x="980" y="390" fill="#888888" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">Dropdown</text>
@@ -49,7 +49,7 @@
   <text x="1730" y="250" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Event Title</text>
   <text x="1730" y="320" fill="#888888" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">Venue Name · Date · Time</text>
   <text x="1730" y="356" fill="#666666" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">From $49.00</text>
-  <rect x="1580" y="400" width="300" height="44" rx="8" fill="#FFE500"/>
+  <rect x="1580" y="400" width="300" height="44" rx="8" fill="#FFFFFF"/>
   <text x="1730" y="428" fill="#000000" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Get Tickets</text>
   <text x="1730" y="520" fill="#444444" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">EVENT CARD</text>
 
@@ -57,7 +57,7 @@
   <rect x="2060" y="160" width="580" height="380" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
   <g transform="translate(2200,240)">
     <rect width="280" height="40" rx="20" fill="#0d0d0d" stroke="#333333" stroke-width="1"/>
-    <circle cx="22" cy="20" r="14" fill="#FFE500"/>
+    <circle cx="22" cy="20" r="14" fill="#FFFFFF"/>
     <rect x="50" y="12" width="80" height="16" rx="4" fill="#666666"/>
     <rect width="280" height="40" rx="20" fill="none" stroke="#333333" stroke-width="1" transform="translate(0,56)"/>
     <rect x="50" y="68" width="100" height="16" rx="4" fill="#666666"/>
@@ -68,11 +68,11 @@
 
   <!-- Row 2 -->
   <rect x="200" y="600" width="580" height="380" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
-  <rect x="240" y="640" width="500" height="60" rx="0" fill="#FFE500"/>
+  <rect x="240" y="640" width="500" height="60" rx="0" fill="#FFFFFF"/>
   <text x="490" y="678" fill="#000000" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Navigation Bar</text>
   <rect x="240" y="720" width="100" height="36" rx="4" fill="#333333"/>
   <rect x="360" y="720" width="100" height="36" rx="4" fill="#333333"/>
-  <rect x="480" y="720" width="100" height="36" rx="4" fill="#1a1a1a" stroke="#FFE500" stroke-width="2"/>
+  <rect x="480" y="720" width="100" height="36" rx="4" fill="#1a1a1a" stroke="#FFFFFF" stroke-width="2"/>
   <rect x="600" y="720" width="100" height="36" rx="4" fill="#333333"/>
   <text x="490" y="960" fill="#444444" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">NAVIGATION</text>
 
@@ -87,16 +87,16 @@
   <rect x="1220" y="660" width="2" height="200" fill="#333333"/>
   <text x="1110" y="960" fill="#444444" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">DATA TABLE</text>
 
-  <rect x="1440" y="600" width="580" height="380" rx="12" fill="#111111" stroke="#FFE500" stroke-width="2"/>
-  <text x="1730" y="760" fill="#FFE500" font-family="system-ui, sans-serif" font-size="64" font-weight="900" text-anchor="middle">50+</text>
+  <rect x="1440" y="600" width="580" height="380" rx="12" fill="#111111" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="1730" y="760" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="64" font-weight="900" text-anchor="middle">50+</text>
   <text x="1730" y="810" fill="#888888" font-family="system-ui, sans-serif" font-size="24" text-anchor="middle">Components</text>
   <text x="1730" y="850" fill="#666666" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">8 products · 2 verticals</text>
-  <text x="1730" y="960" fill="#FFE500" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">GLOBAL DESIGN SYSTEM</text>
+  <text x="1730" y="960" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">GLOBAL DESIGN SYSTEM</text>
 
   <rect x="2060" y="600" width="580" height="380" rx="12" fill="#111111" stroke="#333333" stroke-width="2"/>
   <circle cx="2350" cy="760" r="80" fill="none" stroke="#333333" stroke-width="2"/>
-  <circle cx="2350" cy="760" r="60" fill="none" stroke="#FFE500" stroke-width="3" stroke-dasharray="120 260" stroke-dashoffset="-30"/>
-  <text x="2350" y="772" fill="#FFE500" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" text-anchor="middle">77d</text>
+  <circle cx="2350" cy="760" r="60" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="120 260" stroke-dashoffset="-30"/>
+  <text x="2350" y="772" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" text-anchor="middle">77d</text>
   <text x="2350" y="870" fill="#666666" font-family="system-ui, sans-serif" font-size="18" text-anchor="middle">Avg cycle time</text>
   <text x="2350" y="960" fill="#444444" font-family="system-ui, sans-serif" font-size="20" text-anchor="middle">PIPELINE</text>
 

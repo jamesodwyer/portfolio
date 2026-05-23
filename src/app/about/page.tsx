@@ -365,7 +365,7 @@ export default function AboutPage() {
               </h2>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-4 text-heading hover:text-swiss-yellow transition-colors group"
+                className="inline-flex items-center gap-4 text-heading hover:text-swiss-muted transition-colors group"
               >
                 Get in touch → {siteConfig.email}
                 <svg

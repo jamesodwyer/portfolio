@@ -25,7 +25,7 @@ export default function NotFound() {
 
           <Link
             href="/"
-            className="inline-flex items-center gap-3 text-caption tracking-widest hover:text-swiss-yellow transition-colors"
+            className="inline-flex items-center gap-3 text-caption tracking-widest hover:text-swiss-muted transition-colors"
           >
             <svg
               width="16"
