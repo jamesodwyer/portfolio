@@ -472,6 +472,22 @@ button:focus-visible {
   50%      { transform: rotate(60deg)  translate(calc(14px * var(--loader-spread)), 0) scale(0.75); }
 }
 
+/* ---------- JO logo bounce ----------
+ * SVG transforms operate in the SVG user coordinate system (viewBox 0 0 100 100),
+ * so the px values below are user units, not screen pixels. */
+@keyframes jo-logo-bounce {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-14px); }
+  45%  { transform: translateY(0); }
+  60%  { transform: translateY(-7px); }
+  75%  { transform: translateY(0); }
+  90%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+.jo-logo-bounce {
+  animation: jo-logo-bounce 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
 /* ---------- MacBook mockup slideshow ---------- */
 .mockup {
   position: relative;
