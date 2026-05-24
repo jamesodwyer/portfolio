@@ -105,34 +105,25 @@ const experience = [
 ];
 
 const coreSkills = [
-  "Enterprise & Startup Design Systems",
-  "AI-Driven Product Operations",
+  "Enterprise & Multi-Brand Design Systems",
   "Design Operations & Governance",
-  "MCP Infrastructure & AI Workflows",
   "Federated Contribution Models",
-  "Multi-Brand Design Systems",
-  "Team Development & Coaching",
-  "Scalable Product Systems",
-  "Accessibility & WCAG",
-  "Cross-Functional Leadership",
-  "Product Design Leadership",
+  "AI Workflows & MCP Infrastructure",
+  "Product Design Leadership & Coaching",
   "Product Engineering Collaboration",
   "Product Discovery & Delivery",
-  "Rapid Prototyping",
-  "High-Fidelity Product Prototyping",
+  "Rapid & High-Fidelity Prototyping",
+  "Accessibility & WCAG",
 ];
 
 const tools = [
   "Figma",
   "Storybook",
-  "Claude Code",
-  "MCP Infrastructure",
-  "Workflow Automation",
-  "AI-Assisted Prototyping",
-  "Agent Workflows",
-  "Reusable AI Skills",
-  "Front-End Collaboration",
   "Xcode",
+  "Claude Code & MCP",
+  "Agent Workflows & Reusable Skills",
+  "AI-Assisted Prototyping",
+  "Workflow Automation",
 ];
 
 export default function AboutPage() {
