@@ -10,13 +10,11 @@ const experience = [
     period: "Mar 2024 – Present",
     contract: false,
     bullets: [
-      "Leading the evolution and operational scaling of Ticketmaster’s Global Design System across eight products and multiple business verticals",
-      "Established a federated contribution model enabling 20+ designers across distributed product teams to contribute into a single governed system",
-      "Defined and implemented token architecture supporting scalable multi-brand theming across enterprise platforms",
-      "Introduced AI-enabled workflows using MCP infrastructure, Claude, and Figma Make to accelerate component delivery and improve design-to-engineering collaboration",
-      "Improved cross-team consistency, governance, and operational scalability across complex product ecosystems",
-      "Partner closely with product and engineering leadership to align design strategy with delivery outcomes and platform scalability",
-      "Mentor and support designers across product teams, improving design maturity and scalable ways of working",
+      "Lead Ticketmaster’s Global Design System across 8 products and multiple verticals",
+      "Built a federated contribution model for 20+ designers to ship into a single governed system",
+      "Defined token architecture for scalable multi-brand theming",
+      "Introduced AI workflows via MCP, Claude, and Figma Make to speed component delivery",
+      "Partner with product and engineering leadership and mentor designers across teams",
     ],
   },
   {
@@ -25,11 +23,10 @@ const experience = [
     period: "Aug 2022 – Jan 2024",
     contract: true,
     bullets: [
-      "Led digital product design across web and mobile platforms for a global ticketing and e-commerce business",
-      "Established and scaled a design system to improve consistency, operational efficiency, and delivery speed across teams",
-      "Defined UX strategy across key customer journeys, improving usability and supporting conversion-focused product experiences",
-      "Built and developed design capability through scalable workflows, collaboration models, and structured delivery processes",
-      "Collaborated with senior stakeholders to align customer experience strategy with commercial and operational objectives",
+      "Led product design across web and mobile for a global ticketing platform",
+      "Built and scaled a design system to lift consistency and delivery speed",
+      "Defined UX strategy across key journeys to drive usability and conversion",
+      "Grew design capability and aligned senior stakeholders on customer experience",
     ],
   },
   {
@@ -38,10 +35,9 @@ const experience = [
     period: "May 2022 – Aug 2022",
     contract: true,
     bullets: [
-      "Led product design for a mobile-first investment platform within a fast-paced fintech environment",
-      "Delivered scalable UX and UI solutions across complex financial workflows and customer journeys",
-      "Partnered closely with product and engineering teams to improve delivery quality and implementation consistency",
-      "Introduced design system thinking and reusable design approaches to improve scalability across the platform",
+      "Led product design for a mobile-first fintech investment platform",
+      "Designed scalable UX and UI across complex financial workflows",
+      "Introduced design system thinking and partnered with engineering on delivery quality",
     ],
   },
   {
@@ -50,10 +46,9 @@ const experience = [
     period: "Feb 2022 – May 2022",
     contract: true,
     bullets: [
-      "Led UX and product design initiatives across B2B digital products and SME-focused experiences",
-      "Delivered responsive and mobile-first experiences across customer-facing platforms",
-      "Introduced structured design processes and improved research and collaboration workflows",
-      "Contributed to scalable design system development and reusable UI standards",
+      "Led product design across B2B and SME-focused digital products",
+      "Delivered responsive, mobile-first customer experiences",
+      "Contributed to the design system and introduced structured design processes",
     ],
   },
   {
@@ -62,9 +57,8 @@ const experience = [
     period: "Dec 2021 – Feb 2022",
     contract: true,
     bullets: [
-      "Delivered UX strategy and service design across large-scale digital learning platforms",
-      "Led user research, journey mapping, and stakeholder workshops across complex systems",
-      "Facilitated cross-functional alignment sessions and produced end-to-end UX deliverables from discovery through delivery",
+      "Delivered UX strategy and service design for large-scale digital learning platforms",
+      "Led research, journey mapping, and cross-functional workshops from discovery to delivery",
     ],
   },
   {
@@ -74,9 +68,8 @@ const experience = [
     contract: true,
     bullets: [
       "Led UI design across web platforms for a major financial services organisation",
-      "Contributed to the evolution of the organisation\u2019s design system and reusable UI standards",
-      "Delivered responsive and accessible experiences across multiple financial products and services",
-      "Worked closely with engineering teams to ensure high-quality implementation and scalable delivery",
+      "Helped evolve the design system and reusable UI standards",
+      "Delivered responsive, accessible experiences in close partnership with engineering",
     ],
   },
   {
@@ -85,9 +78,8 @@ const experience = [
     period: "Nov 2016 – Nov 2018",
     contract: true,
     bullets: [
-      "Delivered UX and UI design across digital financial platforms and investment experiences",
-      "Led interaction design and user research initiatives across multiple product areas",
-      "Collaborated with cross-functional teams to deliver scalable product improvements and customer-focused experiences",
+      "Delivered product design across digital investment platforms",
+      "Led interaction design and research across multiple product areas",
     ],
   },
   {
@@ -96,10 +88,9 @@ const experience = [
     period: "2010 – 2016",
     contract: true,
     bullets: [
-      "Worked across major brands including BBC, Sky, UEFA, Disney, Expedia, Comic Relief, Sky Sports, Dr WHO, Cravendale, Guinness, and Arla",
-      "Delivered UX, digital product, and design system work across media, entertainment, FMCG, sports, finance, and e-commerce sectors",
+      "Worked across major brands including BBC, Sky, UEFA, Disney, Expedia, and Guinness",
+      "Delivered UX, product, and early design system work across media, sport, finance, and e-commerce",
       "Led design delivery across web, mobile, and emerging platforms",
-      "Established early design system thinking across client projects",
     ],
   },
 ];
