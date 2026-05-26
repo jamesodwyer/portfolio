@@ -73,7 +73,7 @@ body {
 /* Typography Utilities - Bold Swiss Style */
 .text-display-hero {
   font-size: var(--font-display-hero);
-  line-height: 0.85;
+  line-height: 0.95;
   letter-spacing: -0.03em;
   font-weight: 700;
 }
