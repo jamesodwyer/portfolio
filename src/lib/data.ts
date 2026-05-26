@@ -43,7 +43,7 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "ticketmaster-gds",
-    title: "Ticketmaster GDS",
+    title: "Global Design System",
     subtitle: "Scaling a global design system from its token foundations up — across products, teams, and brands.",
     category: "Design Systems / Leadership",
     year: "",
