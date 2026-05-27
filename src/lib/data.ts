@@ -328,11 +328,6 @@ export const caseStudies: CaseStudy[] = [
       "/images/hl/img_5.jpg",
       "/images/hl/img_6.jpg",
       "/images/hl/img_4.jpg",
-      "/images/hl/img_7.jpg",
-      "/images/hl/img_9.jpg",
-      "/images/hl/img_10.jpg",
-      "/images/hl/img_11.jpg",
-      "/images/hl/img_12.jpg",
     ],
     overview: {
       role: "Lead UX / UI Designer",
