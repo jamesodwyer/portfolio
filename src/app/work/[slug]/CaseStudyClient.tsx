@@ -69,6 +69,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   );
 
   const scrollingFrames = study.scrollingFrames ?? [];
+  const heroFrame = scrollingFrames.find((f) => f.position === "hero");
   const framesAfterChallenge = scrollingFrames.filter(
     (f) => f.position === "after-challenge"
   );
@@ -186,7 +187,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         <div className="grid-container">
           <motion.div
             className={
-              study.heroSlideshow
+              heroFrame || study.heroSlideshow
                 ? "relative"
                 : study.heroEmbed
                   ? "relative"
@@ -196,7 +197,9 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {study.heroSlideshow ? (
+            {heroFrame ? (
+              <ScrollingFrame src={heroFrame.src} variant={heroFrame.variant} />
+            ) : study.heroSlideshow ? (
               <MockupSlideshow
                 slides={study.heroSlideshow.slides}
                 mockup={study.heroSlideshow.mockup}
