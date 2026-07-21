@@ -25,6 +25,10 @@ export interface CaseStudy {
     src: string;
     variant: "macbook" | "iphone";
     position: "hero" | "after-challenge" | "after-solution";
+    /** Optional bar pinned to the top of an iPhone screen while the middle scrolls. */
+    stickyTopSrc?: string;
+    /** Optional bar pinned to the bottom of an iPhone screen while the middle scrolls. */
+    stickyBottomSrc?: string;
   }>;
   overview: {
     role: string;
@@ -67,9 +71,11 @@ export const caseStudies: CaseStudy[] = [
         position: "after-challenge",
       },
       {
-        src: "/images/ticketmaster-gds/ios-homepage.png",
+        src: "/images/ticketmaster-gds/ios-middle.png",
         variant: "iphone",
         position: "after-solution",
+        stickyTopSrc: "/images/ticketmaster-gds/ios-top.png",
+        stickyBottomSrc: "/images/ticketmaster-gds/ios-bottom.png",
       },
     ],
     overview: {

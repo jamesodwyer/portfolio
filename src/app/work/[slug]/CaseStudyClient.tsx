@@ -78,7 +78,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   );
 
   const renderScrollingFrame = (
-    frame: { src: string; variant: "macbook" | "iphone" },
+    frame: {
+      src: string;
+      variant: "macbook" | "iphone";
+      stickyTopSrc?: string;
+      stickyBottomSrc?: string;
+    },
     key: number
   ) => (
     <section key={`frame-${key}`} className="py-grid">
@@ -96,7 +101,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         >
           {frame.variant === "iphone" ? (
             <div className="col-span-12 md:col-start-3 md:col-span-4">
-              <ScrollingFrame src={frame.src} variant="iphone" />
+              <ScrollingFrame
+                src={frame.src}
+                variant="iphone"
+                stickyTopSrc={frame.stickyTopSrc}
+                stickyBottomSrc={frame.stickyBottomSrc}
+              />
             </div>
           ) : (
             <ScrollingFrame src={frame.src} variant="macbook" />

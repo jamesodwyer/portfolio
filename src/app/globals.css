@@ -603,3 +603,23 @@ button:focus-visible {
   border-radius: 0 0 16px 16px;
   z-index: 3;
 }
+
+/* iPhone with pinned top/bottom bars and a scrolling middle. */
+.iphone__screen--stacked {
+  display: flex;
+  flex-direction: column;
+}
+.iphone__bar {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  z-index: 2;
+}
+/* In the stacked layout the scroll window is a flex child, not absolute. */
+.scroll-window--flex {
+  position: relative;
+  inset: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+}
