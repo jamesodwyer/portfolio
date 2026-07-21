@@ -316,6 +316,12 @@ a {
   .scroll-window {
     overflow-y: auto !important;
   }
+  /* Fake sticky header stays hidden under reduced motion so the real header
+     (baked into the page) shows as the user scrolls manually. */
+  .scroll-fade-header {
+    opacity: 0 !important;
+    transition: none !important;
+  }
 }
 
 /* Focus States */
@@ -572,6 +578,22 @@ button:focus-visible {
   0%, 8%     { transform: translateY(0); }
   46%, 54%   { transform: translateY(var(--pan-shift, 0)); }
   92%, 100%  { transform: translateY(0); }
+}
+
+/* Fake sticky header: a copy of the page bar overlaid at the top of the
+   screen. Its opacity is toggled from JS based on live scroll position, so it
+   snaps in fast the moment the page's real bar reaches the top and out on the
+   return. Transparent at the top so the page's real bar shows through. */
+.scroll-fade-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease-out;
 }
 
 /* iPhone frame (drawn in CSS, no binary asset) */

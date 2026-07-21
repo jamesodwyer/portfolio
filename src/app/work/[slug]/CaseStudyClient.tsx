@@ -83,6 +83,8 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       variant: "macbook" | "iphone";
       stickyTopSrc?: string;
       stickyBottomSrc?: string;
+      fadeHeaderSrc?: string;
+      fadeHeaderOffsetPx?: number;
     },
     key: number
   ) => (
@@ -95,25 +97,25 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           transition={{ duration: 0.6 }}
           className={
             frame.variant === "iphone"
-              ? "grid grid-cols-12 gap-6"
+              ? "flex justify-center"
               : undefined
           }
         >
           {frame.variant === "iphone" ? (
-            <div className="col-span-12 md:col-start-3 md:col-span-4">
-              <ScrollingFrame
-                src={frame.src}
-                variant="iphone"
-                stickyTopSrc={frame.stickyTopSrc}
-                stickyBottomSrc={frame.stickyBottomSrc}
-              />
-            </div>
+            <ScrollingFrame
+              src={frame.src}
+              variant="iphone"
+              stickyTopSrc={frame.stickyTopSrc}
+              stickyBottomSrc={frame.stickyBottomSrc}
+            />
           ) : (
             <ScrollingFrame
               src={frame.src}
               variant="macbook"
               stickyTopSrc={frame.stickyTopSrc}
               stickyBottomSrc={frame.stickyBottomSrc}
+              fadeHeaderSrc={frame.fadeHeaderSrc}
+              fadeHeaderOffsetPx={frame.fadeHeaderOffsetPx}
             />
           )}
         </motion.div>
@@ -218,6 +220,8 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
                 variant={heroFrame.variant}
                 stickyTopSrc={heroFrame.stickyTopSrc}
                 stickyBottomSrc={heroFrame.stickyBottomSrc}
+                fadeHeaderSrc={heroFrame.fadeHeaderSrc}
+                fadeHeaderOffsetPx={heroFrame.fadeHeaderOffsetPx}
               />
             ) : study.heroSlideshow ? (
               <MockupSlideshow

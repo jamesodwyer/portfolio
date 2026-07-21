@@ -25,10 +25,14 @@ export interface CaseStudy {
     src: string;
     variant: "macbook" | "iphone";
     position: "hero" | "after-challenge" | "after-solution";
-    /** Optional bar pinned to the top of an iPhone screen while the middle scrolls. */
+    /** Optional bar pinned to the top of the screen while the middle scrolls. */
     stickyTopSrc?: string;
-    /** Optional bar pinned to the bottom of an iPhone screen while the middle scrolls. */
+    /** Optional bar pinned to the bottom of the screen while the middle scrolls. */
     stickyBottomSrc?: string;
+    /** Optional header overlay faded in/out based on scroll (fake sticky header). */
+    fadeHeaderSrc?: string;
+    /** Natural-image Y offset (px) where the real bar sits in `src`. */
+    fadeHeaderOffsetPx?: number;
   }>;
   overview: {
     role: string;
@@ -61,16 +65,17 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/ticketmaster-gds/hero.png",
     scrollingFrames: [
       {
-        src: "/images/ticketmaster-gds/splash-body.png",
+        src: "/images/ticketmaster-gds/artist-splash.png",
         variant: "macbook",
         position: "hero",
-        stickyTopSrc: "/images/ticketmaster-gds/splash-header.png",
+        fadeHeaderSrc: "/images/ticketmaster-gds/splash-header.png",
       },
       {
-        src: "/images/ticketmaster-gds/nfl-body.png",
+        src: "/images/ticketmaster-gds/nfl-overview.png",
         variant: "macbook",
         position: "after-challenge",
-        stickyTopSrc: "/images/ticketmaster-gds/nfl-nav.png",
+        fadeHeaderSrc: "/images/ticketmaster-gds/nfl-nav.png",
+        fadeHeaderOffsetPx: 1505,
       },
       {
         src: "/images/ticketmaster-gds/ios-middle.png",
