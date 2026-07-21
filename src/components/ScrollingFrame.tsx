@@ -10,12 +10,11 @@ interface ScrollingFrameProps {
   /** Full pan cycle duration in ms. Defaults scale with content length. */
   durationMs?: number;
   /**
-   * Optional bar image pinned to the top of the screen (iPhone only). When set
-   * together with stickyBottomSrc, the screen splits into a fixed top bar, a
-   * scrolling middle, and a fixed bottom bar.
+   * Optional bar image pinned to the top of the screen while the middle scrolls.
+   * Works on both variants; use with a matching sliced-off top of `src`.
    */
   stickyTopSrc?: string;
-  /** Optional bar image pinned to the bottom of the screen (iPhone only). */
+  /** Optional bar image pinned to the bottom of the screen while the middle scrolls. */
   stickyBottomSrc?: string;
 }
 
@@ -58,6 +57,8 @@ export function ScrollingFrame({
   const resolvedDurationMs =
     durationMs ?? Math.min(60000, Math.max(16000, Math.abs(panShiftPx) * 24));
 
+  const hasStickyBars = Boolean(stickyTopSrc || stickyBottomSrc);
+
   const renderScrollWindow = (windowClassName: string) => (
     <div className={windowClassName} ref={windowRef}>
       <img
@@ -76,29 +77,36 @@ export function ScrollingFrame({
     </div>
   );
 
+  // The screen contents: either a plain scroll window, or a stacked layout
+  // with pinned top/bottom bars around a flexing scroll window.
+  const renderScreen = () =>
+    hasStickyBars ? (
+      <div className="scroll-stack">
+        {stickyTopSrc && (
+          <img className="scroll-bar" src={stickyTopSrc} alt="" aria-hidden="true" />
+        )}
+        {renderScrollWindow("scroll-window scroll-window--flex")}
+        {stickyBottomSrc && (
+          <img className="scroll-bar" src={stickyBottomSrc} alt="" aria-hidden="true" />
+        )}
+      </div>
+    ) : (
+      renderScrollWindow("scroll-window")
+    );
+
   if (variant === "macbook") {
     return (
       <div className={`mockup ${className}`}>
-        <div className="mockup__screen">{renderScrollWindow("scroll-window")}</div>
+        <div className="mockup__screen">{renderScreen()}</div>
         <img className="mockup__frame" src={MACBOOK_FRAME} alt="" aria-hidden="true" />
       </div>
     );
   }
 
-  const hasStickyBars = Boolean(stickyTopSrc && stickyBottomSrc);
-
   return (
     <div className={`iphone ${className}`}>
       {!hasStickyBars && <div className="iphone__notch" />}
-      {hasStickyBars ? (
-        <div className="iphone__screen iphone__screen--stacked">
-          <img className="iphone__bar" src={stickyTopSrc} alt="" aria-hidden="true" />
-          {renderScrollWindow("scroll-window scroll-window--flex")}
-          <img className="iphone__bar" src={stickyBottomSrc} alt="" aria-hidden="true" />
-        </div>
-      ) : (
-        <div className="iphone__screen">{renderScrollWindow("scroll-window")}</div>
-      )}
+      <div className="iphone__screen">{renderScreen()}</div>
     </div>
   );
 }

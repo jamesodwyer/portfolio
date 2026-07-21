@@ -61,14 +61,16 @@ export const caseStudies: CaseStudy[] = [
     hero: "/images/ticketmaster-gds/hero.png",
     scrollingFrames: [
       {
-        src: "/images/ticketmaster-gds/artist-splash.png",
+        src: "/images/ticketmaster-gds/splash-body.png",
         variant: "macbook",
         position: "hero",
+        stickyTopSrc: "/images/ticketmaster-gds/splash-header.png",
       },
       {
-        src: "/images/ticketmaster-gds/nfl-overview.png",
+        src: "/images/ticketmaster-gds/nfl-body.png",
         variant: "macbook",
         position: "after-challenge",
+        stickyTopSrc: "/images/ticketmaster-gds/nfl-nav.png",
       },
       {
         src: "/images/ticketmaster-gds/ios-middle.png",

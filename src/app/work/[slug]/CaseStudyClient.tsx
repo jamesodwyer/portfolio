@@ -109,7 +109,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               />
             </div>
           ) : (
-            <ScrollingFrame src={frame.src} variant="macbook" />
+            <ScrollingFrame
+              src={frame.src}
+              variant="macbook"
+              stickyTopSrc={frame.stickyTopSrc}
+              stickyBottomSrc={frame.stickyBottomSrc}
+            />
           )}
         </motion.div>
       </div>
@@ -208,7 +213,12 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {heroFrame ? (
-              <ScrollingFrame src={heroFrame.src} variant={heroFrame.variant} />
+              <ScrollingFrame
+                src={heroFrame.src}
+                variant={heroFrame.variant}
+                stickyTopSrc={heroFrame.stickyTopSrc}
+                stickyBottomSrc={heroFrame.stickyBottomSrc}
+              />
             ) : study.heroSlideshow ? (
               <MockupSlideshow
                 slides={study.heroSlideshow.slides}

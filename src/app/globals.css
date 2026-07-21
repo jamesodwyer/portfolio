@@ -604,12 +604,15 @@ button:focus-visible {
   z-index: 3;
 }
 
-/* iPhone with pinned top/bottom bars and a scrolling middle. */
-.iphone__screen--stacked {
+/* Device screen with pinned top/bottom bars and a scrolling middle.
+   Fills its parent screen (.iphone__screen or .mockup__screen). */
+.scroll-stack {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
 }
-.iphone__bar {
+.scroll-bar {
   display: block;
   width: 100%;
   height: auto;
