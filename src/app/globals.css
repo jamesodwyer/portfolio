@@ -308,6 +308,14 @@ a {
     animation-duration: var(--duration) !important;
     animation-iteration-count: var(--iteration-count) !important;
   }
+  /* Auto-scroll frames: stop panning, allow manual scroll instead. */
+  .scroll-track.is-animated {
+    animation: none !important;
+    transform: none !important;
+  }
+  .scroll-window {
+    overflow-y: auto !important;
+  }
 }
 
 /* Focus States */
@@ -540,4 +548,58 @@ button:focus-visible {
 }
 .mockup-slide.is-active {
   opacity: 1;
+}
+
+/* ---------- Auto-scrolling device frames ---------- */
+.scroll-window {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+.scroll-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+}
+.scroll-track.is-animated {
+  animation: scroll-pan var(--pan-duration, 24s) ease-in-out infinite;
+}
+@keyframes scroll-pan {
+  0%, 8%     { transform: translateY(0); }
+  46%, 54%   { transform: translateY(var(--pan-shift, 0)); }
+  92%, 100%  { transform: translateY(0); }
+}
+
+/* iPhone frame (drawn in CSS, no binary asset) */
+.iphone {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 390 / 844;
+  background: #0a0a0a;
+  border-radius: 44px;
+  padding: 12px;
+  box-shadow: 0 0 0 2px #2a2a2a, 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+.iphone__screen {
+  position: absolute;
+  inset: 12px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #000;
+}
+.iphone__notch {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 22px;
+  background: #0a0a0a;
+  border-radius: 0 0 16px 16px;
+  z-index: 3;
 }
