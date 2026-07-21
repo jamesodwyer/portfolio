@@ -21,6 +21,11 @@ export interface CaseStudy {
     mockup?: string;
     position?: "after-challenge" | "after-solution";
   }>;
+  scrollingFrames?: Array<{
+    src: string;
+    variant: "macbook" | "iphone";
+    position: "hero" | "after-challenge" | "after-solution";
+  }>;
   overview: {
     role: string;
     timeline: string;
@@ -50,25 +55,15 @@ export const caseStudies: CaseStudy[] = [
     color: "blue",
     thumbnail: "/images/tm1.png",
     hero: "/images/ticketmaster-gds/hero.png",
-    heroSlideshow: {
-      slides: [
-        "/mockup-slides/images/slide8.png",
-        "/mockup-slides/images/slide9.png",
-      ],
-    },
-    additionalSlideshows: [
+    scrollingFrames: [
       {
-        slides: [
-          "/mockup-slides/images/slide10.png",
-          "/mockup-slides/images/slide11.png",
-        ],
+        src: "/images/ticketmaster-gds/nfl-overview.png",
+        variant: "macbook",
         position: "after-challenge",
       },
       {
-        slides: [
-          "/mockup-slides/images/slide12.png",
-          "/mockup-slides/images/slide13.png",
-        ],
+        src: "/images/ticketmaster-gds/ios-homepage.png",
+        variant: "iphone",
         position: "after-solution",
       },
     ],
