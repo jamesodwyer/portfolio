@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
-import { Footer, MockupSlideshow } from "@/components";
+import { Footer, MockupSlideshow, ScrollingFrame } from "@/components";
 
 const colorMap = {
   red: "bg-swiss-yellow",
@@ -63,6 +63,43 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           transition={{ duration: 0.6 }}
         >
           <MockupSlideshow slides={slideshow.slides} mockup={slideshow.mockup} />
+        </motion.div>
+      </div>
+    </section>
+  );
+
+  const scrollingFrames = study.scrollingFrames ?? [];
+  const framesAfterChallenge = scrollingFrames.filter(
+    (f) => f.position === "after-challenge"
+  );
+  const framesAfterSolution = scrollingFrames.filter(
+    (f) => f.position === "after-solution"
+  );
+
+  const renderScrollingFrame = (
+    frame: { src: string; variant: "macbook" | "iphone" },
+    key: number
+  ) => (
+    <section key={`frame-${key}`} className="py-grid">
+      <div className="grid-container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className={
+            frame.variant === "iphone"
+              ? "grid grid-cols-12 gap-6"
+              : undefined
+          }
+        >
+          {frame.variant === "iphone" ? (
+            <div className="col-span-12 md:col-start-3 md:col-span-4">
+              <ScrollingFrame src={frame.src} variant="iphone" />
+            </div>
+          ) : (
+            <ScrollingFrame src={frame.src} variant="macbook" />
+          )}
         </motion.div>
       </div>
     </section>
@@ -237,6 +274,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         renderSlideshow(slideshow, index)
       )}
 
+      {/* Auto-scrolling device frames after the Challenge section */}
+      {framesAfterChallenge.map((frame, index) =>
+        renderScrollingFrame(frame, index)
+      )}
+
       {/* Gallery - between Challenge and Process (first group) */}
       {gallery.length >= 2 && (
         <section className="py-grid">
@@ -408,6 +450,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       {/* Additional slideshows positioned after the Solution section */}
       {slideshowsAfterSolution.map((slideshow, index) =>
         renderSlideshow(slideshow, index)
+      )}
+
+      {/* Auto-scrolling device frames after the Solution section */}
+      {framesAfterSolution.map((frame, index) =>
+        renderScrollingFrame(frame, index + 100)
       )}
 
       {/* Gallery - after Solution (remaining images) */}
