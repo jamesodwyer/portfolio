@@ -55,6 +55,9 @@ export const caseStudies: CaseStudy[] = [
     color: "blue",
     thumbnail: "/images/tm1.png",
     hero: "/images/ticketmaster-gds/hero.png",
+    heroSlideshow: {
+      slides: ["/images/ticketmaster-gds/hero.png"],
+    },
     scrollingFrames: [
       {
         src: "/images/ticketmaster-gds/nfl-overview.png",
