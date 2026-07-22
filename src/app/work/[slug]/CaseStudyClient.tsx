@@ -51,7 +51,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   }, [study.heroEmbed]);
 
   const renderSlideshow = (
-    slideshow: { slides: string[]; mockup?: string },
+    slideshow: { slides: string[]; mockup?: string; videoSrc?: string },
     key: number
   ) => (
     <section key={key} className="py-grid">
@@ -62,7 +62,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <MockupSlideshow slides={slideshow.slides} mockup={slideshow.mockup} />
+          <MockupSlideshow
+            slides={slideshow.slides}
+            mockup={slideshow.mockup}
+            videoSrc={slideshow.videoSrc}
+          />
         </motion.div>
       </div>
     </section>
@@ -227,6 +231,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
               <MockupSlideshow
                 slides={study.heroSlideshow.slides}
                 mockup={study.heroSlideshow.mockup}
+                videoSrc={study.heroSlideshow.videoSrc}
               />
             ) : study.heroEmbed ? (
               <iframe

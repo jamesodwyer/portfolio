@@ -15,11 +15,15 @@ export interface CaseStudy {
   heroSlideshow?: {
     slides: string[];
     mockup?: string;
+    /** When set, play this looping video in the mockup instead of the slides. */
+    videoSrc?: string;
   };
   additionalSlideshows?: Array<{
     slides: string[];
     mockup?: string;
     position?: "after-challenge" | "after-solution";
+    /** When set, play this looping video in the mockup instead of the slides. */
+    videoSrc?: string;
   }>;
   scrollingFrames?: Array<{
     src: string;
@@ -145,20 +149,13 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: "/images/tm2.png",
     hero: "/images/gds-mcp/hero.png",
     heroSlideshow: {
-      slides: [
-        "/mockup-slides/images/slide1.png",
-        "/mockup-slides/images/slide2.png",
-        "/mockup-slides/images/slide3.png",
-      ],
+      slides: [],
+      videoSrc: "/video/mcp-server.mp4",
     },
     additionalSlideshows: [
       {
-        slides: [
-          "/mockup-slides/images/slide4.png",
-          "/mockup-slides/images/slide5.png",
-          "/mockup-slides/images/slide6.png",
-          "/mockup-slides/images/slide7.png",
-        ],
+        slides: [],
+        videoSrc: "/video/claude-mcp-button.mp4",
         position: "after-solution",
       },
     ],

@@ -555,6 +555,17 @@ button:focus-visible {
 .mockup-slide.is-active {
   opacity: 1;
 }
+.mockup-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* Contain so the full width (left/right edges) stays visible; the mockup
+     screen background fills any letterbox space. */
+  object-fit: contain;
+  object-position: 50% 50%;
+  background: #000;
+}
 
 /* ---------- Auto-scrolling device frames ---------- */
 .scroll-window {
