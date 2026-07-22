@@ -566,6 +566,32 @@ button:focus-visible {
   object-position: 50% 50%;
   background: #000;
 }
+.mockup-fullscreen {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 200ms ease, background-color 200ms ease;
+}
+.mockup:hover .mockup-fullscreen,
+.mockup-fullscreen:focus-visible {
+  opacity: 1;
+}
+.mockup-fullscreen:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
 
 /* ---------- Auto-scrolling device frames ---------- */
 .scroll-window {
