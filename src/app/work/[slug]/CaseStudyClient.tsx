@@ -130,7 +130,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-[80vh] flex items-end pt-32 pb-grid-2">
+      <section className="min-h-[60vh] flex items-end pt-32 pb-grid-2">
         <div className="grid-container w-full">
           {/* Back Link */}
           <motion.div
