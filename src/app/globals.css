@@ -308,6 +308,20 @@ a {
     animation-duration: var(--duration) !important;
     animation-iteration-count: var(--iteration-count) !important;
   }
+  /* Auto-scroll frames: stop panning, allow manual scroll instead. */
+  .scroll-track.is-animated {
+    animation: none !important;
+    transform: none !important;
+  }
+  .scroll-window {
+    overflow-y: auto !important;
+  }
+  /* Fake sticky header stays hidden under reduced motion so the real header
+     (baked into the page) shows as the user scrolls manually. */
+  .scroll-fade-header {
+    opacity: 0 !important;
+    transition: none !important;
+  }
 }
 
 /* Focus States */
@@ -540,4 +554,134 @@ button:focus-visible {
 }
 .mockup-slide.is-active {
   opacity: 1;
+}
+.mockup-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* Contain so the full width (left/right edges) stays visible; the mockup
+     screen background fills any letterbox space. */
+  object-fit: contain;
+  object-position: 50% 50%;
+  background: #000;
+}
+.mockup-fullscreen {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 200ms ease, background-color 200ms ease;
+}
+.mockup:hover .mockup-fullscreen,
+.mockup-fullscreen:focus-visible {
+  opacity: 1;
+}
+.mockup-fullscreen:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- Auto-scrolling device frames ---------- */
+.scroll-window {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+.scroll-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+}
+.scroll-track.is-animated {
+  animation: scroll-pan var(--pan-duration, 24s) ease-in-out infinite;
+}
+@keyframes scroll-pan {
+  0%, 8%     { transform: translateY(0); }
+  46%, 54%   { transform: translateY(var(--pan-shift, 0)); }
+  92%, 100%  { transform: translateY(0); }
+}
+
+/* Fake sticky header: a copy of the page bar overlaid at the top of the
+   screen. Its opacity is toggled from JS based on live scroll position, so it
+   snaps in fast the moment the page's real bar reaches the top and out on the
+   return. Transparent at the top so the page's real bar shows through. */
+.scroll-fade-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+
+/* iPhone frame (drawn in CSS, no binary asset) */
+.iphone {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 390 / 844;
+  background: #0a0a0a;
+  border-radius: 44px;
+  padding: 12px;
+  box-shadow: 0 0 0 2px #2a2a2a, 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+.iphone__screen {
+  position: absolute;
+  inset: 12px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #000;
+}
+.iphone__notch {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34%;
+  height: 22px;
+  background: #0a0a0a;
+  border-radius: 0 0 16px 16px;
+  z-index: 3;
+}
+
+/* Device screen with pinned top/bottom bars and a scrolling middle.
+   Fills its parent screen (.iphone__screen or .mockup__screen). */
+.scroll-stack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+.scroll-bar {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  z-index: 2;
+}
+/* In the stacked layout the scroll window is a flex child, not absolute. */
+.scroll-window--flex {
+  position: relative;
+  inset: auto;
+  flex: 1 1 auto;
+  min-height: 0;
 }

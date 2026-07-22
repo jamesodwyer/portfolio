@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
-import { Footer, MockupSlideshow } from "@/components";
+import { Footer, MockupSlideshow, ScrollingFrame } from "@/components";
 
 const colorMap = {
   red: "bg-swiss-yellow",
@@ -51,7 +51,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   }, [study.heroEmbed]);
 
   const renderSlideshow = (
-    slideshow: { slides: string[]; mockup?: string },
+    slideshow: { slides: string[]; mockup?: string; videoSrc?: string },
     key: number
   ) => (
     <section key={key} className="py-grid">
@@ -62,7 +62,66 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <MockupSlideshow slides={slideshow.slides} mockup={slideshow.mockup} />
+          <MockupSlideshow
+            slides={slideshow.slides}
+            mockup={slideshow.mockup}
+            videoSrc={slideshow.videoSrc}
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+
+  const scrollingFrames = study.scrollingFrames ?? [];
+  const heroFrame = scrollingFrames.find((f) => f.position === "hero");
+  const framesAfterChallenge = scrollingFrames.filter(
+    (f) => f.position === "after-challenge"
+  );
+  const framesAfterSolution = scrollingFrames.filter(
+    (f) => f.position === "after-solution"
+  );
+
+  const renderScrollingFrame = (
+    frame: {
+      src: string;
+      variant: "macbook" | "iphone";
+      stickyTopSrc?: string;
+      stickyBottomSrc?: string;
+      fadeHeaderSrc?: string;
+      fadeHeaderOffsetPx?: number;
+    },
+    key: number
+  ) => (
+    <section key={`frame-${key}`} className="py-grid">
+      <div className="grid-container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className={
+            frame.variant === "iphone"
+              ? "flex justify-center"
+              : undefined
+          }
+        >
+          {frame.variant === "iphone" ? (
+            <ScrollingFrame
+              src={frame.src}
+              variant="iphone"
+              stickyTopSrc={frame.stickyTopSrc}
+              stickyBottomSrc={frame.stickyBottomSrc}
+            />
+          ) : (
+            <ScrollingFrame
+              src={frame.src}
+              variant="macbook"
+              stickyTopSrc={frame.stickyTopSrc}
+              stickyBottomSrc={frame.stickyBottomSrc}
+              fadeHeaderSrc={frame.fadeHeaderSrc}
+              fadeHeaderOffsetPx={frame.fadeHeaderOffsetPx}
+            />
+          )}
         </motion.div>
       </div>
     </section>
@@ -71,7 +130,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-[80vh] flex items-end pt-32 pb-grid-2">
+      <section className="min-h-[60vh] flex items-end pt-32 pb-grid-2">
         <div className="grid-container w-full">
           {/* Back Link */}
           <motion.div
@@ -149,7 +208,7 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
         <div className="grid-container">
           <motion.div
             className={
-              study.heroSlideshow
+              heroFrame || study.heroSlideshow
                 ? "relative"
                 : study.heroEmbed
                   ? "relative"
@@ -159,10 +218,20 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {study.heroSlideshow ? (
+            {heroFrame ? (
+              <ScrollingFrame
+                src={heroFrame.src}
+                variant={heroFrame.variant}
+                stickyTopSrc={heroFrame.stickyTopSrc}
+                stickyBottomSrc={heroFrame.stickyBottomSrc}
+                fadeHeaderSrc={heroFrame.fadeHeaderSrc}
+                fadeHeaderOffsetPx={heroFrame.fadeHeaderOffsetPx}
+              />
+            ) : study.heroSlideshow ? (
               <MockupSlideshow
                 slides={study.heroSlideshow.slides}
                 mockup={study.heroSlideshow.mockup}
+                videoSrc={study.heroSlideshow.videoSrc}
               />
             ) : study.heroEmbed ? (
               <iframe
@@ -235,6 +304,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       {/* Additional slideshows positioned after the Challenge section */}
       {slideshowsAfterChallenge.map((slideshow, index) =>
         renderSlideshow(slideshow, index)
+      )}
+
+      {/* Auto-scrolling device frames after the Challenge section */}
+      {framesAfterChallenge.map((frame, index) =>
+        renderScrollingFrame(frame, index)
       )}
 
       {/* Gallery - between Challenge and Process (first group) */}
@@ -408,6 +482,11 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
       {/* Additional slideshows positioned after the Solution section */}
       {slideshowsAfterSolution.map((slideshow, index) =>
         renderSlideshow(slideshow, index)
+      )}
+
+      {/* Auto-scrolling device frames after the Solution section */}
+      {framesAfterSolution.map((frame, index) =>
+        renderScrollingFrame(frame, index + 100)
       )}
 
       {/* Gallery - after Solution (remaining images) */}

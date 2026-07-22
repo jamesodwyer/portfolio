@@ -5,3 +5,4 @@ export { CaseStudyCard } from "./CaseStudyCard";
 export { DesignCard } from "./DesignCard";
 export { Logo, LogoMark, LogoStacked } from "./Logo";
 export { MockupSlideshow } from "./MockupSlideshow";
+export { ScrollingFrame } from "./ScrollingFrame";

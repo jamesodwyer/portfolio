@@ -15,11 +15,28 @@ export interface CaseStudy {
   heroSlideshow?: {
     slides: string[];
     mockup?: string;
+    /** When set, play this looping video in the mockup instead of the slides. */
+    videoSrc?: string;
   };
   additionalSlideshows?: Array<{
     slides: string[];
     mockup?: string;
     position?: "after-challenge" | "after-solution";
+    /** When set, play this looping video in the mockup instead of the slides. */
+    videoSrc?: string;
+  }>;
+  scrollingFrames?: Array<{
+    src: string;
+    variant: "macbook" | "iphone";
+    position: "hero" | "after-challenge" | "after-solution";
+    /** Optional bar pinned to the top of the screen while the middle scrolls. */
+    stickyTopSrc?: string;
+    /** Optional bar pinned to the bottom of the screen while the middle scrolls. */
+    stickyBottomSrc?: string;
+    /** Optional header overlay faded in/out based on scroll (fake sticky header). */
+    fadeHeaderSrc?: string;
+    /** Natural-image Y offset (px) where the real bar sits in `src`. */
+    fadeHeaderOffsetPx?: number;
   }>;
   overview: {
     role: string;
@@ -50,26 +67,26 @@ export const caseStudies: CaseStudy[] = [
     color: "blue",
     thumbnail: "/images/tm1.png",
     hero: "/images/ticketmaster-gds/hero.png",
-    heroSlideshow: {
-      slides: [
-        "/mockup-slides/images/slide8.png",
-        "/mockup-slides/images/slide9.png",
-      ],
-    },
-    additionalSlideshows: [
+    scrollingFrames: [
       {
-        slides: [
-          "/mockup-slides/images/slide10.png",
-          "/mockup-slides/images/slide11.png",
-        ],
-        position: "after-challenge",
+        src: "/images/ticketmaster-gds/artist-splash.png",
+        variant: "macbook",
+        position: "hero",
+        fadeHeaderSrc: "/images/ticketmaster-gds/splash-header.png",
       },
       {
-        slides: [
-          "/mockup-slides/images/slide12.png",
-          "/mockup-slides/images/slide13.png",
-        ],
+        src: "/images/ticketmaster-gds/nfl-overview.png",
+        variant: "macbook",
+        position: "after-challenge",
+        fadeHeaderSrc: "/images/ticketmaster-gds/nfl-nav.png",
+        fadeHeaderOffsetPx: 1505,
+      },
+      {
+        src: "/images/ticketmaster-gds/ios-middle.png",
+        variant: "iphone",
         position: "after-solution",
+        stickyTopSrc: "/images/ticketmaster-gds/ios-top.png",
+        stickyBottomSrc: "/images/ticketmaster-gds/ios-bottom.png",
       },
     ],
     overview: {
@@ -132,20 +149,13 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: "/images/tm2.png",
     hero: "/images/gds-mcp/hero.png",
     heroSlideshow: {
-      slides: [
-        "/mockup-slides/images/slide1.png",
-        "/mockup-slides/images/slide2.png",
-        "/mockup-slides/images/slide3.png",
-      ],
+      slides: [],
+      videoSrc: "/video/mcp-server.mp4",
     },
     additionalSlideshows: [
       {
-        slides: [
-          "/mockup-slides/images/slide4.png",
-          "/mockup-slides/images/slide5.png",
-          "/mockup-slides/images/slide6.png",
-          "/mockup-slides/images/slide7.png",
-        ],
+        slides: [],
+        videoSrc: "/video/claude-mcp-button.mp4",
         position: "after-solution",
       },
     ],
@@ -203,7 +213,7 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: "/images/tm3.png",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
-      src: "/interactive/",
+      src: "/interactive/index.html",
       title: "AI Design Workflows interactive pipeline explorer",
     },
     overview: {
@@ -259,6 +269,10 @@ export const caseStudies: CaseStudy[] = [
     color: "yellow",
     thumbnail: "/images/atg.png",
     hero: "/images/atg/hero.png",
+    heroSlideshow: {
+      slides: [],
+      videoSrc: "/video/atg-website.mp4",
+    },
     gallery: [
       "/images/atg/img_1.png",
       "/images/atg/img_2.png",
