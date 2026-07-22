@@ -269,6 +269,10 @@ export const caseStudies: CaseStudy[] = [
     color: "yellow",
     thumbnail: "/images/atg.png",
     hero: "/images/atg/hero.png",
+    heroSlideshow: {
+      slides: [],
+      videoSrc: "/video/atg-website.mp4",
+    },
     gallery: [
       "/images/atg/img_1.png",
       "/images/atg/img_2.png",
