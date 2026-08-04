@@ -59,6 +59,61 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "icon-review-ai",
+    title: "A Measurable Icon Standard",
+    subtitle:
+      "Replacing “does this look right to me?” with an AI reviewer that judges icons against the design system’s real, measured rules.",
+    category: "AI / Design Systems",
+    year: "",
+    color: "yellow",
+    // TODO(james): swap for real icon-review imagery — placeholder reuses an existing TM asset.
+    thumbnail: "/images/tm2.png",
+    hero: "/images/tm2.png",
+    overview: {
+      role: "Associate Director, Product Design",
+      timeline: "Prototype → designer testing",
+      team: "Design system team; icon contributors across ~20 product teams",
+      tools: ["Claude Code", "Python", "SVG geometry", "@ticketmaster/global-design-system (npm)", "Figma"],
+    },
+    results: [
+      { metric: "Review time", value: "Senior-level icon review in seconds, with the reasoning attached" },
+      { metric: "Consistency", value: "Same verdict a senior reviewer would give, in a contributor’s own hands before the review queue" },
+      { metric: "Credibility", value: "Rules measured from the live library — caught two of my own wrong assumptions before any designer saw them" },
+    ],
+    challenge:
+      "Every design system hits the same wall: the rules that keep it coherent live in a few people’s heads, so review doesn’t scale and quality drifts as more teams contribute. Icons are deceptively high-risk — around 175 of them, drawn by ~20 product teams, that all have to read as one family at a glance. The rules holding that family together (a 24dp grid, one stroke weight, angular corners, functional naming, no duplicates) were scattered across a Figma frame, tribal knowledge, and my own eye. Review bottlenecked on the two or three people who could hold the whole system in their heads, feedback varied by reviewer, and “it looks a bit off” is hard to act on and easy to argue with. As contribution grew, the system would drift — the exact failure a design system exists to prevent.",
+    process: [
+      {
+        title: "Library as source of truth",
+        description:
+          "Rejected the shortcut of writing the rules down once — a hand-written ruleset drifts the day the library moves. Sourced the reviewer’s reference icons straight from the published npm package. On checking, the inventory I’d maintained by hand had already drifted from the package, which settled the argument.",
+      },
+      {
+        title: "Measure, don’t assert",
+        description:
+          "For any property with an objective answer, measure it across the whole corpus, look at the distribution, and set the threshold from the data. When a designer said a new icon’s points looked “too sharp,” I measured the sharpest angle of every icon rather than encode the anecdote — most cluster near 90°, the star at ~52°, only a sliver below 30°.",
+      },
+      {
+        title: "Let the data overrule me",
+        description:
+          "Measuring the full set caught me being wrong twice: a small sample had told me nothing was sharper than 45° (real icons reach 17°), and two geometry bugs only surfaced at scale. I’d have shipped both on a handful of examples. Measuring the whole corpus is the difference between a tool that looks right and one that is.",
+      },
+      {
+        title: "Draw the automation line",
+        description:
+          "Anything with a measurable, context-free answer (grid, stroke, corners, export hygiene) goes to a deterministic checker; anything needing semantic or aesthetic judgment (metaphor, whether a name is genuinely functional, whether it reads as family) stays with the model. Overreaching on automation is how you get confidently-wrong reviews that erode trust.",
+      },
+    ],
+    solution:
+      "An AI reviewing skill that judges a candidate icon against the design system’s real, measured rules — geometry, cohesion, naming, accessibility — and returns a pass/fail verdict with specific fixes in seconds, plus an annotated report that marks each problem on the icon itself. Objective geometry is checked deterministically; taste stays with the model, backed by the real reference images. Run against a real in-design AI icon that hadn’t yet reached review, it caught a stretch/distortion flaw, flagged the over-sharp points against the measured distribution, confirmed against the live inventory that it wasn’t a duplicate, and recommended where it should live — a review a contributor can act on, and a visual a reviewer can forward, without waiting on a central gate. The deeper point the build proved: encoding a system’s rules by measuring the system is more honest and more durable than writing them down.",
+    learnings: [
+      "The design system is what it is, not what you remember it being — source the rules from the live library",
+      "Set thresholds from the measured distribution, not from a single striking example",
+      "Letting the data overrule your own assumptions is a feature of the method, not a failure",
+      "Automate only what has a reliable answer; keep judgment where the machine is confidently wrong",
+    ],
+  },
+  {
     slug: "ticketmaster-gds",
     title: "Global Design System",
     subtitle: "Scaling a global design system from its token foundations up — across products, teams, and brands.",
