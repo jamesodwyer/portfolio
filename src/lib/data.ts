@@ -66,13 +66,15 @@ export const caseStudies: CaseStudy[] = [
     category: "AI / Design Systems",
     year: "",
     color: "yellow",
-    thumbnail: "/images/icon-review-ai/verdict.png",
-    hero: "/images/icon-review-ai/verdict.png",
-    gallery: [
-      "/images/icon-review-ai/measure.png",
-      "/images/icon-review-ai/cohesion.png",
-      "/images/icon-review-ai/verdict.png",
-    ],
+    thumbnail: "/images/icon-review-ai/slide1.png",
+    hero: "/images/icon-review-ai/slide1.png",
+    heroSlideshow: {
+      slides: [
+        "/images/icon-review-ai/slide1.png",
+        "/images/icon-review-ai/slide2.png",
+        "/images/icon-review-ai/slide3.png",
+      ],
+    },
     overview: {
       role: "Associate Director, Product Design",
       timeline: "Prototype → designer testing",
