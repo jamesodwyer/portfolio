@@ -66,9 +66,13 @@ export const caseStudies: CaseStudy[] = [
     category: "AI / Design Systems",
     year: "",
     color: "yellow",
-    // TODO(james): swap for real icon-review imagery — placeholder reuses an existing TM asset.
-    thumbnail: "/images/tm2.png",
-    hero: "/images/tm2.png",
+    thumbnail: "/images/icon-review-ai/verdict.png",
+    hero: "/images/icon-review-ai/verdict.png",
+    gallery: [
+      "/images/icon-review-ai/measure.png",
+      "/images/icon-review-ai/cohesion.png",
+      "/images/icon-review-ai/verdict.png",
+    ],
     overview: {
       role: "Associate Director, Product Design",
       timeline: "Prototype → designer testing",
