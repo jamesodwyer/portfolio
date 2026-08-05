@@ -76,7 +76,7 @@ export const caseStudies: CaseStudy[] = [
     overview: {
       role: "Associate Director, Product Design",
       timeline: "Prototype → designer testing",
-      team: "Design system team; icon contributors across ~20 product teams",
+      team: "Design system team; icon contributors across 7 product teams",
       tools: ["Claude Code", "Python", "SVG geometry", "@ticketmaster/global-design-system (npm)", "Figma"],
     },
     results: [
@@ -85,7 +85,7 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Credibility", value: "Rules measured from the live library — caught two of my own wrong assumptions before any designer saw them" },
     ],
     challenge:
-      "Every design system hits the same wall: the rules that keep it coherent live in a few people’s heads, so review doesn’t scale and quality drifts as more teams contribute. Icons are deceptively high-risk — around 175 of them, drawn by ~20 product teams, that all have to read as one family at a glance. The rules holding that family together (a 24dp grid, one stroke weight, angular corners, functional naming, no duplicates) were scattered across a Figma frame, tribal knowledge, and my own eye. Review bottlenecked on the two or three people who could hold the whole system in their heads, feedback varied by reviewer, and “it looks a bit off” is hard to act on and easy to argue with. As contribution grew, the system would drift — the exact failure a design system exists to prevent.",
+      "Every design system hits the same wall: the rules that keep it coherent live in a few people’s heads, so review doesn’t scale and quality drifts as more teams contribute. Icons are deceptively high-risk — around 175 of them, drawn by 7 product teams, that all have to read as one family at a glance. The rules holding that family together (a 24dp grid, one stroke weight, angular corners, functional naming, no duplicates) were scattered across a Figma frame, tribal knowledge, and my own eye. Review bottlenecked on the two or three people who could hold the whole system in their heads, feedback varied by reviewer, and “it looks a bit off” is hard to act on and easy to argue with. As contribution grew, the system would drift — the exact failure a design system exists to prevent.",
     process: [
       {
         title: "Library as source of truth",
