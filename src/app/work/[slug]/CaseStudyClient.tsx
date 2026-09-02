@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
-import { Footer, MockupSlideshow, ScrollingFrame } from "@/components";
+import { Footer, ImpactMonitor, MockupSlideshow, ScrollingFrame } from "@/components";
 
 const colorMap = {
   red: "bg-swiss-yellow",
@@ -257,6 +257,29 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
           </motion.div>
         </div>
       </section>
+
+      {/* Impact Monitor */}
+      {study.impact && study.impact.length > 0 && (
+        <section className="py-grid-5 border-t border-swiss-gray">
+          <div className="grid-container">
+            <div className="grid grid-cols-12 gap-6">
+              <motion.div
+                className="col-span-12 lg:col-span-3 mb-8 lg:mb-0"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="text-caption text-swiss-muted">IMPACT</span>
+              </motion.div>
+
+              <div className="col-span-12 lg:col-span-9">
+                <ImpactMonitor dimensions={study.impact} />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Challenge Section */}
       <section className="py-grid-5 border-t border-swiss-gray">

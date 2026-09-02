@@ -48,6 +48,17 @@ export interface CaseStudy {
     metric: string;
     value: string;
   }[];
+  /**
+   * Optional impact monitor: a consistent set of dimensions (scale, adoption,
+   * velocity, etc.) rated on a qualitative maturity scale rather than
+   * fabricated precise stats, so the same framework can be read across
+   * case studies.
+   */
+  impact?: {
+    label: string;
+    level: "emerging" | "scaling" | "embedded";
+    detail: string;
+  }[];
   challenge: string;
   process: {
     title: string;
@@ -85,6 +96,28 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Review time", value: "Senior-level icon review in seconds, with the reasoning attached" },
       { metric: "Consistency", value: "Same verdict a senior reviewer would give, in a contributor’s own hands before the review queue" },
       { metric: "Credibility", value: "Rules measured from the live library — caught two of my own wrong assumptions before any designer saw them" },
+    ],
+    impact: [
+      {
+        label: "Scale",
+        level: "emerging",
+        detail: "Prototype stage, scoped to ~175 icons across 7 contributing product teams.",
+      },
+      {
+        label: "Adoption",
+        level: "emerging",
+        detail: "In designer testing — validating the workflow before it replaces the manual review queue.",
+      },
+      {
+        label: "Velocity",
+        level: "embedded",
+        detail: "Senior-level review compressed from a queue wait to seconds, reasoning attached.",
+      },
+      {
+        label: "Consistency",
+        level: "embedded",
+        detail: "Rules measured from the live library, not opinion — the same verdict every time, regardless of reviewer.",
+      },
     ],
     challenge:
       "Every design system hits the same wall: the rules that keep it coherent live in a few people’s heads, so review doesn’t scale and quality drifts as more teams contribute. Icons are deceptively high-risk — around 175 of them, drawn by 7 product teams, that all have to read as one family at a glance. The rules holding that family together (a 24dp grid, one stroke weight, angular corners, functional naming, no duplicates) were scattered across a Figma frame, tribal knowledge, and my own eye. Review bottlenecked on the two or three people who could hold the whole system in their heads, feedback varied by reviewer, and “it looks a bit off” is hard to act on and easy to argue with. As contribution grew, the system would drift — the exact failure a design system exists to prevent.",
@@ -162,6 +195,28 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Adoption", value: "Widely used across product teams, enabling consistent delivery" },
       { metric: "Operating Model", value: "A structured system for contribution, governance, and continuous evolution" },
     ],
+    impact: [
+      {
+        label: "Scale",
+        level: "embedded",
+        detail: "Spans multiple products across distinct business verticals, 18 months in and still growing.",
+      },
+      {
+        label: "Adoption",
+        level: "embedded",
+        detail: "Widely used across product teams as the standard for consistent delivery.",
+      },
+      {
+        label: "Velocity",
+        level: "scaling",
+        detail: "A structural rebuild from the token layer up — deliberately paced to hold quality as the foundation shifted.",
+      },
+      {
+        label: "Governance",
+        level: "embedded",
+        detail: "A federated contribution model with shared visibility, replacing central bottlenecks.",
+      },
+    ],
     challenge:
       "Ticketmaster operates across a complex ecosystem of products, each with its own priorities, workflows, and technical constraints. At the core, design tokens had evolved organically and inconsistently — there was no shared structure to support theming, no clean separation between foundation, semantic, and brand layers, and no scalable token model. On top of that, the system itself was fragmented across teams, with inconsistent user experiences and duplication of effort. The challenge was twofold: re-architect the token foundation, and embed an operating model that lets teams build consistently, efficiently, and at scale.",
     process: [
@@ -231,6 +286,28 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Capability", value: "Design system becomes AI-queryable and self-serve" },
       { metric: "Integration", value: "Embedded directly into design and development environments" },
     ],
+    impact: [
+      {
+        label: "Scale",
+        level: "scaling",
+        detail: "Six months in, already supporting multiple products across design and engineering workflows.",
+      },
+      {
+        label: "Adoption",
+        level: "scaling",
+        detail: "Introduced through real workflows first, proving value before wider rollout.",
+      },
+      {
+        label: "Velocity",
+        level: "embedded",
+        detail: "Documentation lookups replaced by real-time, queryable answers — no wait on a person.",
+      },
+      {
+        label: "Autonomy",
+        level: "embedded",
+        detail: "The system now maintains itself instead of relying on manual documentation upkeep.",
+      },
+    ],
     challenge:
       "As the Global Design System scaled across multiple products and teams, documentation struggled to keep pace with implementation. This created friction across the organisation: teams relied on fragmented sources of truth, knowledge was distributed across tools and individuals, and design and engineering decisions were harder to validate and scale. The core issue wasn't documentation quality, but the model itself. The system needed to evolve from static documentation into a living, queryable source of truth that could support teams in real time.",
     process: [
@@ -287,6 +364,28 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Operational Coverage", value: "AI workflows supporting multiple products and design system operations" },
       { metric: "Efficiency Gain", value: "Reduction in manual workload across design and documentation processes" },
       { metric: "Adoption Model", value: "Transition from individual workflows to team-level and organisation-wide rollout" },
+    ],
+    impact: [
+      {
+        label: "Scale",
+        level: "scaling",
+        detail: "AI workflows now support multiple products and design system operations, on a 12-month rollout roadmap.",
+      },
+      {
+        label: "Adoption",
+        level: "scaling",
+        detail: "Proven personally first, then handed to the team — organisation-wide rollout is the current phase.",
+      },
+      {
+        label: "Velocity",
+        level: "embedded",
+        detail: "A measurable reduction in manual workload across design and documentation processes.",
+      },
+      {
+        label: "Autonomy",
+        level: "embedded",
+        detail: "Shifts design operations from a resource-constrained team to scalable, self-serve infrastructure.",
+      },
     ],
     challenge:
       "Managing a global design system across multiple products with limited resources exposed a fundamental constraint: traditional workflows do not scale. Workloads were fragmented across multiple threads and teams, manual processes created bottlenecks in delivery and quality, and increasing system complexity required more coordination, not less. The problem wasn't tooling. It was the operating model. To scale effectively, design operations needed to shift from manual execution to system-driven workflows.",
@@ -353,6 +452,28 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Brand theming", value: "Minutes, not days or weeks" },
       { metric: "Token output", value: "Web (SASS), iOS (Swift), Android (XML)" },
       { metric: "Governance", value: "Git workflows, Figma branching, Slack automation" },
+    ],
+    impact: [
+      {
+        label: "Scale",
+        level: "embedded",
+        detail: "One system, multiple brands and platforms — tokens output to web (SASS), iOS (Swift), and Android (XML).",
+      },
+      {
+        label: "Adoption",
+        level: "embedded",
+        detail: "A single central component repository the whole design team builds from.",
+      },
+      {
+        label: "Velocity",
+        level: "embedded",
+        detail: "New brand theming dropped from days or weeks to minutes.",
+      },
+      {
+        label: "Governance",
+        level: "embedded",
+        detail: "Git workflows, Figma branching, and Slack automation keep the system accountable as it scales.",
+      },
     ],
     challenge:
       "ATG Tickets needed a multi-brand design system to grow and scale their digital offering. A full foundation was needed to move the organisation forward and streamline the design team onto a single, unified system. The initial stages involved looking into fundamentals, component review, file structures in Figma, organisation of workflows, governance, and documentation. From there, a full UI library would be built using the latest Figma features to unify the designers' workflow - keeping file sizes small to ensure the system stayed fast and robust.",
