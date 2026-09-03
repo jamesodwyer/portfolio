@@ -504,11 +504,11 @@ export const designs: Design[] = [
 
 export const siteConfig = {
   name: "James O'Dwyer",
-  title: "Principal Product Designer",
+  title: "Design Director",
   subtitle: "Design Systems Leader",
   email: "hello@jamesodwyer.co.uk",
   location: "London, UK",
-  bio: "Principal Product Designer and Design Systems Leader. I scale design systems and AI-driven operating models across global products, working at the intersection of design, engineering, and AI.",
+  bio: "Design Director and Design Systems Leader. I scale design systems and AI-driven operating models across global products, working at the intersection of design, engineering, and AI.",
   social: {
     linkedin: "https://linkedin.com/in/jamesodwyer",
     github: "https://github.com/jamesodwyer",
