@@ -34,7 +34,7 @@ export default function Home() {
 
               {/* Tagline */}
               <p className="text-subheading text-swiss-muted max-w-xl leading-relaxed">
-                Design Director and design leader. I shape products
+                Design Director and Design Systems Leader. I shape products
                 and the teams that build them &mdash; at the intersection of
                 design, engineering, and AI.
               </p>
