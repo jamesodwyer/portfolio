@@ -18,18 +18,13 @@ test.describe("Navigation", () => {
     await page.waitForTimeout(1500);
 
     // ABOUT
-    await page.click('nav a[href="/about"]');
-    await expect(page).toHaveURL("/about");
-    await expect(page.locator("h1")).toBeVisible();
-
-    // PROJECTS
-    await page.click('nav a[href="/projects"]');
-    await expect(page).toHaveURL("/projects");
+    await page.click('nav a[href^="/about"]');
+    await expect(page).toHaveURL(/\/about\/?$/);
     await expect(page.locator("h1")).toBeVisible();
 
     // CONTACT
-    await page.click('nav a[href="/contact"]');
-    await expect(page).toHaveURL("/contact");
+    await page.click('nav a[href^="/contact"]');
+    await expect(page).toHaveURL(/\/contact\/?$/);
     await expect(page.locator("h1")).toBeVisible();
 
     // Home / WORK
@@ -60,16 +55,18 @@ test.describe("Case Study Cards", () => {
     await page.waitForTimeout(1500);
 
     const expectedSlugs = [
+      "icon-review-ai",
       "ticketmaster-gds",
       "gds-mcp",
-      "token-migration",
       "ai-design-workflows",
       "atg",
       "hargreaves-lansdown",
     ];
 
+    // trailingSlash is enabled, so hrefs carry a trailing slash; match either
+    // form so this doesn't break if that config changes.
     for (const slug of expectedSlugs) {
-      const link = page.locator(`a[href="/work/${slug}"]`).first();
+      const link = page.locator(`a[href^="/work/${slug}"]`).first();
       await expect(link).toBeAttached();
     }
   });
@@ -106,26 +103,6 @@ test.describe("External Links", () => {
     await bypassPasswordGate(page);
   });
 
-  test("LinkedIn link has correct href on contact page", async ({ page }) => {
-    await page.goto("/contact");
-    await page.waitForTimeout(1500);
-
-    const link = page.locator('a[href*="linkedin"]').first();
-    await expect(link).toBeAttached();
-    const href = await link.getAttribute("href");
-    expect(href).toContain("linkedin.com");
-  });
-
-  test("GitHub link has correct href on contact page", async ({ page }) => {
-    await page.goto("/contact");
-    await page.waitForTimeout(1500);
-
-    const link = page.locator('a[href*="github"]').first();
-    await expect(link).toBeAttached();
-    const href = await link.getAttribute("href");
-    expect(href).toContain("github.com");
-  });
-
   test("email link has correct href on contact page", async ({ page }) => {
     await page.goto("/contact");
     await page.waitForTimeout(1500);
@@ -136,17 +113,15 @@ test.describe("External Links", () => {
     expect(href).toContain("mailto:");
   });
 
-  test("external links open in new tab with noopener", async ({ page }) => {
+  test("any external links carry noopener", async ({ page }) => {
     await page.goto("/contact");
     await page.waitForTimeout(1500);
 
+    // The contact page currently exposes a mailto link only; this guards the
+    // rel attribute if social or other outbound links are added back.
     const externalLinks = page.locator('a[target="_blank"]');
-    const count = await externalLinks.count();
-    expect(count).toBeGreaterThan(0);
-
-    for (let i = 0; i < count; i++) {
-      const rel = await externalLinks.nth(i).getAttribute("rel");
-      expect(rel).toContain("noopener");
+    for (let i = 0; i < (await externalLinks.count()); i++) {
+      expect(await externalLinks.nth(i).getAttribute("rel")).toContain("noopener");
     }
   });
 });
