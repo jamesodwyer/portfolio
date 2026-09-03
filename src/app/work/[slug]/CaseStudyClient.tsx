@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/data";
-import { Footer, MockupSlideshow, ScrollingFrame } from "@/components";
+import { Footer, MetricValue, MockupSlideshow, ScrollingFrame } from "@/components";
 
 const colorMap = {
   red: "bg-swiss-yellow",
@@ -27,6 +27,7 @@ interface CaseStudyClientProps {
 
 export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientProps) {
   const gallery = study.gallery ?? [];
+  const impact = study.impact ?? [];
   const hasImages = gallery.length > 0 || Boolean(study.hero);
   const additionalSlideshows = study.additionalSlideshows ?? [];
   const slideshowsAfterChallenge = additionalSlideshows.filter(
@@ -182,24 +183,29 @@ export default function CaseStudyClient({ study, nextStudy }: CaseStudyClientPro
             </p>
           </motion.div>
 
-          {/* Results Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-16 pt-8 border-t border-swiss-gray"
-          >
-            {study.results.map((result, index) => (
-              <div key={index}>
-                <span className="text-subheading text-swiss-yellow block mb-3 leading-[1.15]" style={{ fontWeight: 900 }}>
-                  {result.metric}
-                </span>
-                <span className="text-micro text-swiss-muted block leading-relaxed">
-                  {result.value.toUpperCase()}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+          {/* Impact Metrics */}
+          {impact.length > 0 && (
+            <motion.dl
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 mt-16 pt-8 border-t border-swiss-gray"
+            >
+              {impact.map((item, index) => (
+                <div key={index} className="flex flex-col-reverse justify-end">
+                  <dd className="text-micro text-swiss-muted leading-relaxed">
+                    {item.detail.toUpperCase()}
+                  </dd>
+                  <dt className="text-subheading mb-3 leading-[1.3] sm:min-h-[2.6em]">{item.label}</dt>
+                  {/* Fixed height so pie and flip-card treatments reserve the
+                      same space and their labels stay on a shared baseline. */}
+                  <dd className="text-display text-swiss-yellow leading-none mb-4 tabular-nums h-[1.15em] flex items-center">
+                    <MetricValue value={item.value} delay={0.4 + index * 0.1} />
+                  </dd>
+                </div>
+              ))}
+            </motion.dl>
+          )}
         </div>
       </section>
 

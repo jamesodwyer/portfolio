@@ -685,3 +685,113 @@ button:focus-visible {
   flex: 1 1 auto;
   min-height: 0;
 }
+
+/* ---------------------------------------------------------------
+   Split-flap metric digits
+   Each digit is a card divided by a hinge line; on change the old
+   top half falls forward and the new bottom half swings up.
+   --------------------------------------------------------------- */
+.flip-digit {
+  --flip-duration: 260ms;
+  position: relative;
+  display: inline-block;
+  width: 0.72em;
+  height: 1.06em;
+  margin-right: 0.05em;
+  perspective: 260px;
+  vertical-align: baseline;
+}
+
+.flip-half {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 0.04em;
+}
+
+/* Each half carries its own gradient so the card reads as a lit surface:
+   the top face catches light and falls into shadow at the hinge, the bottom
+   picks up again below it. Kept subtle so the numeral stays dominant. */
+.flip-half--top {
+  top: 0;
+  background-image: linear-gradient(
+    to bottom,
+    #1c1c1c 0%,
+    #141414 55%,
+    #0b0b0b 100%
+  );
+  border-bottom: 1px solid rgb(255 255 255 / 0.16);
+}
+
+.flip-half--bottom {
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    #101010 0%,
+    #151515 45%,
+    #1a1a1a 100%
+  );
+}
+
+/* Each half clips a full-size glyph. The top half shows the glyph's upper
+   portion; the bottom half holds an identical glyph pulled up by 50% of the
+   digit box so the two halves compose one continuous numeral. */
+.flip-glyph {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Both halves hold a full-height glyph pinned to the digit box's top edge.
+   The bottom half is shifted up by half the box so its window falls over the
+   glyph's lower portion, composing one numeral across the hinge. */
+.flip-half--top .flip-glyph { top: 0; }
+.flip-half--bottom .flip-glyph { top: 0; transform: translateY(-50%); }
+
+.flip-anim-out {
+  transform-origin: bottom center;
+  animation: flip-out var(--flip-duration) cubic-bezier(0.36, 0, 0.66, -0.24) forwards;
+  z-index: 2;
+}
+
+.flip-anim-in {
+  transform-origin: top center;
+  animation: flip-in var(--flip-duration) cubic-bezier(0.34, 1.36, 0.64, 1) forwards;
+  z-index: 3;
+}
+
+@keyframes flip-out {
+  from { transform: rotateX(0deg); }
+  to   { transform: rotateX(-90deg); }
+}
+
+@keyframes flip-in {
+  from { transform: rotateX(90deg); }
+  to   { transform: rotateX(0deg); }
+}
+
+/* Trailing text ("days", "/7") sits just clear of the last card. */
+.flip-affix {
+  display: inline-block;
+  margin-left: 0.12em;
+}
+
+.flip-affix:first-child {
+  margin-left: 0;
+  margin-right: 0.12em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-anim-out,
+  .flip-anim-in {
+    animation: none !important;
+  }
+}
