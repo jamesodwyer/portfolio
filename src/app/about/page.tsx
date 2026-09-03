@@ -133,7 +133,7 @@ export default function AboutPage() {
       <section className="min-h-[60vh] flex items-end pt-20 pb-grid-2">
         <div className="grid-container w-full">
           <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 lg:col-span-8">
+            <div className="col-span-12">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -146,19 +146,6 @@ export default function AboutPage() {
                 <p className="text-heading text-swiss-muted leading-relaxed max-w-3xl">
                   I specialise in enterprise design systems, scalable product operations, rapid prototyping, web and app design, and AI-enabled workflows that improve delivery speed and consistency across large and small organisations.
                 </p>
-              </motion.div>
-            </div>
-
-            {/* Geometric Element */}
-            <div className="hidden lg:flex col-span-4 items-end justify-end">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative"
-              >
-                <div className="w-32 h-32 bg-swiss-yellow" />
-                <div className="absolute -top-8 -left-8 w-32 h-32 border-4 border-swiss-gray" />
               </motion.div>
             </div>
           </div>
