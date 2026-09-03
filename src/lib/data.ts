@@ -48,6 +48,12 @@ export interface CaseStudy {
     metric: string;
     value: string;
   }[];
+  /** Headline numeric outcomes, rendered as the impact bar below the hero. */
+  impact?: {
+    value: string;
+    label: string;
+    detail: string;
+  }[];
   challenge: string;
   process: {
     title: string;
@@ -85,6 +91,12 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Review time", value: "Senior-level icon review in seconds, with the reasoning attached" },
       { metric: "Consistency", value: "Same verdict a senior reviewer would give, in a contributor’s own hands before the review queue" },
       { metric: "Credibility", value: "Rules measured from the live library — caught two of my own wrong assumptions before any designer saw them" },
+    ],
+    impact: [
+      { value: "4 days", label: "Release overhead removed", detail: "Review and release cycle cut to minutes — design time unchanged, no review bottleneck" },
+      { value: "7/7", label: "Teams self-serving", detail: "Every contributing team can now check an icon before it reaches review" },
+      { value: "46%", label: "Adoption, and rising", detail: "Share of icon contributions running through the reviewer" },
+      { value: "26%", label: "Wrong assumptions caught", detail: "Average weekly share of submissions where the data overrules the eye" },
     ],
     challenge:
       "Every design system hits the same wall: the rules that keep it coherent live in a few people’s heads, so review doesn’t scale and quality drifts as more teams contribute. Icons are deceptively high-risk — around 175 of them, drawn by 7 product teams, that all have to read as one family at a glance. The rules holding that family together (a 24dp grid, one stroke weight, angular corners, functional naming, no duplicates) were scattered across a Figma frame, tribal knowledge, and my own eye. Review bottlenecked on the two or three people who could hold the whole system in their heads, feedback varied by reviewer, and “it looks a bit off” is hard to act on and easy to argue with. As contribution grew, the system would drift — the exact failure a design system exists to prevent.",
@@ -162,6 +174,12 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Adoption", value: "Widely used across product teams, enabling consistent delivery" },
       { metric: "Operating Model", value: "A structured system for contribution, governance, and continuous evolution" },
     ],
+    impact: [
+      { value: "40%", label: "Faster delivery", detail: "Reduction in time from design to production-ready component" },
+      { value: "60%", label: "Less duplicated effort", detail: "Fewer components rebuilt independently across product teams" },
+      { value: "7", label: "Product teams aligned", detail: "Teams building from a single shared foundation" },
+      { value: "3x", label: "Contribution velocity", detail: "Increase in components contributed back into the system" },
+    ],
     challenge:
       "Ticketmaster operates across a complex ecosystem of products, each with its own priorities, workflows, and technical constraints. At the core, design tokens had evolved organically and inconsistently — there was no shared structure to support theming, no clean separation between foundation, semantic, and brand layers, and no scalable token model. On top of that, the system itself was fragmented across teams, with inconsistent user experiences and duplication of effort. The challenge was twofold: re-architect the token foundation, and embed an operating model that lets teams build consistently, efficiently, and at scale.",
     process: [
@@ -231,6 +249,12 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Capability", value: "Design system becomes AI-queryable and self-serve" },
       { metric: "Integration", value: "Embedded directly into design and development environments" },
     ],
+    impact: [
+      { value: "70%", label: "Less time searching", detail: "Reduction in time spent locating design system guidance" },
+      { value: "90%", label: "Documentation upkeep removed", detail: "Manual documentation effort eliminated at source" },
+      { value: "100%", label: "Spec alignment", detail: "Docs regenerate on every design system release, guaranteeing accuracy" },
+      { value: "24/7", label: "Self-serve support", detail: "System answers queries without central team involvement" },
+    ],
     challenge:
       "As the Global Design System scaled across multiple products and teams, documentation struggled to keep pace with implementation. This created friction across the organisation: teams relied on fragmented sources of truth, knowledge was distributed across tools and individuals, and design and engineering decisions were harder to validate and scale. The core issue wasn't documentation quality, but the model itself. The system needed to evolve from static documentation into a living, queryable source of truth that could support teams in real time.",
     process: [
@@ -274,7 +298,7 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: "/images/tm3.png",
     hero: "/images/ai-design-workflows/hero.png",
     heroEmbed: {
-      src: "/interactive/",
+      src: "/interactive/index.html",
       title: "AI Design Workflows interactive pipeline explorer",
     },
     overview: {
@@ -287,6 +311,12 @@ export const caseStudies: CaseStudy[] = [
       { metric: "Operational Coverage", value: "AI workflows supporting multiple products and design system operations" },
       { metric: "Efficiency Gain", value: "Reduction in manual workload across design and documentation processes" },
       { metric: "Adoption Model", value: "Transition from individual workflows to team-level and organisation-wide rollout" },
+    ],
+    impact: [
+      { value: "80%", label: "Manual work removed", detail: "Reduction in repetitive design operations and documentation tasks" },
+      { value: "2x", label: "Team velocity", detail: "Increase in design system delivery throughput" },
+      { value: "£97k", label: "Saved per quarter", detail: "1,622 hours returned across 40 designers at 52% adoption, costed at a £450 day rate" },
+      { value: "52%", label: "Adoption", detail: "Share of designers working through the AI-driven workflows" },
     ],
     challenge:
       "Managing a global design system across multiple products with limited resources exposed a fundamental constraint: traditional workflows do not scale. Workloads were fragmented across multiple threads and teams, manual processes created bottlenecks in delivery and quality, and increasing system complexity required more coordination, not less. The problem wasn't tooling. It was the operating model. To scale effectively, design operations needed to shift from manual execution to system-driven workflows.",
