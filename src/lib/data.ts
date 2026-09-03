@@ -44,10 +44,6 @@ export interface CaseStudy {
     team: string;
     tools: string[];
   };
-  results: {
-    metric: string;
-    value: string;
-  }[];
   /** Headline numeric outcomes, rendered as the impact bar below the hero. */
   impact?: {
     value: string;
@@ -87,11 +83,6 @@ export const caseStudies: CaseStudy[] = [
       team: "Design system team; icon contributors across 7 product teams",
       tools: ["Claude Code", "Python", "SVG geometry", "@ticketmaster/global-design-system (npm)", "Figma"],
     },
-    results: [
-      { metric: "Review time", value: "Senior-level icon review in seconds, with the reasoning attached" },
-      { metric: "Consistency", value: "Same verdict a senior reviewer would give, in a contributor’s own hands before the review queue" },
-      { metric: "Credibility", value: "Rules measured from the live library — caught two of my own wrong assumptions before any designer saw them" },
-    ],
     impact: [
       { value: "4 days", label: "Release overhead removed", detail: "Review and release cycle cut to minutes — design time unchanged, no review bottleneck" },
       { value: "7/7", label: "Teams self-serving", detail: "Every contributing team can now check an icon before it reaches review" },
@@ -168,12 +159,6 @@ export const caseStudies: CaseStudy[] = [
       team: "Cross-functional product teams, design contributors, engineering partners",
       tools: ["Figma", "Token Studio", "Style Dictionary", "Jira", "Claude Code", "Confluence"],
     },
-    results: [
-      { metric: "Scale", value: "Multiple products across distinct business verticals" },
-      { metric: "Foundation", value: "Multi-layer token architecture supporting theming and multi-brand delivery" },
-      { metric: "Adoption", value: "Widely used across product teams, enabling consistent delivery" },
-      { metric: "Operating Model", value: "A structured system for contribution, governance, and continuous evolution" },
-    ],
     impact: [
       { value: "40%", label: "Faster delivery", detail: "Reduction in time from design to production-ready component" },
       { value: "60%", label: "Less duplicated effort", detail: "Fewer components rebuilt independently across product teams" },
@@ -244,11 +229,6 @@ export const caseStudies: CaseStudy[] = [
       team: "Cross-functional design and engineering teams",
       tools: ["TypeScript", "MCP SDK", "Figma API", "Claude Code", "Token Studio"],
     },
-    results: [
-      { metric: "Coverage", value: "Supports multiple products across design and engineering workflows" },
-      { metric: "Capability", value: "Design system becomes AI-queryable and self-serve" },
-      { metric: "Integration", value: "Embedded directly into design and development environments" },
-    ],
     impact: [
       { value: "70%", label: "Less time searching", detail: "Reduction in time spent locating design system guidance" },
       { value: "90%", label: "Documentation upkeep removed", detail: "Manual documentation effort eliminated at source" },
@@ -307,11 +287,6 @@ export const caseStudies: CaseStudy[] = [
       team: "Cross-functional design, engineering, and platform teams",
       tools: ["Claude Code", "MCP SDK", "Figma", "GitLab", "Token Studio"],
     },
-    results: [
-      { metric: "Operational Coverage", value: "AI workflows supporting multiple products and design system operations" },
-      { metric: "Efficiency Gain", value: "Reduction in manual workload across design and documentation processes" },
-      { metric: "Adoption Model", value: "Transition from individual workflows to team-level and organisation-wide rollout" },
-    ],
     impact: [
       { value: "80%", label: "Manual work removed", detail: "Reduction in repetitive design operations and documentation tasks" },
       { value: "2x", label: "Team velocity", detail: "Increase in design system delivery throughput" },
@@ -379,11 +354,6 @@ export const caseStudies: CaseStudy[] = [
       team: "Stephen Taylor (Product Director), Nathanael Woodbridge (Lead Software Engineer), Carlos Silva (Software Engineer), Odete Fernandes (Senior Digital Designer), Sebastian Swainsbury (Senior Digital Designer)",
       tools: ["Figma", "Token Studio", "Git", "Visual Studio", "Axure", "Miro", "Notion"],
     },
-    results: [
-      { metric: "Brand theming", value: "Minutes, not days or weeks" },
-      { metric: "Token output", value: "Web (SASS), iOS (Swift), Android (XML)" },
-      { metric: "Governance", value: "Git workflows, Figma branching, Slack automation" },
-    ],
     challenge:
       "ATG Tickets needed a multi-brand design system to grow and scale their digital offering. A full foundation was needed to move the organisation forward and streamline the design team onto a single, unified system. The initial stages involved looking into fundamentals, component review, file structures in Figma, organisation of workflows, governance, and documentation. From there, a full UI library would be built using the latest Figma features to unify the designers' workflow - keeping file sizes small to ensure the system stayed fast and robust.",
     process: [
@@ -440,11 +410,6 @@ export const caseStudies: CaseStudy[] = [
       team: "Oli Ray (Design Director), Joe Marriott (Lead Researcher), Craig Hodge (Digital Designer), Dan Grose (Content Designer)",
       tools: ["Sketch", "Figma", "Invision", "DSM", "UXPin", "Miro", "Optimal Sort"],
     },
-    results: [
-      { metric: "Call centre volume", value: "Reduced across the board" },
-      { metric: "Design system", value: "New foundations for all products" },
-      { metric: "Research", value: "6 data sources, end-to-end" },
-    ],
     challenge:
       "The primary objective was to move the existing Hargreaves Lansdown website over to AEM (Adobe Experience Manager) and improve the customer experience where possible. A substantial research piece was carried out gathering data from call centre agents, call centre transcripts, emails, web analytics, product owners, and end user interviews. The initial stages focused on the help section - migrating components, templates, and patterns over to the new framework. The new UI library formed off the back of this would then feed into a new design system. The key KPI was to reduce call centre volumes caused by the pandemic and allow users to self-serve rather than call.",
     process: [
