@@ -19,7 +19,7 @@ export default function Home() {
               {/* Title Label */}
               <div className="mb-12">
                 <span className="text-caption text-swiss-muted">
-                  PRINCIPAL PRODUCT DESIGNER · DESIGN SYSTEMS LEADER
+                  DESIGN DIRECTOR · DESIGN SYSTEMS LEADER
                 </span>
               </div>
 
@@ -34,7 +34,7 @@ export default function Home() {
 
               {/* Tagline */}
               <p className="text-subheading text-swiss-muted max-w-xl leading-relaxed">
-                Principal Product Designer and design leader. I shape products
+                Design Director and design leader. I shape products
                 and the teams that build them &mdash; at the intersection of
                 design, engineering, and AI.
               </p>
